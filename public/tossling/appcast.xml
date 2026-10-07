@@ -4,13 +4,13 @@
     <title>Tossling</title>
     <link>https://monoroh.com/tossling</link>
     <item>
-      <title>Tossling 0.3.3</title>
-      <pubDate>Wed, 07 Oct 2026 08:44:05 GMT</pubDate>
-      <sparkle:version>14</sparkle:version>
-      <sparkle:shortVersionString>0.3.3</sparkle:shortVersionString>
+      <title>Tossling 0.4.0</title>
+      <pubDate>Wed, 07 Oct 2026 16:43:16 GMT</pubDate>
+      <sparkle:version>32</sparkle:version>
+      <sparkle:shortVersionString>0.4.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-      <sparkle:fullReleaseNotesLink>https://github.com/tossling/tossling-desktop/releases/tag/v0.3.3</sparkle:fullReleaseNotesLink>
-      <enclosure url="https://github.com/tossling/tossling-desktop/releases/download/v0.3.3/Tossling-0.3.3.dmg" sparkle:edSignature="8CAz/kqFO4rKh66LQsY0kkwTUes7dnJ369C4isJLGzEe9weLQHACyUc31dBtVzNQSvwXPdx/NSdHSn24RTsYBw==" length="3644807" type="application/octet-stream"/>
+      <sparkle:fullReleaseNotesLink>https://github.com/tossling/tossling-desktop/releases/tag/v0.4.0</sparkle:fullReleaseNotesLink>
+      <enclosure url="https://github.com/tossling/tossling-desktop/releases/download/v0.4.0/Tossling-0.4.0.dmg" sparkle:edSignature="5Y6a2eeRN6YtHFnHsNEFEf3L3TkgR6uYtypU1KZSXB5T0jz3wU1NXRGiPLvSri925oSdMhdCKEW0uCYoQ9fWAg==" length="3652658" type="application/octet-stream"/>
     </item>
   </channel>
 </rss>

@@ -23,7 +23,7 @@ export interface AppData {
 }
 
 export interface Platform {
-  name: 'iOS' | 'Android' | 'Web' | 'Desktop' | 'Ruby'
+  name: 'iOS' | 'Android' | 'Web' | 'Desktop' | 'macOS' | 'Docker' | 'Ruby'
   icon: string
   available: boolean
 }
@@ -35,6 +35,12 @@ export interface AppLinks {
   github?: string
   rubygems?: string
   website?: string
+  page?: string
+  githubOrg?: string
+  githubMobile?: string
+  githubServer?: string
+  macDownload?: string
+  androidDownload?: string
 }
 
 // Component Props Types

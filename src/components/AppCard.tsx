@@ -78,7 +78,9 @@ export default function AppCard({ app, className, onClick, variant = 'default', 
   }
 
   const handleCardClick = () => {
-    if (app.links.website) {
+    if (app.links.page && onClick) {
+      onClick()
+    } else if (app.links.website) {
       window.open(app.links.website, '_blank', 'noopener,noreferrer')
     } else if (app.links.github && visibleStores.length === 0) {
       window.open(app.links.github, '_blank', 'noopener,noreferrer')
@@ -94,7 +96,9 @@ export default function AppCard({ app, className, onClick, variant = 'default', 
     }
   }
 
-  const ctaLabel = app.links.website
+  const ctaLabel = app.links.page
+    ? t.card.viewCase
+    : app.links.website
     ? t.card.visitSite
     : visibleStores.length === 0
       ? t.card.viewSource

@@ -9,6 +9,7 @@ import Terms from './pages/Terms'
 import Authmeister from './pages/Authmeister'
 import AuthmeisterPrivacy from './pages/AuthmeisterPrivacy'
 import AuthmeisterTerms from './pages/AuthmeisterTerms'
+import Tossling from './pages/Tossling'
 import NotFound from './pages/NotFound'
 import './styles/globals.css'
 
@@ -26,6 +27,7 @@ function App() {
                 <Route path="/authmeister" element={<Authmeister />} />
                 <Route path="/authmeister/privacy" element={<AuthmeisterPrivacy />} />
                 <Route path="/authmeister/terms" element={<AuthmeisterTerms />} />
+                <Route path="/tossling" element={<Tossling />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Layout>

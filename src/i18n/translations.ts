@@ -21,6 +21,8 @@ type ProseBlockT = ProseP | ProseH2 | ProseH3 | ProseUl
 interface LegalDoc { title: string; body: ProseBlockT[] }
 interface ProjectCopyT { category: string; description: string; features: string[] }
 interface HintLink { label: string; to: string; external: boolean }
+interface Shot { src: string; alt: string; kind: 'desktop' | 'phone' | 'wide' }
+interface RepoLink { name: string; detail: string; href: string }
 
 export interface Translations {
   meta: { siteName: string; description: string; keywords: string }
@@ -60,7 +62,7 @@ export interface Translations {
     privacy: string
     terms: string
   }
-  projects: Record<'authmeister' | 'sympee' | 'fastlaneRustore', ProjectCopyT>
+  projects: Record<'tossling' | 'authmeister' | 'fastlaneRustore', ProjectCopyT>
   authmeisterPage: {
     back: string
     tagline: string
@@ -72,6 +74,29 @@ export interface Translations {
     finalBody: string
     legalPrivacy: string
     legalTerms: string
+  }
+  tosslingPage: {
+    back: string
+    tagline: string
+    downloadMac: string
+    downloadAndroid: string
+    brewLabel: string
+    copy: string
+    copied: string
+    specs: LabeledValue[]
+    featuresEyebrow: string
+    featuresTitle: string
+    highlights: TitleBody[]
+    screensEyebrow: string
+    screensTitle: string
+    shots: Shot[]
+    sourceEyebrow: string
+    sourceTitle: string
+    sourceBody: string
+    repos: RepoLink[]
+    finalTitle: string
+    finalBody: string
+    status: string
   }
   legal: {
     backHome: string
@@ -138,7 +163,7 @@ export const en: Translations = {
     eyebrowPrefix: 'Selected work',
     title: 'Apps people actually use.',
     subtitle:
-      'Shipped to App Store, Google Play and RuStore. Designed end-to-end — from API to pixel polish.',
+      'Shipped to App Store, Google Play, RuStore and GitHub. Designed end-to-end — from API to pixel polish.',
   },
 
   card: {
@@ -201,6 +226,18 @@ export const en: Translations = {
   },
 
   projects: {
+    tossling: {
+      category: 'Open Source · macOS & Android',
+      description:
+        'One end-to-end encrypted clipboard for your Macs and Android phone, through your own server. Copy on one device, paste on another a second later — text, images and files up to 500 MB.',
+      features: [
+        'Encrypted on the devices (AES-256-GCM)',
+        'Self-hosted server in one Docker container',
+        'Files up to 500 MB from Finder or the phone',
+        'Notifications from your own projects',
+        'Open source, GPL-3.0',
+      ],
+    },
     authmeister: {
       category: 'Security & Authentication',
       description:
@@ -211,18 +248,6 @@ export const en: Translations = {
         'Secure encrypted storage',
         'Clean, intuitive interface',
         'Backup & restore functionality',
-      ],
-    },
-    sympee: {
-      category: 'Gifting & Services',
-      description:
-        'A compliments platform where you can surprise friends with services and goods from partner businesses. Send coffee, haircuts, or other treats to loved ones in any city through QR codes.',
-      features: [
-        'Gift services to friends remotely',
-        'QR code redemption system',
-        'Partner business network',
-        'Cross-city gifting',
-        'Surprise & delight experience',
       ],
     },
     fastlaneRustore: {
@@ -277,6 +302,79 @@ export const en: Translations = {
     finalBody: 'Available on iOS, Android and RuStore. Free, no ads, no tracking.',
     legalPrivacy: 'Privacy Policy',
     legalTerms: 'Terms & Conditions',
+  },
+
+  tosslingPage: {
+    back: 'Back to portfolio',
+    tagline:
+      'One clipboard for your Macs and Android phone, through your own server. Copy on one device, paste on another a second later. Everything is encrypted on the devices; the server only relays ciphertext.',
+    downloadMac: 'Download for Mac',
+    downloadAndroid: 'Android APK',
+    brewLabel: 'Or with Homebrew',
+    copy: 'Copy',
+    copied: 'Copied',
+    specs: [
+      { label: 'Platforms', value: 'macOS 13+ · Android 13+' },
+      { label: 'Server', value: 'Self-hosted, Docker' },
+      { label: 'Encryption', value: 'AES-256-GCM · X25519' },
+      { label: 'License', value: 'GPL-3.0' },
+    ],
+    featuresEyebrow: 'Features',
+    featuresTitle: 'Copy here, paste there.',
+    highlights: [
+      {
+        title: 'One clipboard for the room',
+        body:
+          'Text and images you copy reach the other devices of your room by themselves — or only on a hotkey, if you prefer. A room is a phone and any number of Macs.',
+      },
+      {
+        title: 'Files up to 500 MB',
+        body:
+          'From the Finder menu «Send via Tossling», the hotkey, the menu bar or «Share → To Mac» on the phone. Received files land in Downloads/Tossling and in the clipboard.',
+      },
+      {
+        title: 'Encrypted on the devices',
+        body:
+          'AES-256-GCM on the devices, a separate X25519 key for every device. Disconnecting a device moves the rest of the room to a new key and a new server token.',
+      },
+      {
+        title: 'Your own server',
+        body:
+          'Tossling Server is one Docker container (ntfy inside) with a setup page. It relays ciphertext, keeps attachments for three hours and never sees the clipboard.',
+      },
+      {
+        title: 'Notifications from your projects',
+        body:
+          'Servers, bots and CI publish events to channels of your server; every device shows them — as macOS notifications, in the menu and on the phone.',
+      },
+      {
+        title: 'Careful with secrets',
+        body:
+          'Passwords marked by password managers and Apple’s Universal Clipboard are never sent. Pairing with the phone is a QR code; another Mac joins with a 10-minute invite code.',
+      },
+    ],
+    screensEyebrow: 'Screenshots',
+    screensTitle: 'Menu bar, phone and server.',
+    shots: [
+      { src: '/media/tossling/mac-menu.webp', alt: 'The menu bar: recent items from the other devices of the room', kind: 'desktop' },
+      { src: '/media/tossling/android-home.webp', alt: 'Android: the room and the recent items', kind: 'phone' },
+      { src: '/media/tossling/android-alerts.webp', alt: 'Android: notifications from your projects', kind: 'phone' },
+      { src: '/media/tossling/server-setup.webp', alt: 'Tossling Server: the setup page after the first start', kind: 'wide' },
+      { src: '/media/tossling/server-project.webp', alt: 'Tossling Server: a project in the web panel with its events', kind: 'wide' },
+    ],
+    sourceEyebrow: 'Open source',
+    sourceTitle: 'Three repositories, one project.',
+    sourceBody: 'Everything is open source under GPL-3.0. Windows and Linux desktop apps are in progress.',
+    repos: [
+      { name: 'Tossling Desktop', detail: 'The macOS app: menu bar helper, the tossling command and a Finder extension', href: 'https://github.com/Tossling/tossling-desktop' },
+      { name: 'Tossling for Android', detail: 'The phone app: history, widget, project notifications', href: 'https://github.com/Tossling/tossling-mobile' },
+      { name: 'Tossling Server', detail: 'One Docker container: ghcr.io/tossling/tossling-server (amd64, arm64)', href: 'https://github.com/Tossling/tossling-server' },
+      { name: 'github.com/Tossling', detail: 'The organization: releases, issues, the Homebrew tap', href: 'https://github.com/Tossling' },
+    ],
+    finalTitle: 'Start with the server.',
+    finalBody:
+      'Run Tossling Server, open its setup page, then install the Mac app — it asks for the address and the token and shows a QR code for the phone.',
+    status: 'Early, in daily use by the author. Expect changes before 1.0.',
   },
 
   legal: {
@@ -388,7 +486,7 @@ export const en: Translations = {
     hints: [
       { label: 'Selected work', to: '/#work', external: false },
       { label: 'Authmeister — OTP authenticator', to: '/authmeister', external: false },
-      { label: 'Sympee — gifting platform', to: 'https://sympee.ru', external: true },
+      { label: 'Tossling — one clipboard for your Macs and phone', to: '/tossling', external: false },
     ],
     metaTitle: 'Page Not Found',
     metaDescription:
@@ -439,7 +537,7 @@ export const ru: Translations = {
     eyebrowPrefix: 'В проде',
     title: 'Приложения, которыми правда пользуются.',
     subtitle:
-      'Живут в App Store, Google Play и RuStore. Собраны end-to-end — от API до пиксельной полировки.',
+      'Живут в App Store, Google Play, RuStore и на GitHub. Собраны end-to-end — от API до пиксельной полировки.',
   },
 
   card: {
@@ -502,6 +600,18 @@ export const ru: Translations = {
   },
 
   projects: {
+    tossling: {
+      category: 'Open Source · macOS и Android',
+      description:
+        'Общий буфер обмена для своих Mac и Android-телефона через свой сервер, со сквозным шифрованием. Скопировал на одном устройстве — через секунду вставляешь на другом: текст, картинки и файлы до 500 МБ.',
+      features: [
+        'Шифрование на устройствах (AES-256-GCM)',
+        'Свой сервер — один Docker-контейнер',
+        'Файлы до 500 МБ из Finder или с телефона',
+        'Уведомления от своих проектов',
+        'Открытый код, GPL-3.0',
+      ],
+    },
     authmeister: {
       category: 'Безопасность · 2FA',
       description:
@@ -512,18 +622,6 @@ export const ru: Translations = {
         'Зашифрованное локальное хранилище',
         'Чистый UI без лишнего',
         'Бэкап и восстановление',
-      ],
-    },
-    sympee: {
-      category: 'Подарочный сервис',
-      description:
-        'Платформа комплиментов: дарим друзьям услуги и товары от партнёров. Отправил кофе, стрижку или подарок — человек получает QR и забирает в любом городе.',
-      features: [
-        'Дистанционные подарки услугами',
-        'Активация по QR-коду',
-        'Сеть партнёрских заведений',
-        'Подарки между городами',
-        'Эффект приятного сюрприза',
       ],
     },
     fastlaneRustore: {
@@ -578,6 +676,79 @@ export const ru: Translations = {
     finalBody: 'Доступно в App Store, Google Play и RuStore. Бесплатно, без рекламы и трекинга.',
     legalPrivacy: 'Политика конфиденциальности',
     legalTerms: 'Условия использования',
+  },
+
+  tosslingPage: {
+    back: 'К проектам',
+    tagline:
+      'Общий буфер обмена для своих Mac и Android-телефона через свой сервер. Скопировал на одном устройстве — через секунду вставляешь на другом. Всё шифруется на устройствах, сервер передаёт только шифротекст.',
+    downloadMac: 'Скачать для Mac',
+    downloadAndroid: 'APK для Android',
+    brewLabel: 'Или через Homebrew',
+    copy: 'Скопировать',
+    copied: 'Скопировано',
+    specs: [
+      { label: 'Платформы', value: 'macOS 13+ · Android 13+' },
+      { label: 'Сервер', value: 'Свой, Docker' },
+      { label: 'Шифрование', value: 'AES-256-GCM · X25519' },
+      { label: 'Лицензия', value: 'GPL-3.0' },
+    ],
+    featuresEyebrow: 'Возможности',
+    featuresTitle: 'Скопировал здесь — вставил там.',
+    highlights: [
+      {
+        title: 'Один буфер на всю комнату',
+        body:
+          'Скопированные текст и картинки сами доходят до остальных устройств комнаты — или только по горячей клавише, если так удобнее. Комната — это телефон и сколько угодно Mac.',
+      },
+      {
+        title: 'Файлы до 500 МБ',
+        body:
+          'Из меню Finder «Отправить через Tossling», по горячей клавише, из строки меню или через «Поделиться → На Mac» на телефоне. Полученные файлы ложатся в Загрузки/Tossling и в буфер обмена.',
+      },
+      {
+        title: 'Шифрование на устройствах',
+        body:
+          'AES-256-GCM на устройствах, у каждого устройства свой ключ X25519. Если отключить устройство, остальная комната переходит на новый ключ и новый токен сервера.',
+      },
+      {
+        title: 'Свой сервер',
+        body:
+          'Tossling Server — один Docker-контейнер (внутри ntfy) со страницей настройки. Он передаёт шифротекст, хранит вложения три часа и не видит содержимое буфера.',
+      },
+      {
+        title: 'Уведомления от своих проектов',
+        body:
+          'Серверы, боты и CI публикуют события в каналы вашего сервера, а все устройства их показывают — уведомлениями macOS, в меню и на телефоне.',
+      },
+      {
+        title: 'Бережно с секретами',
+        body:
+          'Пароли, помеченные менеджерами паролей, и Универсальный буфер обмена Apple никогда не отправляются. Телефон подключается по QR-коду, ещё один Mac — по коду-приглашению на 10 минут.',
+      },
+    ],
+    screensEyebrow: 'Скриншоты',
+    screensTitle: 'Строка меню, телефон и сервер.',
+    shots: [
+      { src: '/media/tossling/mac-menu.webp', alt: 'Меню в строке меню Mac: последние элементы с других устройств комнаты', kind: 'desktop' },
+      { src: '/media/tossling/android-home.webp', alt: 'Android: комната и последние элементы', kind: 'phone' },
+      { src: '/media/tossling/android-alerts.webp', alt: 'Android: уведомления от своих проектов', kind: 'phone' },
+      { src: '/media/tossling/server-setup.webp', alt: 'Tossling Server: страница настройки после первого запуска', kind: 'wide' },
+      { src: '/media/tossling/server-project.webp', alt: 'Tossling Server: проект в веб-панели и его события', kind: 'wide' },
+    ],
+    sourceEyebrow: 'Открытый код',
+    sourceTitle: 'Три репозитория, один проект.',
+    sourceBody: 'Весь код открыт под GPL-3.0. Версии для Windows и Linux в работе.',
+    repos: [
+      { name: 'Tossling Desktop', detail: 'Приложение для macOS: строка меню, команда tossling и расширение Finder', href: 'https://github.com/Tossling/tossling-desktop' },
+      { name: 'Tossling для Android', detail: 'Приложение для телефона: история, виджет, уведомления проектов', href: 'https://github.com/Tossling/tossling-mobile' },
+      { name: 'Tossling Server', detail: 'Один Docker-контейнер: ghcr.io/tossling/tossling-server (amd64, arm64)', href: 'https://github.com/Tossling/tossling-server' },
+      { name: 'github.com/Tossling', detail: 'Организация: релизы, задачи, Homebrew tap', href: 'https://github.com/Tossling' },
+    ],
+    finalTitle: 'Начните с сервера.',
+    finalBody:
+      'Запустите Tossling Server, откройте его страницу настройки и поставьте приложение для Mac — оно спросит адрес и токен и покажет QR-код для телефона.',
+    status: 'Ранняя версия, автор пользуется каждый день. До 1.0 возможны изменения.',
   },
 
   legal: {
@@ -689,7 +860,7 @@ export const ru: Translations = {
     hints: [
       { label: 'Проекты в проде', to: '/#work', external: false },
       { label: 'Authmeister — OTP-аутентификатор', to: '/authmeister', external: false },
-      { label: 'Sympee — платформа подарков', to: 'https://sympee.ru', external: true },
+      { label: 'Tossling — общий буфер обмена для Mac и телефона', to: '/tossling', external: false },
     ],
     metaTitle: 'Страница не найдена',
     metaDescription:

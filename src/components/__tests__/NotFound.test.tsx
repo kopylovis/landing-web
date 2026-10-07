@@ -52,6 +52,6 @@ describe('NotFound page', () => {
 
     expect(document.querySelector('a[href="/#work"]')).toBeInTheDocument()
     expect(document.querySelector('a[href="/authmeister"]')).toBeInTheDocument()
-    expect(document.querySelector('a[href="https://sympee.ru"]')).toBeInTheDocument()
+    expect(document.querySelector('a[href="/tossling"]')).toBeInTheDocument()
   })
 })

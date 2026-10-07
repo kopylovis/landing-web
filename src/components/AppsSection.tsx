@@ -13,7 +13,9 @@ export default function AppsSection({ apps: propApps }: AppsSectionProps) {
   const { t } = useI18n()
 
   const handleAppClick = (appId: string) => {
-    if (appId === 'authmeister') navigate('/authmeister')
+    const page = apps.find((app) => app.id === appId)?.links.page
+    if (page) navigate(page)
+    else if (appId === 'authmeister') navigate('/authmeister')
   }
 
   return (

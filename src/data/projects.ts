@@ -7,6 +7,25 @@ import { AppData } from '../types'
  */
 export const projects: AppData[] = [
   {
+    id: 'tossling',
+    name: 'Tossling',
+    image: '/media/tossling_512x512.png',
+    platforms: [
+      { name: 'macOS', icon: '', available: true },
+      { name: 'Android', icon: '', available: true },
+      { name: 'Docker', icon: '', available: true },
+    ],
+    links: {
+      page: '/tossling',
+      github: 'https://github.com/Tossling/tossling-desktop',
+      githubOrg: 'https://github.com/Tossling',
+      githubMobile: 'https://github.com/Tossling/tossling-mobile',
+      githubServer: 'https://github.com/Tossling/tossling-server',
+      macDownload: 'https://github.com/Tossling/tossling-desktop/releases/latest',
+      androidDownload: 'https://github.com/Tossling/tossling-mobile/releases/latest',
+    },
+  },
+  {
     id: 'authmeister',
     name: 'Authmeister',
     image: '/media/authmeister_512x512.png',
@@ -18,21 +37,6 @@ export const projects: AppData[] = [
       googlePlay: 'https://play.google.com/store/apps/details?id=com.kopylovis.authmeister',
       appStore: 'https://apps.apple.com/app/id6742833866',
       ruStore: 'https://www.rustore.ru/catalog/app/com.kopylovis.authmeister',
-    },
-  },
-  {
-    id: 'sympee',
-    name: 'Sympee',
-    image: '/media/sympee_512x512.png',
-    platforms: [
-      { name: 'Android', icon: '/media/googleplay.svg', available: true },
-      { name: 'iOS', icon: '/media/appstore.svg', available: true },
-    ],
-    links: {
-      googlePlay: 'https://play.google.com/store/apps/details?id=ru.sympee.mobile',
-      appStore: 'https://apps.apple.com/app/id6742376781',
-      ruStore: 'https://www.rustore.ru/catalog/app/ru.sympee.mobile',
-      website: 'https://sympee.ru',
     },
   },
   {

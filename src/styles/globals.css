@@ -324,7 +324,8 @@ body::after {
 .btn-primary {
   background: var(--accent);
   color: var(--accent-ink);
-  box-shadow: 0 0 0 1px var(--accent), 0 8px 32px -8px oklch(var(--accent-l) var(--accent-c) var(--accent-h) / 0.5);
+  border: 1px solid var(--accent);
+  box-shadow: 0 8px 32px -8px oklch(var(--accent-l) var(--accent-c) var(--accent-h) / 0.5);
 }
 
 .btn-primary:hover {

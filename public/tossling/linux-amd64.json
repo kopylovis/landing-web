@@ -1,0 +1,9 @@
+{
+  "version": "0.5.1",
+  "url": "https://github.com/tossling/tossling-desktop/releases/download/v0.5.1/tossling_0.5.1_amd64.deb",
+  "size": 63697920,
+  "sha256": "01596c1d84ecf21c770fd09b665aa99717fa498c5b4087de566206d01b7261ec",
+  "signature": "ZKtwF7rf8c6ky619PVxi/kvL3HzuQHLtBol+QIlMGxm0WVMR5hyu/+Bc50i2YkhqhKkCOgl8G1xL8ESqCPMhAA==",
+  "manifest_signature": "Iy37SCMCmDnDQI3cmSCqgBMBGQLOHfOlZOzA1c4vOmRf6y8lGZ1MloPdrpMPGg7uFvdOzHah6OzbKvse51I3AQ==",
+  "notes": "https://github.com/tossling/tossling-desktop/releases/tag/v0.5.1"
+}

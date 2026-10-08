@@ -487,7 +487,7 @@ export const en: Translations = {
       body: [
         { type: 'p', text: 'This policy covers the **Tossling** apps for iPhone and Android. Tossling has no accounts and no analytics, and the developer does not receive what you copy.' },
         { type: 'h2', text: 'Where your data goes' },
-        { type: 'p', text: 'The phone talks only to the Tossling server that your computer uses. You run that server yourself or use one run by someone you trust. The developer does not see its traffic. The one exception is the demo room, described below.' },
+        { type: 'p', text: 'The phone talks only to the Tossling server that your computer uses. You run that server yourself or use one run by someone you trust. The developer does not see its traffic. The one exception is the demo, described below.' },
         { type: 'h2', text: 'What the server sees' },
         { type: 'ul', items: [
           'Clipboard text, images and files are encrypted on your device with AES-256-GCM before they leave it. The key stays on the devices of your room, so the server cannot read the content.',
@@ -503,8 +503,8 @@ export const en: Translations = {
           'The app reads the clipboard only when you send it, with the To Computer button, the share sheet, a shortcut or the quick settings tile.',
           'The camera is used only to scan the QR code that a computer shows. Nothing is recorded or stored.',
         ] },
-        { type: 'h2', text: 'Demo room' },
-        { type: 'p', text: 'The developer runs a demo room at tossling-demo.monoroh.com, so the app can be tried without a computer. A bot in that room decrypts what you send in order to reply. Everyone in the demo room sees the names of the other devices there, so do not send anything private. Messages are deleted after 12 hours and files after 3 hours.' },
+        { type: 'h2', text: 'Demo' },
+        { type: 'p', text: 'The developer runs a demo server at tossling-demo.monoroh.com, so the app can be tried without a computer. Each demo gets a room of its own with a bot that decrypts what you send in order to reply. The room closes after an hour, and the server deletes messages and files an hour after they arrive. Notifications of the demo project go to everyone trying the demo, and they never carry what you sent.' },
         { type: 'h2', text: 'Children' },
         { type: 'p', text: 'Tossling is not directed at children under 13 and does not knowingly collect their data.' },
         { type: 'h2', text: 'Source code' },
@@ -896,7 +896,7 @@ export const ru: Translations = {
       body: [
         { type: 'p', text: 'Политика относится к приложениям **Tossling** для iPhone и Android. В Tossling нет аккаунтов и аналитики, и разработчик не получает то, что вы копируете.' },
         { type: 'h2', text: 'Куда уходят данные' },
-        { type: 'p', text: 'Телефон обменивается данными только с тем сервером Tossling, который использует ваш компьютер. Этот сервер вы запускаете сами или пользуетесь сервером человека, которому доверяете. Разработчик его трафик не видит. Исключение одно, демо-комната, о ней ниже.' },
+        { type: 'p', text: 'Телефон обменивается данными только с тем сервером Tossling, который использует ваш компьютер. Этот сервер вы запускаете сами или пользуетесь сервером человека, которому доверяете. Разработчик его трафик не видит. Исключение одно, демо, о нем ниже.' },
         { type: 'h2', text: 'Что видит сервер' },
         { type: 'ul', items: [
           'Текст, картинки и файлы из буфера шифруются на устройстве по AES-256-GCM еще до отправки. Ключ есть только у устройств вашей комнаты, поэтому сервер содержимое прочитать не может.',
@@ -912,8 +912,8 @@ export const ru: Translations = {
           'Приложение читает буфер, только когда вы его отправляете, кнопкой "На компьютер", через меню "Поделиться", быструю команду или плитку в быстрых настройках.',
           'Камера нужна только чтобы отсканировать QR-код с компьютера. Ничего не записывается и не сохраняется.',
         ] },
-        { type: 'h2', text: 'Демо-комната' },
-        { type: 'p', text: 'Разработчик держит демо-комнату на tossling-demo.monoroh.com, чтобы приложение можно было попробовать без компьютера. Бот в этой комнате расшифровывает присланное, чтобы ответить. Все, кто в демо-комнате, видят названия устройств друг друга, поэтому не отправляйте туда ничего личного. Сообщения удаляются через 12 часов, файлы через 3 часа.' },
+        { type: 'h2', text: 'Демо' },
+        { type: 'p', text: 'Разработчик держит демо-сервер на tossling-demo.monoroh.com, чтобы приложение можно было попробовать без компьютера. Для каждого демо создается отдельная комната с ботом, который расшифровывает присланное, чтобы ответить. Через час комната закрывается, а сообщения и файлы сервер удаляет через час после получения. Уведомления демо-проекта видят все, кто пробует демо, и того, что вы отправили, в них никогда нет.' },
         { type: 'h2', text: 'Дети' },
         { type: 'p', text: 'Tossling не рассчитан на детей младше 13 лет и сознательно не собирает их данные.' },
         { type: 'h2', text: 'Исходный код' },

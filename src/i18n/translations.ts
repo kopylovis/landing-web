@@ -79,6 +79,7 @@ export interface Translations {
     back: string
     tagline: string
     downloadMac: string
+    downloadDesktop: string
     downloadAndroid: string
     brewLabel: string
     copy: string
@@ -227,9 +228,9 @@ export const en: Translations = {
 
   projects: {
     tossling: {
-      category: 'Open Source · macOS & Android',
+      category: 'Open Source · macOS, Windows, Linux & Android',
       description:
-        'One end-to-end encrypted clipboard for your Macs and Android phone, through your own server. Copy on one device, paste on another a second later — text, images and files up to 500 MB.',
+        'One end-to-end encrypted clipboard for your computers and Android phone, through your own server. Copy on one device and paste on another a second later. Text, images and files up to 500 MB.',
       features: [
         'Encrypted on the devices (AES-256-GCM)',
         'Self-hosted server in one Docker container',
@@ -307,14 +308,15 @@ export const en: Translations = {
   tosslingPage: {
     back: 'Back to portfolio',
     tagline:
-      'One clipboard for your Macs and Android phone, through your own server. Copy on one device, paste on another a second later. Everything is encrypted on the devices; the server only relays ciphertext.',
+      'One clipboard for your computers and Android phone, through your own server. Copy on one device, paste on another a second later. Everything is encrypted on the devices; the server only relays ciphertext.',
     downloadMac: 'Download for Mac',
+    downloadDesktop: 'Windows and Linux',
     downloadAndroid: 'Android APK',
     brewLabel: 'Or with Homebrew',
     copy: 'Copy',
     copied: 'Copied',
     specs: [
-      { label: 'Platforms', value: 'macOS 13+ · Android 13+' },
+      { label: 'Platforms', value: 'macOS 13+ · Windows 10+ · Linux · Android 13+ · iOS in progress' },
       { label: 'Server', value: 'Self-hosted, Docker' },
       { label: 'Encryption', value: 'AES-256-GCM · X25519' },
       { label: 'License', value: 'GPL-3.0' },
@@ -325,12 +327,12 @@ export const en: Translations = {
       {
         title: 'One clipboard for the room',
         body:
-          'Text and images you copy reach the other devices of your room by themselves — or only on a hotkey, if you prefer. A room is a phone and any number of Macs.',
+          'Text and images you copy reach the other devices of your room by themselves — or only on a hotkey, if you prefer. A room is a phone and any number of computers.',
       },
       {
         title: 'Files up to 500 MB',
         body:
-          'From the Finder menu «Send via Tossling», the hotkey, the menu bar or «Share → To Mac» on the phone. Received files land in Downloads/Tossling and in the clipboard.',
+          'From "Send via Tossling" in Finder, Explorer or a Linux file manager, the hotkey, the menu or Share on the phone. Received files land in Downloads/Tossling and in the clipboard.',
       },
       {
         title: 'Encrypted on the devices',
@@ -345,12 +347,12 @@ export const en: Translations = {
       {
         title: 'Notifications from your projects',
         body:
-          'Servers, bots and CI publish events to channels of your server; every device shows them — as macOS notifications, in the menu and on the phone.',
+          'Servers, bots and CI publish events to channels of your server; every device shows them as system notifications, in the menu and on the phone.',
       },
       {
         title: 'Careful with secrets',
         body:
-          'Passwords marked by password managers and Apple’s Universal Clipboard are never sent. Pairing with the phone is a QR code; another Mac joins with a 10-minute invite code.',
+          'Passwords marked by password managers and Apple’s Universal Clipboard are never sent. Pairing with the phone is a QR code; another computer joins with a 10-minute invite code.',
       },
     ],
     screensEyebrow: 'Screenshots',
@@ -364,16 +366,16 @@ export const en: Translations = {
     ],
     sourceEyebrow: 'Open source',
     sourceTitle: 'Three repositories, one project.',
-    sourceBody: 'Everything is open source under GPL-3.0. Windows and Linux desktop apps are in progress.',
+    sourceBody: 'Everything is open source under GPL-3.0. The iOS app is in progress.',
     repos: [
-      { name: 'Tossling Desktop', detail: 'The macOS app: menu bar helper, the tossling command and a Finder extension', href: 'https://github.com/Tossling/tossling-desktop' },
+      { name: 'Tossling Desktop', detail: 'Apps for macOS, Windows and Linux: menu bar or tray, the tossling command, file manager menus', href: 'https://github.com/Tossling/tossling-desktop' },
       { name: 'Tossling for Android', detail: 'The phone app: history, widget, project notifications', href: 'https://github.com/Tossling/tossling-mobile' },
       { name: 'Tossling Server', detail: 'One Docker container: ghcr.io/tossling/tossling-server (amd64, arm64)', href: 'https://github.com/Tossling/tossling-server' },
       { name: 'github.com/Tossling', detail: 'The organization: releases, issues, the Homebrew tap', href: 'https://github.com/Tossling' },
     ],
     finalTitle: 'Start with the server.',
     finalBody:
-      'Run Tossling Server, open its setup page, then install the Mac app — it asks for the address and the token and shows a QR code for the phone.',
+      'Run Tossling Server, open its setup page, then install the app on a computer. It asks for the address and the token and shows a QR code for the phone.',
     status: 'Early, in daily use by the author. Expect changes before 1.0.',
   },
 
@@ -486,7 +488,7 @@ export const en: Translations = {
     hints: [
       { label: 'Selected work', to: '/#work', external: false },
       { label: 'Authmeister — OTP authenticator', to: '/authmeister', external: false },
-      { label: 'Tossling — one clipboard for your Macs and phone', to: '/tossling', external: false },
+      { label: 'Tossling, one clipboard for your computers and phone', to: '/tossling', external: false },
     ],
     metaTitle: 'Page Not Found',
     metaDescription:
@@ -601,9 +603,9 @@ export const ru: Translations = {
 
   projects: {
     tossling: {
-      category: 'Open Source · macOS и Android',
+      category: 'Open Source · macOS, Windows, Linux и Android',
       description:
-        'Общий буфер обмена для своих Mac и Android-телефона через свой сервер, со сквозным шифрованием. Скопировал на одном устройстве — через секунду вставляешь на другом: текст, картинки и файлы до 500 МБ.',
+        'Общий буфер обмена для своих компьютеров и Android-телефона через свой сервер, со сквозным шифрованием. Скопировал на одном устройстве, через секунду вставляешь на другом. Текст, картинки и файлы до 500 МБ.',
       features: [
         'Шифрование на устройствах (AES-256-GCM)',
         'Свой сервер — один Docker-контейнер',
@@ -681,14 +683,15 @@ export const ru: Translations = {
   tosslingPage: {
     back: 'К проектам',
     tagline:
-      'Общий буфер обмена для своих Mac и Android-телефона через свой сервер. Скопировал на одном устройстве — через секунду вставляешь на другом. Всё шифруется на устройствах, сервер передаёт только шифротекст.',
+      'Общий буфер обмена для своих компьютеров и Android-телефона через свой сервер. Скопировал на одном устройстве — через секунду вставляешь на другом. Всё шифруется на устройствах, сервер передаёт только шифротекст.',
     downloadMac: 'Скачать для Mac',
+    downloadDesktop: 'Windows и Linux',
     downloadAndroid: 'APK для Android',
     brewLabel: 'Или через Homebrew',
     copy: 'Скопировать',
     copied: 'Скопировано',
     specs: [
-      { label: 'Платформы', value: 'macOS 13+ · Android 13+' },
+      { label: 'Платформы', value: 'macOS 13+ · Windows 10+ · Linux · Android 13+ · iOS в работе' },
       { label: 'Сервер', value: 'Свой, Docker' },
       { label: 'Шифрование', value: 'AES-256-GCM · X25519' },
       { label: 'Лицензия', value: 'GPL-3.0' },
@@ -699,12 +702,12 @@ export const ru: Translations = {
       {
         title: 'Один буфер на всю комнату',
         body:
-          'Скопированные текст и картинки сами доходят до остальных устройств комнаты — или только по горячей клавише, если так удобнее. Комната — это телефон и сколько угодно Mac.',
+          'Скопированные текст и картинки сами доходят до остальных устройств комнаты — или только по горячей клавише, если так удобнее. Комната — это телефон и сколько угодно компьютеров.',
       },
       {
         title: 'Файлы до 500 МБ',
         body:
-          'Из меню Finder «Отправить через Tossling», по горячей клавише, из строки меню или через «Поделиться → На Mac» на телефоне. Полученные файлы ложатся в Загрузки/Tossling и в буфер обмена.',
+          'Через "Отправить через Tossling" в Finder, Проводнике или файловом менеджере Linux, по горячей клавише, из меню или через "Поделиться" на телефоне. Полученные файлы ложатся в Загрузки/Tossling и в буфер обмена.',
       },
       {
         title: 'Шифрование на устройствах',
@@ -719,12 +722,12 @@ export const ru: Translations = {
       {
         title: 'Уведомления от своих проектов',
         body:
-          'Серверы, боты и CI публикуют события в каналы вашего сервера, а все устройства их показывают — уведомлениями macOS, в меню и на телефоне.',
+          'Серверы, боты и CI публикуют события в каналы вашего сервера, а все устройства показывают их системными уведомлениями, в меню и на телефоне.',
       },
       {
         title: 'Бережно с секретами',
         body:
-          'Пароли, помеченные менеджерами паролей, и Универсальный буфер обмена Apple никогда не отправляются. Телефон подключается по QR-коду, ещё один Mac — по коду-приглашению на 10 минут.',
+          'Пароли, помеченные менеджерами паролей, и Универсальный буфер обмена Apple никогда не отправляются. Телефон подключается по QR-коду, еще один компьютер по коду-приглашению на 10 минут.',
       },
     ],
     screensEyebrow: 'Скриншоты',
@@ -738,16 +741,16 @@ export const ru: Translations = {
     ],
     sourceEyebrow: 'Открытый код',
     sourceTitle: 'Три репозитория, один проект.',
-    sourceBody: 'Весь код открыт под GPL-3.0. Версии для Windows и Linux в работе.',
+    sourceBody: 'Весь код открыт под GPL-3.0. Приложение для iOS в работе.',
     repos: [
-      { name: 'Tossling Desktop', detail: 'Приложение для macOS: строка меню, команда tossling и расширение Finder', href: 'https://github.com/Tossling/tossling-desktop' },
+      { name: 'Tossling Desktop', detail: 'Приложения для macOS, Windows и Linux: строка меню или трей, команда tossling, меню файловых менеджеров', href: 'https://github.com/Tossling/tossling-desktop' },
       { name: 'Tossling для Android', detail: 'Приложение для телефона: история, виджет, уведомления проектов', href: 'https://github.com/Tossling/tossling-mobile' },
       { name: 'Tossling Server', detail: 'Один Docker-контейнер: ghcr.io/tossling/tossling-server (amd64, arm64)', href: 'https://github.com/Tossling/tossling-server' },
       { name: 'github.com/Tossling', detail: 'Организация: релизы, задачи, Homebrew tap', href: 'https://github.com/Tossling' },
     ],
     finalTitle: 'Начните с сервера.',
     finalBody:
-      'Запустите Tossling Server, откройте его страницу настройки и поставьте приложение для Mac — оно спросит адрес и токен и покажет QR-код для телефона.',
+      'Запустите Tossling Server, откройте его страницу настройки и поставьте приложение на компьютер. Оно спросит адрес и токен и покажет QR-код для телефона.',
     status: 'Ранняя версия, автор пользуется каждый день. До 1.0 возможны изменения.',
   },
 
@@ -860,7 +863,7 @@ export const ru: Translations = {
     hints: [
       { label: 'Проекты в проде', to: '/#work', external: false },
       { label: 'Authmeister — OTP-аутентификатор', to: '/authmeister', external: false },
-      { label: 'Tossling — общий буфер обмена для Mac и телефона', to: '/tossling', external: false },
+      { label: 'Tossling — общий буфер обмена для компьютеров и телефона', to: '/tossling', external: false },
     ],
     metaTitle: 'Страница не найдена',
     metaDescription:

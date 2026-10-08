@@ -19,6 +19,9 @@ function DownloadButtons() {
         </svg>
         {t.tosslingPage.downloadMac}
       </a>
+      <a href={tossling.links.macDownload} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+        {t.tosslingPage.downloadDesktop}
+      </a>
       <a href={tossling.links.androidDownload} target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
           <path d="M17.6 9.48 19.44 6.3a.38.38 0 0 0-.66-.38l-1.87 3.23a11.4 11.4 0 0 0-9.82 0L5.22 5.92a.38.38 0 0 0-.66.38L6.4 9.48A10.8 10.8 0 0 0 1 18h22a10.8 10.8 0 0 0-5.4-8.52ZM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5Zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5Z" />
@@ -63,7 +66,7 @@ export default function Tossling() {
   return (
     <>
       <SEO
-        title="Tossling — One Clipboard for Your Macs and Android Phone"
+        title="Tossling, One Clipboard for Your Computers and Android Phone"
         description={t.projects.tossling.description}
         image="https://monoroh.com/media/tossling_512x512.png"
         url="/tossling"

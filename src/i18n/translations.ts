@@ -125,7 +125,7 @@ export const en: Translations = {
   meta: {
     siteName: 'Monoroh',
     description:
-      'Mobile engineer crafting multiplatform products that feel native. Kotlin Multiplatform, iOS & Android — shipped.',
+      'Mobile developer. I build apps for iOS, Android, desktop and web, often with Kotlin Multiplatform.',
     keywords:
       'Mobile App Developer, Kotlin Multiplatform, iOS, Android, Compose Multiplatform, SwiftUI',
   },
@@ -152,7 +152,7 @@ export const en: Translations = {
       l3: 'apps that feel native.',
     },
     lede: {
-      before: 'I build apps for iOS, Android, desktop and web — often on ',
+      before: 'I build apps for iOS, Android, desktop and web, often with ',
       strong: 'Kotlin Multiplatform',
       trailing: '.',
     },
@@ -164,7 +164,7 @@ export const en: Translations = {
     eyebrowPrefix: 'Selected work',
     title: 'Apps people actually use.',
     subtitle:
-      'Shipped to App Store, Google Play, RuStore and GitHub. Designed end-to-end — from API to pixel polish.',
+      'Published on the App Store, Google Play, RuStore and GitHub.',
   },
 
   card: {
@@ -175,40 +175,40 @@ export const en: Translations = {
 
   about: {
     eyebrow: 'About',
-    title: 'Engineer with an eye for detail and a sense for product.',
+    title: 'An engineer who takes apps all the way to the store.',
     lede:
-      "I'm Ivan Kopylov. I design and ship apps in full — from architecture to publishing in the stores, with care for the product and the user experience. 10+ years on iOS, Android and Kotlin Multiplatform.",
+      "I'm Ivan Kopylov. I design an app's architecture, write the app and publish it in the stores myself. More than 10 years with iOS, Android and Kotlin Multiplatform.",
     principles: [
       {
-        title: 'Architecture-first',
+        title: 'Architecture first',
         body:
-          'I treat clean architecture as a feature: testable, predictable, and easy to onboard. Domain logic stays platform-agnostic via KMP.',
+          'Clean architecture makes code easy to test and easy for a new developer to pick up. Business logic lives in Kotlin Multiplatform and does not depend on the platform.',
       },
       {
-        title: 'Share by default, native when it earns it',
+        title: 'Shared UI by default',
         body:
-          'Compose Multiplatform carries shared UI across iOS, Android, desktop and web. Drop down to SwiftUI or native Compose when a specific screen genuinely calls for it.',
+          'With Compose Multiplatform one UI runs on iOS, Android, desktop and web. A screen gets SwiftUI or native Compose only when the shared version falls short.',
       },
       {
-        title: 'Ship & measure',
+        title: 'Release early',
         body:
-          'I optimize for time-to-feedback. Continuous delivery, sensible analytics, and crash-free guarantees before chasing polish.',
+          'The sooner a build reaches people, the sooner I learn what is wrong with it. CI/CD, analytics and crash reports come first, polish comes later.',
       },
     ],
     stackEyebrow: 'Stack',
-    stackTitle: 'Mobile, end-to-end.',
+    stackTitle: 'What I build with.',
     stackSub:
-      'The tools I trust to ship production-grade products. Picked, not collected.',
+      'The tools behind my apps in production.',
     closer:
-      'Care for your project — from the first line of code to the final \u201Ccan we nudge that button just a pixel?\u201D',
+      'And yes, I will move that button one more pixel if you ask.',
   },
 
   stack: [
     { name: 'Kotlin Multiplatform', detail: 'Shared business logic across platforms' },
-    { name: 'Compose Multiplatform', detail: 'Shared UI on top of KMP — one Compose across iOS, Android, desktop and web' },
+    { name: 'Compose Multiplatform', detail: 'Shared UI on top of KMP, one Compose for iOS, Android, desktop and web' },
     { name: 'Android · Kotlin', detail: 'Jetpack Compose, coroutines, modern Android' },
-    { name: 'iOS · Swift', detail: 'SwiftUI first, UIKit when it earns its place' },
-    { name: 'Flutter', detail: 'When cross-platform speed wins the trade-off' },
+    { name: 'iOS · Swift', detail: 'SwiftUI first, UIKit where SwiftUI is not enough' },
+    { name: 'Flutter', detail: 'When the project already uses it or needs one codebase fast' },
   ],
 
   footer: {
@@ -221,7 +221,7 @@ export const en: Translations = {
       github: 'GitHub',
       telegram: 'Telegram',
     },
-    copyrightSuffix: ' — built with care.',
+    copyrightSuffix: ', built by hand.',
     privacy: 'Privacy',
     terms: 'Terms',
   },
@@ -242,13 +242,13 @@ export const en: Translations = {
     authmeister: {
       category: 'Security & Authentication',
       description:
-        'A modern OTP authenticator supporting both TOTP and HOTP standards. Seamlessly migrate from other authenticators including Google Authenticator with otpauth-migration support.',
+        'An OTP authenticator for TOTP and HOTP codes. It imports accounts from other authenticators, Google Authenticator included, through otpauth-migration.',
       features: [
         'TOTP & HOTP support',
         'Google Authenticator migration',
-        'Secure encrypted storage',
-        'Clean, intuitive interface',
-        'Backup & restore functionality',
+        'Encrypted storage',
+        'A simple interface',
+        'Backup and restore',
       ],
     },
     fastlaneRustore: {
@@ -268,7 +268,7 @@ export const en: Translations = {
   authmeisterPage: {
     back: 'Back to portfolio',
     tagline:
-      'A modern OTP authenticator built around three ideas: standards-compliant security, effortless migration, and zero data leaving your device.',
+      'An OTP authenticator that imports your accounts in one scan and keeps every secret on the device.',
     specs: [
       { label: 'Platforms', value: 'iOS · Android' },
       { label: 'Tech', value: 'Kotlin Multiplatform' },
@@ -276,31 +276,31 @@ export const en: Translations = {
       { label: 'Privacy', value: 'On-device only' },
     ],
     featuresEyebrow: 'Features',
-    featuresTitle: 'Designed to disappear into your workflow.',
+    featuresTitle: 'Open it, copy the code, close it.',
     highlights: [
       {
-        title: 'TOTP & HOTP — done right',
+        title: 'TOTP and HOTP',
         body:
-          'Standards-compliant time- and counter-based codes. Works with every service that supports authenticator apps.',
+          'Time-based and counter-based codes that follow the standard. Works with any service that supports authenticator apps.',
       },
       {
-        title: 'One-tap migration',
+        title: 'Import from Google Authenticator',
         body:
-          'Import the Google Authenticator otpauth-migration QR in a single scan. Your accounts, instantly.',
+          'Scan the otpauth-migration QR code from Google Authenticator once and all your accounts move over.',
       },
       {
-        title: 'Local-only by design',
+        title: 'Only on the device',
         body:
-          'Secrets are encrypted on-device. No cloud sync, no telemetry on tokens, no third parties.',
+          'Secrets are encrypted on the device. There is no cloud sync, and tokens never reach analytics or third parties.',
       },
       {
         title: 'Encrypted backups',
         body:
-          'Export an encrypted vault to your favorite storage and restore in seconds when you switch devices.',
+          'Export an encrypted backup to any storage you like and restore it on a new device.',
       },
     ],
-    finalTitle: 'Ready when you are.',
-    finalBody: 'Available on iOS, Android and RuStore. Free, no ads, no tracking.',
+    finalTitle: 'Free, no ads.',
+    finalBody: 'On the App Store, Google Play and RuStore. No ads and no tracking.',
     legalPrivacy: 'Privacy Policy',
     legalTerms: 'Terms & Conditions',
   },
@@ -327,7 +327,7 @@ export const en: Translations = {
       {
         title: 'One clipboard for the room',
         body:
-          'Text and images you copy reach the other devices of your room by themselves — or only on a hotkey, if you prefer. A room is a phone and any number of computers.',
+          'Text and images you copy reach the other devices of your room by themselves. If you prefer, they go only on a hotkey. A room is a phone and any number of computers.',
       },
       {
         title: 'Files up to 500 MB',
@@ -352,26 +352,26 @@ export const en: Translations = {
       {
         title: 'Careful with secrets',
         body:
-          'Passwords marked by password managers and Apple’s Universal Clipboard are never sent. Pairing with the phone is a QR code; another computer joins with a 10-minute invite code.',
+          'Passwords marked by password managers and Apple\'s Universal Clipboard are never sent. Pairing with the phone is a QR code; another computer joins with a 10-minute invite code.',
       },
     ],
     screensEyebrow: 'Screenshots',
     screensTitle: 'Menu bar, phone and server.',
     shots: [
-      { src: '/media/tossling/mac-menu.webp', alt: 'The menu bar: recent items from the other devices of the room', kind: 'desktop' },
-      { src: '/media/tossling/android-home.webp', alt: 'Android: the room and the recent items', kind: 'phone' },
-      { src: '/media/tossling/android-alerts.webp', alt: 'Android: notifications from your projects', kind: 'phone' },
-      { src: '/media/tossling/server-setup.webp', alt: 'Tossling Server: the setup page after the first start', kind: 'wide' },
-      { src: '/media/tossling/server-project.webp', alt: 'Tossling Server: a project in the web panel with its events', kind: 'wide' },
+      { src: '/media/tossling/mac-menu.webp', alt: 'The menu bar with recent items from the other devices of the room', kind: 'desktop' },
+      { src: '/media/tossling/android-home.webp', alt: 'The Android app with the room and the recent items', kind: 'phone' },
+      { src: '/media/tossling/android-alerts.webp', alt: 'Project notifications on Android', kind: 'phone' },
+      { src: '/media/tossling/server-setup.webp', alt: 'The Tossling Server setup page after the first start', kind: 'wide' },
+      { src: '/media/tossling/server-project.webp', alt: 'A project in the Tossling Server web panel with its events', kind: 'wide' },
     ],
     sourceEyebrow: 'Open source',
     sourceTitle: 'Three repositories, one project.',
     sourceBody: 'Everything is open source under GPL-3.0. The iOS app is in progress.',
     repos: [
-      { name: 'Tossling Desktop', detail: 'Apps for macOS, Windows and Linux: menu bar or tray, the tossling command, file manager menus', href: 'https://github.com/Tossling/tossling-desktop' },
-      { name: 'Tossling for Android', detail: 'The phone app: history, widget, project notifications', href: 'https://github.com/Tossling/tossling-mobile' },
-      { name: 'Tossling Server', detail: 'One Docker container: ghcr.io/tossling/tossling-server (amd64, arm64)', href: 'https://github.com/Tossling/tossling-server' },
-      { name: 'github.com/Tossling', detail: 'The organization: releases, issues, the Homebrew tap', href: 'https://github.com/Tossling' },
+      { name: 'Tossling Desktop', detail: 'Apps for macOS, Windows and Linux with a menu bar or tray icon, the tossling command and file manager menus', href: 'https://github.com/Tossling/tossling-desktop' },
+      { name: 'Tossling for Android', detail: 'The phone app with history, a widget and project notifications', href: 'https://github.com/Tossling/tossling-mobile' },
+      { name: 'Tossling Server', detail: 'One Docker container, ghcr.io/tossling/tossling-server (amd64, arm64)', href: 'https://github.com/Tossling/tossling-server' },
+      { name: 'github.com/Tossling', detail: 'Releases, issues and the Homebrew tap', href: 'https://github.com/Tossling' },
     ],
     finalTitle: 'Start with the server.',
     finalBody:
@@ -487,7 +487,7 @@ export const en: Translations = {
     hintLabel: 'Maybe you wanted',
     hints: [
       { label: 'Selected work', to: '/#work', external: false },
-      { label: 'Authmeister — OTP authenticator', to: '/authmeister', external: false },
+      { label: 'Authmeister, an OTP authenticator', to: '/authmeister', external: false },
       { label: 'Tossling, one clipboard for your computers and phone', to: '/tossling', external: false },
     ],
     metaTitle: 'Page Not Found',
@@ -500,7 +500,7 @@ export const ru: Translations = {
   meta: {
     siteName: 'Monoroh',
     description:
-      'Мобильный разработчик. Делаю мультиплатформенные продукты, которые ощущаются нативно. Kotlin Multiplatform, iOS и Android — в проде.',
+      'Мобильный разработчик. Делаю приложения для iOS, Android, десктопа и веба, часто на Kotlin Multiplatform.',
     keywords:
       'мобильная разработка, Kotlin Multiplatform, iOS, Android, Compose Multiplatform, SwiftUI',
   },
@@ -514,7 +514,7 @@ export const ru: Translations = {
 
   controls: {
     toLight: 'Включить светлую тему',
-    toDark: 'Включить тёмную тему',
+    toDark: 'Включить темную тему',
     switchLanguage: 'Переключить язык на английский',
   },
 
@@ -539,7 +539,7 @@ export const ru: Translations = {
     eyebrowPrefix: 'В проде',
     title: 'Приложения, которыми правда пользуются.',
     subtitle:
-      'Живут в App Store, Google Play, RuStore и на GitHub. Собраны end-to-end — от API до пиксельной полировки.',
+      'Опубликованы в App Store, Google Play, RuStore и на GitHub.',
   },
 
   card: {
@@ -550,53 +550,53 @@ export const ru: Translations = {
 
   about: {
     eyebrow: 'Обо мне',
-    title: 'Инженер с вниманием к деталям и продуктовым чутьём.',
+    title: 'Инженер, который доводит приложение до стора.',
     lede:
-      'Я — Иван Копылов. Проектирую и выпускаю приложения целиком — от архитектуры до публикации в сторах, с вниманием к продукту и пользовательскому опыту. Более 10 лет опыта с iOS, Android и Kotlin Multiplatform.',
+      'Я Иван Копылов. Сам проектирую архитектуру приложения, пишу его и публикую в сторах. Больше 10 лет работаю с iOS, Android и Kotlin Multiplatform.',
     principles: [
       {
-        title: 'Архитектура — это фича',
+        title: 'Сначала архитектура',
         body:
-          'Хорошая архитектура — не про усложнение, а про спокойную разработку без хаоса по мере роста продукта. Бизнес-логика живёт в Kotlin Multiplatform и шарится между платформами.',
+          'С хорошей архитектурой код легко тестировать, и новый разработчик быстро в нем разбирается. Бизнес-логика живет в Kotlin Multiplatform и общая для всех платформ.',
       },
       {
-        title: 'Общий UI — там, где это оправданно',
+        title: 'Общий UI по умолчанию',
         body:
-          'С Compose Multiplatform один UI для iOS, Android, десктопа и веба. SwiftUI или нативный Compose — только там, где конкретный экран это реально заслужил.',
+          'На Compose Multiplatform один интерфейс работает на iOS, Android, десктопе и в вебе. SwiftUI или нативный Compose беру только для экрана, которому общего не хватает.',
       },
       {
-        title: 'Релизы без хаоса',
+        title: 'Выпускать рано',
         body:
-          'Быстрые релизы, CI/CD, понятная аналитика и стабильная работа продукта — а уже потом полировка пикселей.',
+          'Чем раньше сборка попадет к людям, тем раньше я узнаю, что в ней не так. Сначала CI/CD, аналитика и отчеты о падениях, полировка потом.',
       },
     ],
     stackEyebrow: 'Стек',
-    stackTitle: 'Мобайл от и до.',
+    stackTitle: 'На чем пишу.',
     stackSub:
-      'Инструменты, с которыми выпускаю реальные продукты. Выбираю под задачи, а не для коллекции.',
+      'Инструменты, на которых собраны мои приложения в проде.',
     closer:
-      'Забота о вашем проекте — от первой строчки кода до последнего \u00ABа можно ещё кнопочку подвинуть?\u00BB',
+      'И да, кнопку на пиксель подвину, если попросите.',
   },
 
   stack: [
-    { name: 'Kotlin Multiplatform', detail: 'Бизнес-логика — одна на всех платформах' },
-    { name: 'Compose Multiplatform', detail: 'Единый Compose-интерфейс для iOS, Android, десктопа и веба — без лишнего дублирования' },
-    { name: 'Android · Kotlin', detail: 'Jetpack Compose, корутины и актуальный Android-стек — всё, что нужно для стабильного продукта' },
-    { name: 'iOS · Swift', detail: 'SwiftUI — где можно, UIKit — где нужно' },
-    { name: 'Flutter', detail: 'Когда нужна скорость и единая кодовая база' },
+    { name: 'Kotlin Multiplatform', detail: 'Одна бизнес-логика на все платформы' },
+    { name: 'Compose Multiplatform', detail: 'Один Compose-интерфейс для iOS, Android, десктопа и веба' },
+    { name: 'Android · Kotlin', detail: 'Jetpack Compose, корутины и современный Android' },
+    { name: 'iOS · Swift', detail: 'SwiftUI в первую очередь, UIKit там, где SwiftUI не хватает' },
+    { name: 'Flutter', detail: 'Когда проект уже на нем или быстро нужна одна кодовая база' },
   ],
 
   footer: {
     eyebrow: 'Связаться',
     title: 'Есть идея, которую хочется собрать?',
-    titleBreak: 'Соберём её вместе.',
+    titleBreak: 'Соберем ее вместе.',
     cta: 'Написать',
     channels: {
       email: 'Email',
       github: 'GitHub',
       telegram: 'Telegram',
     },
-    copyrightSuffix: ' — собрано вручную.',
+    copyrightSuffix: ', собрано вручную.',
     privacy: 'Конфиденциальность',
     terms: 'Условия',
   },
@@ -608,7 +608,7 @@ export const ru: Translations = {
         'Общий буфер обмена для своих компьютеров и Android-телефона через свой сервер, со сквозным шифрованием. Скопировал на одном устройстве, через секунду вставляешь на другом. Текст, картинки и файлы до 500 МБ.',
       features: [
         'Шифрование на устройствах (AES-256-GCM)',
-        'Свой сервер — один Docker-контейнер',
+        'Свой сервер в одном Docker-контейнере',
         'Файлы до 500 МБ из Finder или с телефона',
         'Уведомления от своих проектов',
         'Открытый код, GPL-3.0',
@@ -617,25 +617,25 @@ export const ru: Translations = {
     authmeister: {
       category: 'Безопасность · 2FA',
       description:
-        'Современный OTP-аутентификатор: TOTP и HOTP из коробки. Бесшовно затягивает аккаунты из соседних аутентификаторов — включая Google Authenticator через otpauth-migration.',
+        'OTP-аутентификатор для кодов TOTP и HOTP. Переносит аккаунты из других аутентификаторов, в том числе из Google Authenticator через otpauth-migration.',
       features: [
         'Поддержка TOTP и HOTP',
         'Импорт из Google Authenticator',
         'Зашифрованное локальное хранилище',
-        'Чистый UI без лишнего',
+        'Простой интерфейс',
         'Бэкап и восстановление',
       ],
     },
     fastlaneRustore: {
       category: 'Open Source · Fastlane-плагин',
       description:
-        'Fastlane-плагин для автопубликации Android-сборок (AAB / APK) в RuStore. Тащит на себе JWE-авторизацию, чистит черновики, заливает билд и отправляет на модерацию — одной командой в lane.',
+        'Fastlane-плагин, который публикует Android-сборки (AAB или APK) в RuStore. Сам проходит JWE-авторизацию, чистит черновики, заливает сборку и отправляет ее на модерацию одним шагом lane.',
       features: [
         'RSA-SHA512 авторизация и обмен на JWE-токен',
-        'Автоочистка незавершённых черновиков',
+        'Автоочистка незавершенных черновиков',
         'Заливка AAB или AAB + APK в один шаг',
-        'Тип публикации: instantly / delayed / manual',
-        'Прокидывает changelog и шлёт на модерацию',
+        'Тип публикации instantly, delayed или manual',
+        'Передает changelog и отправляет на модерацию',
       ],
     },
   },
@@ -643,7 +643,7 @@ export const ru: Translations = {
   authmeisterPage: {
     back: 'К проектам',
     tagline:
-      'OTP-аутентификатор, собранный вокруг трёх идей: безопасность по стандартам, импорт в одно касание и ноль данных, которые уходят с устройства.',
+      'OTP-аутентификатор, который переносит аккаунты одним сканированием и хранит все секреты на устройстве.',
     specs: [
       { label: 'Платформы', value: 'iOS · Android' },
       { label: 'Стек', value: 'Kotlin Multiplatform' },
@@ -651,31 +651,31 @@ export const ru: Translations = {
       { label: 'Приватность', value: 'Только на устройстве' },
     ],
     featuresEyebrow: 'Возможности',
-    featuresTitle: 'Сделан, чтобы раствориться в твоём флоу.',
+    featuresTitle: 'Открыл, скопировал код, закрыл.',
     highlights: [
       {
-        title: 'TOTP и HOTP — как положено',
+        title: 'TOTP и HOTP',
         body:
-          'Полностью по стандарту: коды по времени и по счётчику. Работает со всем, что вообще понимает аутентификаторы.',
+          'Коды по времени и по счетчику, строго по стандарту. Работает с любым сервисом, который поддерживает аутентификаторы.',
       },
       {
-        title: 'Импорт в одно касание',
+        title: 'Импорт из Google Authenticator',
         body:
-          'Сканируешь otpauth-migration QR из Google Authenticator — и все аккаунты на месте. Мгновенно, без ручного перевбивания секретов.',
+          'Отсканируй QR-код otpauth-migration из Google Authenticator, и все аккаунты переедут. Вбивать секреты руками не нужно.',
       },
       {
-        title: 'Локально по умолчанию',
+        title: 'Только на устройстве',
         body:
-          'Секреты зашифрованы на устройстве. Никакой облачной синхронизации, никакой телеметрии по токенам, никаких третьих сторон.',
+          'Секреты зашифрованы на устройстве. Облачной синхронизации нет, токены не попадают ни в аналитику, ни к третьим лицам.',
       },
       {
         title: 'Зашифрованные бэкапы',
         body:
-          'Кидаешь зашифрованный экспорт в любое облако — и за секунды накатываешься на новом устройстве.',
+          'Сохрани зашифрованный экспорт в любое облако и восстанови его на новом устройстве.',
       },
     ],
-    finalTitle: 'Когда будешь готов.',
-    finalBody: 'Доступно в App Store, Google Play и RuStore. Бесплатно, без рекламы и трекинга.',
+    finalTitle: 'Бесплатно, без рекламы.',
+    finalBody: 'В App Store, Google Play и RuStore. Без рекламы и трекинга.',
     legalPrivacy: 'Политика конфиденциальности',
     legalTerms: 'Условия использования',
   },
@@ -683,7 +683,7 @@ export const ru: Translations = {
   tosslingPage: {
     back: 'К проектам',
     tagline:
-      'Общий буфер обмена для своих компьютеров и Android-телефона через свой сервер. Скопировал на одном устройстве — через секунду вставляешь на другом. Всё шифруется на устройствах, сервер передаёт только шифротекст.',
+      'Общий буфер обмена для своих компьютеров и Android-телефона через свой сервер. Скопировал на одном устройстве, через секунду вставляешь на другом. Все шифруется на устройствах, сервер передает только шифротекст.',
     downloadMac: 'Скачать для Mac',
     downloadDesktop: 'Windows и Linux',
     downloadAndroid: 'APK для Android',
@@ -697,12 +697,12 @@ export const ru: Translations = {
       { label: 'Лицензия', value: 'GPL-3.0' },
     ],
     featuresEyebrow: 'Возможности',
-    featuresTitle: 'Скопировал здесь — вставил там.',
+    featuresTitle: 'Скопировал здесь, вставил там.',
     highlights: [
       {
         title: 'Один буфер на всю комнату',
         body:
-          'Скопированные текст и картинки сами доходят до остальных устройств комнаты — или только по горячей клавише, если так удобнее. Комната — это телефон и сколько угодно компьютеров.',
+          'Скопированные текст и картинки сами доходят до остальных устройств комнаты. Если удобнее, они уходят только по горячей клавише. Комната — это телефон и сколько угодно компьютеров.',
       },
       {
         title: 'Файлы до 500 МБ',
@@ -717,7 +717,7 @@ export const ru: Translations = {
       {
         title: 'Свой сервер',
         body:
-          'Tossling Server — один Docker-контейнер (внутри ntfy) со страницей настройки. Он передаёт шифротекст, хранит вложения три часа и не видит содержимое буфера.',
+          'Tossling Server — один Docker-контейнер (внутри ntfy) со страницей настройки. Он передает шифротекст, хранит вложения три часа и не видит содержимое буфера.',
       },
       {
         title: 'Уведомления от своих проектов',
@@ -733,20 +733,20 @@ export const ru: Translations = {
     screensEyebrow: 'Скриншоты',
     screensTitle: 'Строка меню, телефон и сервер.',
     shots: [
-      { src: '/media/tossling/mac-menu.webp', alt: 'Меню в строке меню Mac: последние элементы с других устройств комнаты', kind: 'desktop' },
-      { src: '/media/tossling/android-home.webp', alt: 'Android: комната и последние элементы', kind: 'phone' },
-      { src: '/media/tossling/android-alerts.webp', alt: 'Android: уведомления от своих проектов', kind: 'phone' },
-      { src: '/media/tossling/server-setup.webp', alt: 'Tossling Server: страница настройки после первого запуска', kind: 'wide' },
-      { src: '/media/tossling/server-project.webp', alt: 'Tossling Server: проект в веб-панели и его события', kind: 'wide' },
+      { src: '/media/tossling/mac-menu.webp', alt: 'Меню Tossling в строке меню Mac с последними элементами с других устройств', kind: 'desktop' },
+      { src: '/media/tossling/android-home.webp', alt: 'Приложение для Android с комнатой и последними элементами', kind: 'phone' },
+      { src: '/media/tossling/android-alerts.webp', alt: 'Уведомления проектов на Android', kind: 'phone' },
+      { src: '/media/tossling/server-setup.webp', alt: 'Страница настройки Tossling Server после первого запуска', kind: 'wide' },
+      { src: '/media/tossling/server-project.webp', alt: 'Проект в веб-панели Tossling Server и его события', kind: 'wide' },
     ],
     sourceEyebrow: 'Открытый код',
     sourceTitle: 'Три репозитория, один проект.',
     sourceBody: 'Весь код открыт под GPL-3.0. Приложение для iOS в работе.',
     repos: [
-      { name: 'Tossling Desktop', detail: 'Приложения для macOS, Windows и Linux: строка меню или трей, команда tossling, меню файловых менеджеров', href: 'https://github.com/Tossling/tossling-desktop' },
-      { name: 'Tossling для Android', detail: 'Приложение для телефона: история, виджет, уведомления проектов', href: 'https://github.com/Tossling/tossling-mobile' },
-      { name: 'Tossling Server', detail: 'Один Docker-контейнер: ghcr.io/tossling/tossling-server (amd64, arm64)', href: 'https://github.com/Tossling/tossling-server' },
-      { name: 'github.com/Tossling', detail: 'Организация: релизы, задачи, Homebrew tap', href: 'https://github.com/Tossling' },
+      { name: 'Tossling Desktop', detail: 'Приложения для macOS, Windows и Linux со строкой меню или треем, командой tossling и меню файловых менеджеров', href: 'https://github.com/Tossling/tossling-desktop' },
+      { name: 'Tossling для Android', detail: 'Приложение для телефона с историей, виджетом и уведомлениями проектов', href: 'https://github.com/Tossling/tossling-mobile' },
+      { name: 'Tossling Server', detail: 'Один Docker-контейнер ghcr.io/tossling/tossling-server (amd64, arm64)', href: 'https://github.com/Tossling/tossling-server' },
+      { name: 'github.com/Tossling', detail: 'Релизы, задачи и Homebrew tap', href: 'https://github.com/Tossling' },
     ],
     finalTitle: 'Начните с сервера.',
     finalBody:
@@ -763,18 +763,18 @@ export const ru: Translations = {
     privacy: {
       title: 'Политика конфиденциальности',
       body: [
-        { type: 'p', text: 'Эта политика описывает, как **Monoroh Developer** («мы», «нас» или «наш») собирает, использует и защищает вашу информацию, когда вы посещаете сайт и пользуетесь нашими сервисами. Используя наши сервисы, вы соглашаетесь со сбором и использованием информации в соответствии с этой политикой.' },
+        { type: 'p', text: 'Эта политика описывает, как **Monoroh Developer** ("мы", "нас" или "наш") собирает, использует и защищает вашу информацию, когда вы посещаете сайт и пользуетесь нашими сервисами. Используя наши сервисы, вы соглашаетесь со сбором и использованием информации в соответствии с этой политикой.' },
         { type: 'h2', text: 'Какую информацию мы собираем' },
         { type: 'h3', text: 'Личная информация' },
-        { type: 'p', text: 'Мы можем собирать личную информацию, которую вы добровольно передаёте, например:' },
+        { type: 'p', text: 'Мы можем собирать личную информацию, которую вы добровольно передаете, например:' },
         { type: 'ul', items: ['Email-адрес (когда вы пишете нам)', 'Имя (если вы указываете его в переписке)', 'Любую другую информацию, которую вы решите предоставить'] },
         { type: 'h3', text: 'Информация об использовании' },
         { type: 'p', text: 'Мы можем автоматически собирать информацию о вашем визите:' },
-        { type: 'ul', items: ['Тип и версию браузера', 'Операционную систему', 'Посещённые страницы и время на сайте', 'Обезличенный IP-адрес'] },
+        { type: 'ul', items: ['Тип и версию браузера', 'Операционную систему', 'Посещенные страницы и время на сайте', 'Обезличенный IP-адрес'] },
         { type: 'h2', text: 'Как мы используем эту информацию' },
         { type: 'ul', items: ['Отвечаем на ваши запросы и сообщения', 'Улучшаем сайт и приложения', 'Анализируем паттерны использования и улучшаем UX', 'Соблюдаем юридические обязательства'] },
         { type: 'h2', text: 'Передача информации' },
-        { type: 'p', text: 'Мы не продаём и не передаём вашу личную информацию. Передача возможна только:' },
+        { type: 'p', text: 'Мы не продаем и не передаем вашу личную информацию. Передача возможна только:' },
         { type: 'ul', items: ['С вашего явного согласия', 'Для выполнения требований закона', 'Для защиты прав, имущества и безопасности', 'В рамках реорганизации или слияния'] },
         { type: 'h2', text: 'Безопасность' },
         { type: 'p', text: 'Мы применяем разумные технические и организационные меры для защиты данных от несанкционированного доступа, изменения, раскрытия или уничтожения. Ни один способ передачи через интернет не безопасен на 100%.' },
@@ -783,7 +783,7 @@ export const ru: Translations = {
         { type: 'h2', text: 'Дети' },
         { type: 'p', text: 'Наши сервисы не предназначены для детей младше 13 лет. Мы намеренно не собираем личную информацию детей младше 13.' },
         { type: 'h2', text: 'Изменения' },
-        { type: 'p', text: 'Мы можем обновлять политику. Новая версия будет опубликована на этой странице с обновлённой датой.' },
+        { type: 'p', text: 'Мы можем обновлять политику. Новая версия будет опубликована на этой странице с обновленной датой.' },
         { type: 'h2', text: 'Контакты' },
         { type: 'p', text: 'Есть вопросы? Напишите на mailto:mnrhwow@gmail.com.' },
       ],
@@ -792,14 +792,14 @@ export const ru: Translations = {
     terms: {
       title: 'Условия использования',
       body: [
-        { type: 'p', text: 'Эти условия использования («Условия») регулируют ваше использование сайта и сервисов, которыми управляет **Monoroh Developer**. Пользуясь нашими сервисами, вы соглашаетесь с этими Условиями.' },
+        { type: 'p', text: 'Эти условия использования ("Условия") регулируют ваше использование сайта и сервисов, которыми управляет **Monoroh Developer**. Пользуясь нашими сервисами, вы соглашаетесь с этими Условиями.' },
         { type: 'h2', text: 'Принятие условий' },
         { type: 'p', text: 'Заходя на сайт и используя его, вы соглашаетесь с условиями и положениями этого соглашения.' },
         { type: 'h2', text: 'Лицензия на использование' },
         { type: 'p', text: 'Разрешено временно скачать одну копию материалов сайта для личного некоммерческого просмотра. В рамках этой лицензии нельзя:' },
         { type: 'ul', items: ['Изменять или копировать материалы', 'Использовать материалы в коммерческих целях или публично показывать', 'Реверс-инжинирить любое ПО', 'Удалять копирайт и иные обозначения прав'] },
         { type: 'h2', text: 'Отказ от ответственности' },
-        { type: 'p', text: 'Материалы предоставляются «как есть». Никаких прямых или подразумеваемых гарантий — мы отказываемся от всех гарантий.' },
+        { type: 'p', text: 'Материалы предоставляются "как есть". Никаких прямых или подразумеваемых гарантий — мы отказываемся от всех гарантий.' },
         { type: 'h2', text: 'Ограничения' },
         { type: 'p', text: 'Ни в каком случае Monoroh Developer или его поставщики не несут ответственности за убытки, связанные с использованием или невозможностью использования материалов сайта.' },
         { type: 'h2', text: 'Точность материалов' },
@@ -820,14 +820,14 @@ export const ru: Translations = {
       body: [
         { type: 'p', text: 'Эта политика описывает, как **Authmeister** обращается с вашими данными. Кратко: они не покидают ваше устройство.' },
         { type: 'h2', text: 'Какую информацию мы собираем' },
-        { type: 'ul', items: ['Ваши OTP-токены хранятся локально на устройстве.', 'Никакая личная информация не передаётся на наши серверы.', 'Может собираться обезличенная аналитика использования приложения — для его улучшения.'] },
+        { type: 'ul', items: ['Ваши OTP-токены хранятся локально на устройстве.', 'Никакая личная информация не передается на наши серверы.', 'Может собираться обезличенная аналитика использования приложения — для его улучшения.'] },
         { type: 'h2', text: 'Хранение данных' },
         { type: 'p', text: 'Все ваши данные аутентификации хранятся на устройстве безопасно:' },
         { type: 'ul', items: ['Зашифрованное локальное хранилище', 'Ключи шифрования, привязанные к устройству', 'Чувствительные данные не уходят в облако'] },
         { type: 'h2', text: 'Разрешения' },
         { type: 'ul', items: ['**Камера** — для сканирования QR-кодов при настройке', '**Хранилище** — для зашифрованного бэкапа и восстановления'] },
         { type: 'h2', text: 'Передача данных' },
-        { type: 'p', text: 'Мы не передаём ваши данные третьим лицам. Ваши OTP-секреты остаются на устройстве.' },
+        { type: 'p', text: 'Мы не передаем ваши данные третьим лицам. Ваши OTP-секреты остаются на устройстве.' },
         { type: 'h2', text: 'Контакты' },
         { type: 'p', text: 'Есть вопросы? Напишите на mailto:mnrhwow@gmail.com.' },
       ],
@@ -840,13 +840,13 @@ export const ru: Translations = {
         { type: 'h2', text: 'Принятие условий' },
         { type: 'p', text: 'Скачивая и используя Authmeister, вы соглашаетесь с этими условиями.' },
         { type: 'h2', text: 'Описание сервиса' },
-        { type: 'p', text: 'Authmeister — это OTP-аутентификатор, который генерирует одноразовые коды по времени (TOTP) и по счётчику (HOTP).' },
+        { type: 'p', text: 'Authmeister — это OTP-аутентификатор, который генерирует одноразовые коды по времени (TOTP) и по счетчику (HOTP).' },
         { type: 'h2', text: 'Обязанности пользователя' },
         { type: 'ul', items: ['Содержите устройство в безопасности', 'Делайте бэкапы своих данных аутентификации', 'Не передавайте OTP-коды посторонним'] },
         { type: 'h2', text: 'Отказ от ответственности' },
-        { type: 'p', text: 'Приложение предоставляется «как есть» без гарантий. Мы не несём ответственности за потерю доступа к аккаунтам из-за сбоев приложения или проблем устройства.' },
+        { type: 'p', text: 'Приложение предоставляется "как есть" без гарантий. Мы не несем ответственности за потерю доступа к аккаунтам из-за сбоев приложения или проблем устройства.' },
         { type: 'h2', text: 'Ограничение ответственности' },
-        { type: 'p', text: 'Наша ответственность ограничена в максимальной степени, разрешённой применимым законом.' },
+        { type: 'p', text: 'Наша ответственность ограничена в максимальной степени, разрешенной применимым законом.' },
         { type: 'h2', text: 'Контакты' },
         { type: 'p', text: 'Есть вопросы? Напишите на mailto:mnrhwow@gmail.com.' },
       ],
@@ -856,7 +856,7 @@ export const ru: Translations = {
   notFound: {
     title: 'Страница где-то затерялась.',
     lede:
-      'Не нашёл то, что ты искал. Возможно, страница переехала, переименовалась или вообще никогда не существовала.',
+      'Не нашел то, что ты искал. Возможно, страница переехала, переименовалась или вообще никогда не существовала.',
     ctaHome: 'На главную',
     ctaReport: 'Сообщить о проблеме',
     hintLabel: 'Возможно, ты искал',

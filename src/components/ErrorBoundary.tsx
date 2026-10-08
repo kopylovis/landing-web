@@ -31,7 +31,7 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
         <div className="error-boundary">
           <div className="error-container">
             <h2>Something went wrong</h2>
-            <p>We're sorry, but something unexpected happened. Please try refreshing the page.</p>
+            <p>Something broke on this page. Try reloading it.</p>
             <details style={{ whiteSpace: 'pre-wrap' }}>
               <summary>Error Details</summary>
               <p>{this.state.error?.toString()}</p>

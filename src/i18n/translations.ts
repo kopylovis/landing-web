@@ -102,12 +102,15 @@ export interface Translations {
   legal: {
     backHome: string
     backAuthmeister: string
+    backTossling: string
     section: string
     updated: string
+    tosslingUpdated: string
     privacy: LegalDoc
     terms: LegalDoc
     authmeisterPrivacy: LegalDoc
     authmeisterTerms: LegalDoc
+    tosslingPrivacy: LegalDoc
   }
   notFound: {
     title: string
@@ -382,8 +385,10 @@ export const en: Translations = {
   legal: {
     backHome: 'Back home',
     backAuthmeister: 'Back to Authmeister',
+    backTossling: 'Back to Tossling',
     section: 'Legal',
     updated: 'Updated 05 Mar 2025',
+    tosslingUpdated: 'Updated 9 Oct 2026',
 
     privacy: {
       title: 'Privacy Policy',
@@ -474,6 +479,38 @@ export const en: Translations = {
         { type: 'p', text: 'Our liability is limited to the maximum extent permitted by law.' },
         { type: 'h2', text: 'Contact' },
         { type: 'p', text: 'Questions? Email mailto:mnrhwow@gmail.com.' },
+      ],
+    },
+
+    tosslingPrivacy: {
+      title: 'Privacy Policy',
+      body: [
+        { type: 'p', text: 'This policy covers the **Tossling** apps for iPhone and Android. Tossling has no accounts and no analytics, and the developer does not receive what you copy.' },
+        { type: 'h2', text: 'Where your data goes' },
+        { type: 'p', text: 'The phone talks only to the Tossling server that your computer uses. You run that server yourself or use one run by someone you trust. The developer does not see its traffic. The one exception is the demo room, described below.' },
+        { type: 'h2', text: 'What the server sees' },
+        { type: 'ul', items: [
+          'Clipboard text, images and files are encrypted on your device with AES-256-GCM before they leave it. The key stays on the devices of your room, so the server cannot read the content.',
+          'The server keeps encrypted messages for up to 12 hours and attachments for up to 3 hours, then deletes them.',
+          'Like any web server, it sees the IP address of your device and when it connects.',
+          'Project notifications are not encrypted. Your own services send them to your server, and the phone shows them.',
+        ] },
+        { type: 'h2', text: 'Push notifications' },
+        { type: 'p', text: 'To wake the app, the server sends a push through Firebase Cloud Messaging by Google and, on iPhone, through the Apple Push Notification service. A push carries no clipboard content, only a signal to fetch new messages. For this Firebase gives the app an installation ID and a push token. They are not linked to your name or email. Google describes its part at https://policies.google.com/privacy.' },
+        { type: 'h2', text: 'On your phone' },
+        { type: 'ul', items: [
+          'The history of what you sent and received, the room key and the list of devices are stored on the phone only. On iPhone the room key is kept in the Keychain, so the app can return to the room after a reinstall.',
+          'The app reads the clipboard only when you send it, with the To Computer button, the share sheet, a shortcut or the quick settings tile.',
+          'The camera is used only to scan the QR code that a computer shows. Nothing is recorded or stored.',
+        ] },
+        { type: 'h2', text: 'Demo room' },
+        { type: 'p', text: 'The developer runs a demo room at tossling-demo.monoroh.com, so the app can be tried without a computer. A bot in that room decrypts what you send in order to reply. Everyone in the demo room sees the names of the other devices there, so do not send anything private. Messages are deleted after 12 hours and files after 3 hours.' },
+        { type: 'h2', text: 'Children' },
+        { type: 'p', text: 'Tossling is not directed at children under 13 and does not knowingly collect their data.' },
+        { type: 'h2', text: 'Source code' },
+        { type: 'p', text: 'The apps and the server are open source at https://github.com/Tossling, so anyone can check what they do.' },
+        { type: 'h2', text: 'Changes and contact' },
+        { type: 'p', text: 'When this policy changes, the new version appears on this page with a new date. Write to mailto:mnrhwow@gmail.com with any questions.' },
       ],
     },
   },
@@ -757,8 +794,10 @@ export const ru: Translations = {
   legal: {
     backHome: 'На главную',
     backAuthmeister: 'К Authmeister',
+    backTossling: 'К Tossling',
     section: 'Юридическое',
     updated: 'Обновлено 05.03.2025',
+    tosslingUpdated: 'Обновлено 09.10.2026',
 
     privacy: {
       title: 'Политика конфиденциальности',
@@ -849,6 +888,38 @@ export const ru: Translations = {
         { type: 'p', text: 'Наша ответственность ограничена в максимальной степени, разрешенной применимым законом.' },
         { type: 'h2', text: 'Контакты' },
         { type: 'p', text: 'Есть вопросы? Напишите на mailto:mnrhwow@gmail.com.' },
+      ],
+    },
+
+    tosslingPrivacy: {
+      title: 'Политика конфиденциальности',
+      body: [
+        { type: 'p', text: 'Политика относится к приложениям **Tossling** для iPhone и Android. В Tossling нет аккаунтов и аналитики, и разработчик не получает то, что вы копируете.' },
+        { type: 'h2', text: 'Куда уходят данные' },
+        { type: 'p', text: 'Телефон обменивается данными только с тем сервером Tossling, который использует ваш компьютер. Этот сервер вы запускаете сами или пользуетесь сервером человека, которому доверяете. Разработчик его трафик не видит. Исключение одно, демо-комната, о ней ниже.' },
+        { type: 'h2', text: 'Что видит сервер' },
+        { type: 'ul', items: [
+          'Текст, картинки и файлы из буфера шифруются на устройстве по AES-256-GCM еще до отправки. Ключ есть только у устройств вашей комнаты, поэтому сервер содержимое прочитать не может.',
+          'Зашифрованные сообщения сервер хранит до 12 часов, вложения до 3 часов, потом удаляет.',
+          'Как любой веб-сервер, он видит IP-адрес устройства и время подключения.',
+          'Уведомления проектов не шифруются. Их присылают на ваш сервер ваши же сервисы, а телефон показывает.',
+        ] },
+        { type: 'h2', text: 'Пуш-уведомления' },
+        { type: 'p', text: 'Чтобы разбудить приложение, сервер отправляет пуш через Firebase Cloud Messaging от Google, а на iPhone еще и через Apple Push Notification service. В пуше нет содержимого буфера, только сигнал забрать новые сообщения. Для этого Firebase выдает приложению идентификатор установки и токен для пушей. С вашим именем или почтой они не связаны. Свою часть Google описывает на https://policies.google.com/privacy.' },
+        { type: 'h2', text: 'На телефоне' },
+        { type: 'ul', items: [
+          'История отправленного и полученного, ключ комнаты и список устройств хранятся только на телефоне. На iPhone ключ комнаты лежит в связке ключей, поэтому после переустановки приложение возвращается в комнату.',
+          'Приложение читает буфер, только когда вы его отправляете, кнопкой "На компьютер", через меню "Поделиться", быструю команду или плитку в быстрых настройках.',
+          'Камера нужна только чтобы отсканировать QR-код с компьютера. Ничего не записывается и не сохраняется.',
+        ] },
+        { type: 'h2', text: 'Демо-комната' },
+        { type: 'p', text: 'Разработчик держит демо-комнату на tossling-demo.monoroh.com, чтобы приложение можно было попробовать без компьютера. Бот в этой комнате расшифровывает присланное, чтобы ответить. Все, кто в демо-комнате, видят названия устройств друг друга, поэтому не отправляйте туда ничего личного. Сообщения удаляются через 12 часов, файлы через 3 часа.' },
+        { type: 'h2', text: 'Дети' },
+        { type: 'p', text: 'Tossling не рассчитан на детей младше 13 лет и сознательно не собирает их данные.' },
+        { type: 'h2', text: 'Исходный код' },
+        { type: 'p', text: 'Приложения и сервер открыты на https://github.com/Tossling, так что любой может проверить, что они делают.' },
+        { type: 'h2', text: 'Изменения и связь' },
+        { type: 'p', text: 'Если политика изменится, новая версия появится на этой странице с новой датой. Вопросы присылайте на mailto:mnrhwow@gmail.com.' },
       ],
     },
   },

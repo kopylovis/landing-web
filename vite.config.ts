@@ -1,7 +1,7 @@
 import { defineConfig, Plugin } from 'vite'
 import react from '@vitejs/plugin-react'
 
-const routesWithFiles = ['tossling']
+const routesWithFiles = ['tossling', 'tossling/privacy']
 
 function routeEntryPages(): Plugin {
   return {

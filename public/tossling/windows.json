@@ -1,9 +1,9 @@
 {
-  "version": "0.5.1",
-  "url": "https://github.com/tossling/tossling-desktop/releases/download/v0.5.1/Tossling-0.5.1.msi",
-  "size": 69461472,
-  "sha256": "1cd17551f022786ebd00a942d6788b902cb0177be474116064f95c8e40355dc0",
-  "signature": "rE4CSF2H88j/EPcFRfKT/UwCgyr6bmp6o9qNqE+qdmE/GMY2W6D84MNjEh/YHhUUN5M5zA8iZWIfSfoktzHqAQ==",
-  "manifest_signature": "GSbaTlMqIu98pw8amK5DXGdAHBeTriKRoa+uaELbh1OYMYZqudChGbhVVjljuAMRcpl7J4VgfKYUZoiOgGNsDg==",
-  "notes": "https://github.com/tossling/tossling-desktop/releases/tag/v0.5.1"
+  "version": "0.5.2",
+  "url": "https://github.com/tossling/tossling-desktop/releases/download/v0.5.2/Tossling-0.5.2.msi",
+  "size": 70529363,
+  "sha256": "5e74b4bbe21f6cc9b78b5570f034c2a713e9a734a265f81c38e7af2f769bce9a",
+  "signature": "BP0OZwI4uquS9Tgw/NBd5stzRUnC9PmNJvp50mKOELp/TTz+RhHZVTdWrJ5q8+2iWiZfoRWDOrn/Gk4DKBRGAg==",
+  "manifest_signature": "NUtgDdYdzjKQ1gC289A7ymixQrFZol+6/Kmg2i6DGnU8dp2vU2BU3n1zazLe5U9R2WTV3LSOPQ7uWK5btIQsCw==",
+  "notes": "https://github.com/tossling/tossling-desktop/releases/tag/v0.5.2"
 }

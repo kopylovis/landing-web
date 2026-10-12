@@ -42,7 +42,7 @@ export const projects: AppData[] = [
   {
     id: 'fastlaneRustore',
     name: 'upload_to_ru_store',
-    image: '/media/fastlane-rustore.svg',
+    image: '/media/upload_to_ru_store_512x512.png',
     platforms: [{ name: 'Ruby', icon: '', available: true }],
     links: {
       github: 'https://github.com/kopylovis/fastlane-upload-to-ru-store',

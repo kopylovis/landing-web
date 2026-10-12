@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
+import { seoProps } from '../seo/pages'
 import { useI18n } from '../hooks/useI18n'
 import { projects } from '../data/projects'
 import '../styles/AuthmeisterPage.css'
@@ -40,13 +41,7 @@ export default function Authmeister() {
 
   return (
     <>
-      <SEO
-        title="Authmeister — Modern OTP Authenticator"
-        description={t.projects.authmeister.description}
-        url="/authmeister"
-        type="website"
-        locale={locale}
-      />
+      <SEO {...seoProps('authmeister', locale)} />
 
       <div className="product">
         <div className="container">

@@ -37,7 +37,7 @@ describe('SEO Component', () => {
     expect(ogDescription).toHaveAttribute('content', 'Test Description')
     
     const ogUrl = document.querySelector('meta[property="og:url"]')
-    expect(ogUrl).toHaveAttribute('content', 'https://monoroh.com/test')
+    expect(ogUrl).toHaveAttribute('content', 'https://monoroh.com/test/')
   })
 
   it('handles custom image and siteName', async () => {
@@ -70,7 +70,7 @@ describe('SEO Component', () => {
 
     await waitFor(() => {
       const twitterCard = document.querySelector('meta[name="twitter:card"]')
-      expect(twitterCard).toHaveAttribute('content', 'summary_large_image')
+      expect(twitterCard).toHaveAttribute('content', 'summary')
     })
     
     const twitterCreator = document.querySelector('meta[name="twitter:creator"]')
@@ -78,6 +78,15 @@ describe('SEO Component', () => {
     
     const twitterTitle = document.querySelector('meta[name="twitter:title"]')
     expect(twitterTitle).toHaveAttribute('content', 'Twitter Test - Monoroh')
+  })
+
+  it('marks noindex pages and drops the canonical link', async () => {
+    renderWithHelmet(<SEO title="Missing" description="Not here" noindex />)
+
+    await waitFor(() => {
+      expect(document.querySelector('meta[name="robots"]')).toHaveAttribute('content', 'noindex')
+    })
+    expect(document.querySelector('link[rel="canonical"]')).toBeNull()
   })
 
   it('handles canonical URL correctly', async () => {

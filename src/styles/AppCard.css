@@ -124,8 +124,7 @@
   letter-spacing: -0.025em;
   line-height: 1.15;
   color: var(--ink);
-  overflow-wrap: anywhere;
-  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .app-card--featured .app-card__name {
@@ -139,6 +138,16 @@
   letter-spacing: 0.08em;
   margin-left: auto;
   align-self: flex-start;
+}
+
+@media (max-width: 480px) {
+  .app-card__index { display: none; }
+
+  .app-card--featured .app-card__icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+  }
 }
 
 /* Body */

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
+import { seoProps } from '../seo/pages'
 import { useI18n } from '../hooks/useI18n'
 import { projects } from '../data/projects'
 import '../styles/AuthmeisterPage.css'
@@ -65,14 +66,7 @@ export default function Tossling() {
 
   return (
     <>
-      <SEO
-        title="Tossling, One Clipboard for Your Computers and Android Phone"
-        description={t.projects.tossling.description}
-        image="https://monoroh.com/media/tossling_512x512.png"
-        url="/tossling"
-        type="website"
-        locale={locale}
-      />
+      <SEO {...seoProps('tossling', locale)} />
 
       <div className="product tossling">
         <div className="container">
@@ -167,6 +161,10 @@ export default function Tossling() {
             <p>{page.finalBody}</p>
             <DownloadButtons />
             <p className="tossling__status">{page.status}</p>
+
+            <nav className="product__legal" aria-label="Tossling legal">
+              <Link to="/tossling/privacy">{page.legalPrivacy}</Link>
+            </nav>
           </section>
         </div>
       </div>

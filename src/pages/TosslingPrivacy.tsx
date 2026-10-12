@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
+import { seoProps } from '../seo/pages'
 import Prose, { ProseBlock } from '../components/Prose'
 import { useI18n } from '../hooks/useI18n'
 import '../styles/ContentPage.css'
@@ -9,13 +10,7 @@ export default function TosslingPrivacy() {
 
   return (
     <>
-      <SEO
-        title={`Tossling, ${t.legal.tosslingPrivacy.title}`}
-        description={t.legal.tosslingPrivacy.title}
-        url="/tossling/privacy"
-        type="article"
-        locale={locale}
-      />
+      <SEO {...seoProps('tosslingPrivacy', locale)} />
       <div className="legal">
         <div className="container container-narrow">
           <Link to="/tossling" className="legal__back">

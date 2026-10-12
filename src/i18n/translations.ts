@@ -18,14 +18,14 @@ interface ProseH2 { type: 'h2'; text: string }
 interface ProseH3 { type: 'h3'; text: string }
 interface ProseUl { type: 'ul'; items: string[] }
 type ProseBlockT = ProseP | ProseH2 | ProseH3 | ProseUl
-interface LegalDoc { title: string; body: ProseBlockT[] }
+interface LegalDoc { title: string; description: string; body: ProseBlockT[] }
 interface ProjectCopyT { category: string; description: string; features: string[] }
 interface HintLink { label: string; to: string; external: boolean }
 interface Shot { src: string; alt: string; kind: 'desktop' | 'phone' | 'wide' }
 interface RepoLink { name: string; detail: string; href: string }
 
 export interface Translations {
-  meta: { siteName: string; description: string; keywords: string }
+  meta: { siteName: string; description: string }
   nav: { index: string; work: string; about: string; contact: string }
   controls: { toLight: string; toDark: string; switchLanguage: string }
   hero: {
@@ -98,6 +98,7 @@ export interface Translations {
     finalTitle: string
     finalBody: string
     status: string
+    legalPrivacy: string
   }
   legal: {
     backHome: string
@@ -106,6 +107,8 @@ export interface Translations {
     section: string
     updated: string
     tosslingUpdated: string
+    privacyUpdated: string
+    authmeisterUpdated: string
     privacy: LegalDoc
     terms: LegalDoc
     authmeisterPrivacy: LegalDoc
@@ -129,8 +132,6 @@ export const en: Translations = {
     siteName: 'Monoroh',
     description:
       'Mobile developer. I build apps for iOS, Android, desktop and web, often with Kotlin Multiplatform.',
-    keywords:
-      'Mobile App Developer, Kotlin Multiplatform, iOS, Android, Compose Multiplatform, SwiftUI',
   },
 
   nav: {
@@ -276,7 +277,7 @@ export const en: Translations = {
       { label: 'Platforms', value: 'iOS · Android' },
       { label: 'Tech', value: 'Kotlin Multiplatform' },
       { label: 'Pricing', value: 'Free' },
-      { label: 'Privacy', value: 'On-device only' },
+      { label: 'Privacy', value: 'Encrypted on the device' },
     ],
     featuresEyebrow: 'Features',
     featuresTitle: 'Open it, copy the code, close it.',
@@ -292,9 +293,9 @@ export const en: Translations = {
           'Scan the otpauth-migration QR code from Google Authenticator once and all your accounts move over.',
       },
       {
-        title: 'Only on the device',
+        title: 'Secrets stay on the device',
         body:
-          'Secrets are encrypted on the device. There is no cloud sync, and tokens never reach analytics or third parties.',
+          'Secrets are encrypted on the device and never reach analytics or the developer. They go to the cloud only if you turn on backups, encrypted with your password.',
       },
       {
         title: 'Encrypted backups',
@@ -303,7 +304,7 @@ export const en: Translations = {
       },
     ],
     finalTitle: 'Free, no ads.',
-    finalBody: 'On the App Store, Google Play and RuStore. No ads and no tracking.',
+    finalBody: 'On the App Store, Google Play and RuStore. No ads.',
     legalPrivacy: 'Privacy Policy',
     legalTerms: 'Terms & Conditions',
   },
@@ -380,6 +381,7 @@ export const en: Translations = {
     finalBody:
       'Run Tossling Server, open its setup page, then install the app on a computer. It asks for the address and the token and shows a QR code for the phone.',
     status: 'Early, in daily use by the author. Expect changes before 1.0.',
+    legalPrivacy: 'Privacy Policy',
   },
 
   legal: {
@@ -389,38 +391,32 @@ export const en: Translations = {
     section: 'Legal',
     updated: 'Updated 05 Mar 2025',
     tosslingUpdated: 'Updated 12 Oct 2026',
+    privacyUpdated: 'Updated 12 Oct 2026',
+    authmeisterUpdated: 'Updated 12 Oct 2026',
 
     privacy: {
       title: 'Privacy Policy',
+      description: 'The monoroh.com website collects nothing: no analytics and no cookies. What the GitHub Pages hosting sees and what happens to your emails.',
       body: [
-        { type: 'p', text: 'This Privacy Policy describes how **Monoroh Developer** (\u201cwe,\u201d \u201cus,\u201d or \u201cour\u201d) collects, uses, and protects your information when you visit our website and use our services. By using our services, you agree to the collection and use of information in accordance with this Privacy Policy.' },
-        { type: 'h2', text: 'Information we collect' },
-        { type: 'h3', text: 'Personal information' },
-        { type: 'p', text: 'We may collect personal information that you voluntarily provide to us, such as:' },
-        { type: 'ul', items: ['Email address (when you contact us)', 'Name (when you provide it in communications)', 'Any other information you choose to provide'] },
-        { type: 'h3', text: 'Usage information' },
-        { type: 'p', text: 'We may automatically collect information about your visit, including:' },
-        { type: 'ul', items: ['Browser type and version', 'Operating system', 'Pages visited and time spent on the site', 'Anonymized IP address'] },
-        { type: 'h2', text: 'How we use your information' },
-        { type: 'ul', items: ['To respond to your inquiries and communications', 'To improve the website and the apps we build', 'To analyze usage patterns and improve UX', 'To comply with legal obligations'] },
-        { type: 'h2', text: 'Information sharing' },
-        { type: 'p', text: "We don\u2019t sell or trade your personal information. We may share it only:" },
-        { type: 'ul', items: ['With your explicit consent', 'To comply with legal requirements', 'To protect rights, property, or safety', 'In connection with a business transfer or merger'] },
-        { type: 'h2', text: 'Data security' },
-        { type: 'p', text: 'We implement appropriate technical and organizational measures to protect your data against unauthorized access, alteration, disclosure, or destruction. No method of transmission over the internet is 100% secure.' },
-        { type: 'h2', text: 'Your rights' },
-        { type: 'ul', items: ['Access your personal information', 'Correct inaccurate information', 'Request deletion of your information', 'Object to processing', 'Request data portability'] },
-        { type: 'h2', text: "Children\u2019s privacy" },
-        { type: 'p', text: 'Our services are not intended for children under 13. We do not knowingly collect personal information from children under 13.' },
-        { type: 'h2', text: 'Changes' },
-        { type: 'p', text: "We may update this policy from time to time. We\u2019ll post the new version on this page and update the date above." },
-        { type: 'h2', text: 'Contact' },
-        { type: 'p', text: 'Questions? Reach out at mailto:mnrhwow@gmail.com.' },
+        { type: 'p', text: 'This policy covers the **monoroh.com** website. Each app has a policy of its own: https://monoroh.com/authmeister/privacy/ for Authmeister and https://monoroh.com/tossling/privacy/ for Tossling.' },
+        { type: 'h2', text: 'What the site collects' },
+        { type: 'p', text: 'Nothing. The site has no analytics, no counters, no ads and no cookies. Fonts, images and scripts load from monoroh.com itself.' },
+        { type: 'h2', text: 'Hosting' },
+        { type: 'p', text: 'The site is hosted on GitHub Pages. Like any web server, GitHub sees your IP address and the pages you open and keeps them in its logs for security. GitHub describes this at https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement.' },
+        { type: 'h2', text: 'In your browser' },
+        { type: 'p', text: 'The theme and language you pick are saved in your browser’s local storage. They stay on your device and are not sent anywhere. Clearing the site data removes them.' },
+        { type: 'h2', text: 'If you write to me' },
+        { type: 'p', text: 'When you email me, I get your address and what you write. I use it only to reply. Ask, and I will delete the correspondence.' },
+        { type: 'h2', text: 'Children' },
+        { type: 'p', text: 'The site is not directed at children under 13 and does not collect their data.' },
+        { type: 'h2', text: 'Who is responsible' },
+        { type: 'p', text: 'The site and the apps are made by Ivan Kopylov (Monoroh). When this policy changes, the new version appears on this page with a new date. Write to mailto:mnrhwow@gmail.com with any questions.' },
       ],
     },
 
     terms: {
       title: 'Terms of Service',
+      description: 'Terms of use for the monoroh.com website.',
       body: [
         { type: 'p', text: 'These Terms of Service (\u201cTerms\u201d) govern your use of our website and services operated by **Monoroh Developer**. By accessing or using our services, you agree to be bound by these Terms.' },
         { type: 'h2', text: 'Acceptance of terms' },
@@ -447,32 +443,51 @@ export const en: Translations = {
 
     authmeisterPrivacy: {
       title: 'Privacy Policy',
+      description: 'What Authmeister keeps on your device, what it sends to the developer’s server, to Firebase and to cloud backups, and how to delete it.',
       body: [
-        { type: 'p', text: "This policy describes how **Authmeister** handles your data. Short version: it doesn\u2019t leave your device." },
-        { type: 'h2', text: 'Information we collect' },
-        { type: 'ul', items: ['Your OTP tokens are stored locally on your device.', 'No personal information is transmitted to our servers.', 'Anonymous app-usage analytics may be collected to improve the app.'] },
-        { type: 'h2', text: 'Data storage' },
-        { type: 'p', text: 'All your authentication data is stored securely on your device using:' },
-        { type: 'ul', items: ['Encrypted local storage', 'Device-specific encryption keys', 'No cloud storage of sensitive data'] },
-        { type: 'h2', text: 'Permissions' },
-        { type: 'ul', items: ['**Camera** — to scan QR codes for setup', '**Storage** — for encrypted backup & restore'] },
-        { type: 'h2', text: 'Data sharing' },
-        { type: 'p', text: "We don\u2019t share your data with third parties. Your OTP secrets remain on your device." },
-        { type: 'h2', text: 'Contact' },
-        { type: 'p', text: 'Questions? Email mailto:mnrhwow@gmail.com.' },
+        { type: 'p', text: 'This policy covers the **Authmeister** apps for iPhone, Apple Watch, Android and Wear OS. Authmeister has no accounts and no ads. Your codes and passwords are stored on your device, and the developer never receives them.' },
+        { type: 'h2', text: 'On your device' },
+        { type: 'ul', items: [
+          'Accounts for one-time codes and saved passwords are stored encrypted. On Android they are encrypted with AES-256-GCM under a key kept in the Android Keystore. On iPhone they are kept in the Keychain and are not synced to iCloud Keychain.',
+          'A PIN, Face ID or a fingerprint can lock the app. The system checks the biometrics, and the app never gets them.',
+          'The camera is used only to scan QR codes. The photo library is read only when you pick an image with a QR code.',
+          'Codes go to a paired Apple Watch or Wear OS watch directly over the system connection. By default all codes are sent and passwords are not. You choose what goes to the watch in the settings.',
+          'Widgets show codes on the home screen if you add them.',
+        ] },
+        { type: 'h2', text: 'The developer’s server' },
+        { type: 'ul', items: [
+          'At launch the app downloads the list of services and their setup guides from api.monoroh.com. Each request carries the app version, the OS version and the device maker and model. Like any web server, it also sees your IP address. Codes, passwords and account names are never sent.',
+          'To check whether a saved password has leaked, the app sends the first 5 characters of its SHA-1 hash. The server returns all leaked hashes that start with them, and the match is checked on the device. The password and its full hash never leave the device.',
+        ] },
+        { type: 'h2', text: 'Firebase' },
+        { type: 'p', text: 'The app uses Firebase Analytics and Firebase Crashlytics by Google. Analytics records app launches, sessions and screens with the device model, OS version, country and an app instance ID. Crashlytics sends crash reports with the error, the device state and an installation ID. None of this is linked to your name or email, and your codes, passwords and account names are not sent. On Android, Firebase may also read the advertising ID. Authmeister shows no ads and does not use it for advertising. Google describes its part at https://firebase.google.com/support/privacy.' },
+        { type: 'h2', text: 'Cloud backups' },
+        { type: 'ul', items: [
+          'Backups to Google Drive, Dropbox, Microsoft OneDrive or iCloud Drive are off until you turn them on.',
+          'A backup is encrypted on the device with your password (PBKDF2 and AES-GCM) before upload. The cloud provider stores only the encrypted file. The password hint is saved in the file unencrypted, so don’t put the password in it.',
+          'When you connect Google Drive, Dropbox or OneDrive, the app receives your name, email and avatar from that service to show which account is connected. Signing out in the app revokes its access.',
+          'Export to a QR code is not encrypted unless you turn on encryption in the backup settings. Treat an unencrypted export like the secrets themselves.',
+        ] },
+        { type: 'h2', text: 'Deleting your data' },
+        { type: 'p', text: 'Delete accounts and passwords in the app, one by one or several at once. Resetting a forgotten PIN erases everything. On iPhone the Keychain keeps the data after the app is deleted, so delete the accounts first if you want them gone. A cloud backup can be deleted in the backup settings or in the cloud storage itself. To have Firebase or server data about your device deleted, write to the email below.' },
+        { type: 'h2', text: 'Children' },
+        { type: 'p', text: 'Authmeister is not directed at children under 13 and does not knowingly collect their data.' },
+        { type: 'h2', text: 'Changes and contact' },
+        { type: 'p', text: 'Authmeister is made by Ivan Kopylov. When this policy changes, the new version appears on this page with a new date. Write to mailto:mnrhwow@gmail.com with any questions.' },
       ],
     },
 
     authmeisterTerms: {
       title: 'Terms and Conditions',
+      description: 'Terms of use for the Authmeister authenticator for iPhone, Android and watches.',
       body: [
         { type: 'p', text: 'These Terms govern your use of the **Authmeister** mobile application.' },
         { type: 'h2', text: 'Acceptance of terms' },
         { type: 'p', text: 'By downloading and using Authmeister, you agree to these terms.' },
         { type: 'h2', text: 'Description of service' },
-        { type: 'p', text: 'Authmeister is an OTP authenticator that generates time-based (TOTP) and counter-based (HOTP) authentication codes.' },
+        { type: 'p', text: 'Authmeister is an authenticator that generates time-based (TOTP) and counter-based (HOTP) codes and stores passwords. It can show codes on a watch and in widgets and back up your data, encrypted, to a cloud storage you choose.' },
         { type: 'h2', text: 'User responsibilities' },
-        { type: 'ul', items: ['Keep your device secure', 'Back up your authentication data', "Don\u2019t share your OTP codes with unauthorized parties"] },
+        { type: 'ul', items: ['Keep your device secure', 'Back up your authentication data', 'Remember your backup password. It cannot be recovered, and without it the backup cannot be restored.', "Don\u2019t share your OTP codes with unauthorized parties"] },
         { type: 'h2', text: 'Disclaimer' },
         { type: 'p', text: 'The app is provided \u201cas is\u201d without warranties. We are not responsible for loss of account access due to app malfunction or device issues.' },
         { type: 'h2', text: 'Limitation of liability' },
@@ -484,6 +499,7 @@ export const en: Translations = {
 
     tosslingPrivacy: {
       title: 'Privacy Policy',
+      description: 'Tossling encrypts the clipboard on your device. What the server and Firebase see, what stays on the phone and how to delete it.',
       body: [
         { type: 'p', text: 'This policy covers the **Tossling** apps for iPhone and Android. Tossling has no accounts and no analytics, and the developer does not receive what you copy.' },
         { type: 'h2', text: 'Where your data goes' },
@@ -541,8 +557,6 @@ export const ru: Translations = {
     siteName: 'Monoroh',
     description:
       'Мобильный разработчик. Делаю приложения для iOS, Android, десктопа и веба, часто на Kotlin Multiplatform.',
-    keywords:
-      'мобильная разработка, Kotlin Multiplatform, iOS, Android, Compose Multiplatform, SwiftUI',
   },
 
   nav: {
@@ -688,7 +702,7 @@ export const ru: Translations = {
       { label: 'Платформы', value: 'iOS · Android' },
       { label: 'Стек', value: 'Kotlin Multiplatform' },
       { label: 'Цена', value: 'Бесплатно' },
-      { label: 'Приватность', value: 'Только на устройстве' },
+      { label: 'Приватность', value: 'Шифрование на устройстве' },
     ],
     featuresEyebrow: 'Возможности',
     featuresTitle: 'Открыл, скопировал код, закрыл.',
@@ -704,9 +718,9 @@ export const ru: Translations = {
           'Отсканируй QR-код otpauth-migration из Google Authenticator, и все аккаунты переедут. Вбивать секреты руками не нужно.',
       },
       {
-        title: 'Только на устройстве',
+        title: 'Секреты на устройстве',
         body:
-          'Секреты зашифрованы на устройстве. Облачной синхронизации нет, токены не попадают ни в аналитику, ни к третьим лицам.',
+          'Секреты зашифрованы на устройстве и не попадают ни в аналитику, ни к разработчику. В облако они уходят, только если включить бэкап, и шифруются вашим паролем.',
       },
       {
         title: 'Зашифрованные бэкапы',
@@ -715,7 +729,7 @@ export const ru: Translations = {
       },
     ],
     finalTitle: 'Бесплатно, без рекламы.',
-    finalBody: 'В App Store, Google Play и RuStore. Без рекламы и трекинга.',
+    finalBody: 'В App Store, Google Play и RuStore. Без рекламы.',
     legalPrivacy: 'Политика конфиденциальности',
     legalTerms: 'Условия использования',
   },
@@ -792,6 +806,7 @@ export const ru: Translations = {
     finalBody:
       'Запустите Tossling Server, откройте его страницу настройки и поставьте приложение на компьютер. Оно спросит адрес и токен и покажет QR-код для телефона.',
     status: 'Ранняя версия, автор пользуется каждый день. До 1.0 возможны изменения.',
+    legalPrivacy: 'Политика конфиденциальности',
   },
 
   legal: {
@@ -801,38 +816,32 @@ export const ru: Translations = {
     section: 'Юридическое',
     updated: 'Обновлено 05.03.2025',
     tosslingUpdated: 'Обновлено 12.10.2026',
+    privacyUpdated: 'Обновлено 12.10.2026',
+    authmeisterUpdated: 'Обновлено 12.10.2026',
 
     privacy: {
       title: 'Политика конфиденциальности',
+      description: 'Сайт monoroh.com ничего не собирает, на нем нет аналитики и cookies. Что видит хостинг GitHub Pages и что происходит с письмами.',
       body: [
-        { type: 'p', text: 'Эта политика описывает, как **Monoroh Developer** ("мы", "нас" или "наш") собирает, использует и защищает вашу информацию, когда вы посещаете сайт и пользуетесь нашими сервисами. Используя наши сервисы, вы соглашаетесь со сбором и использованием информации в соответствии с этой политикой.' },
-        { type: 'h2', text: 'Какую информацию мы собираем' },
-        { type: 'h3', text: 'Личная информация' },
-        { type: 'p', text: 'Мы можем собирать личную информацию, которую вы добровольно передаете, например:' },
-        { type: 'ul', items: ['Email-адрес (когда вы пишете нам)', 'Имя (если вы указываете его в переписке)', 'Любую другую информацию, которую вы решите предоставить'] },
-        { type: 'h3', text: 'Информация об использовании' },
-        { type: 'p', text: 'Мы можем автоматически собирать информацию о вашем визите:' },
-        { type: 'ul', items: ['Тип и версию браузера', 'Операционную систему', 'Посещенные страницы и время на сайте', 'Обезличенный IP-адрес'] },
-        { type: 'h2', text: 'Как мы используем эту информацию' },
-        { type: 'ul', items: ['Отвечаем на ваши запросы и сообщения', 'Улучшаем сайт и приложения', 'Анализируем паттерны использования и улучшаем UX', 'Соблюдаем юридические обязательства'] },
-        { type: 'h2', text: 'Передача информации' },
-        { type: 'p', text: 'Мы не продаем и не передаем вашу личную информацию. Передача возможна только:' },
-        { type: 'ul', items: ['С вашего явного согласия', 'Для выполнения требований закона', 'Для защиты прав, имущества и безопасности', 'В рамках реорганизации или слияния'] },
-        { type: 'h2', text: 'Безопасность' },
-        { type: 'p', text: 'Мы применяем разумные технические и организационные меры для защиты данных от несанкционированного доступа, изменения, раскрытия или уничтожения. Ни один способ передачи через интернет не безопасен на 100%.' },
-        { type: 'h2', text: 'Ваши права' },
-        { type: 'ul', items: ['Получить доступ к своей личной информации', 'Исправить неточные данные', 'Потребовать удаления данных', 'Возразить против обработки', 'Запросить переносимость данных'] },
+        { type: 'p', text: 'Политика относится к сайту **monoroh.com**. У каждого приложения своя политика, для Authmeister это https://monoroh.com/authmeister/privacy/, для Tossling https://monoroh.com/tossling/privacy/.' },
+        { type: 'h2', text: 'Что собирает сайт' },
+        { type: 'p', text: 'Ничего. На сайте нет аналитики, счетчиков, рекламы и cookies. Шрифты, картинки и скрипты грузятся с самого monoroh.com.' },
+        { type: 'h2', text: 'Хостинг' },
+        { type: 'p', text: 'Сайт размещен на GitHub Pages. Как любой веб-сервер, GitHub видит IP-адрес и открытые страницы и хранит их в журналах для безопасности. Подробности у GitHub на https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement.' },
+        { type: 'h2', text: 'В браузере' },
+        { type: 'p', text: 'Выбранные тема и язык сохраняются в локальном хранилище браузера. Они остаются на устройстве и никуда не отправляются. Если очистить данные сайта, они пропадут.' },
+        { type: 'h2', text: 'Если вы мне пишете' },
+        { type: 'p', text: 'Из письма я получаю ваш адрес и то, что вы написали, и использую это только для ответа. Если попросите, удалю переписку.' },
         { type: 'h2', text: 'Дети' },
-        { type: 'p', text: 'Наши сервисы не предназначены для детей младше 13 лет. Мы намеренно не собираем личную информацию детей младше 13.' },
-        { type: 'h2', text: 'Изменения' },
-        { type: 'p', text: 'Мы можем обновлять политику. Новая версия будет опубликована на этой странице с обновленной датой.' },
-        { type: 'h2', text: 'Контакты' },
-        { type: 'p', text: 'Есть вопросы? Напишите на mailto:mnrhwow@gmail.com.' },
+        { type: 'p', text: 'Сайт не рассчитан на детей младше 13 лет и не собирает их данные.' },
+        { type: 'h2', text: 'Кто отвечает' },
+        { type: 'p', text: 'Сайт и приложения делает Иван Копылов (Monoroh). Если политика изменится, новая версия появится на этой странице с новой датой. Вопросы присылайте на mailto:mnrhwow@gmail.com.' },
       ],
     },
 
     terms: {
       title: 'Условия использования',
+      description: 'Условия использования сайта monoroh.com.',
       body: [
         { type: 'p', text: 'Эти условия использования ("Условия") регулируют ваше использование сайта и сервисов, которыми управляет **Monoroh Developer**. Пользуясь нашими сервисами, вы соглашаетесь с этими Условиями.' },
         { type: 'h2', text: 'Принятие условий' },
@@ -859,32 +868,51 @@ export const ru: Translations = {
 
     authmeisterPrivacy: {
       title: 'Политика конфиденциальности',
+      description: 'Что Authmeister хранит на устройстве, что отправляет на сервер разработчика, в Firebase и в облачные бэкапы и как все это удалить.',
       body: [
-        { type: 'p', text: 'Эта политика описывает, как **Authmeister** обращается с вашими данными. Кратко: они не покидают ваше устройство.' },
-        { type: 'h2', text: 'Какую информацию мы собираем' },
-        { type: 'ul', items: ['Ваши OTP-токены хранятся локально на устройстве.', 'Никакая личная информация не передается на наши серверы.', 'Может собираться обезличенная аналитика использования приложения — для его улучшения.'] },
-        { type: 'h2', text: 'Хранение данных' },
-        { type: 'p', text: 'Все ваши данные аутентификации хранятся на устройстве безопасно:' },
-        { type: 'ul', items: ['Зашифрованное локальное хранилище', 'Ключи шифрования, привязанные к устройству', 'Чувствительные данные не уходят в облако'] },
-        { type: 'h2', text: 'Разрешения' },
-        { type: 'ul', items: ['**Камера** — для сканирования QR-кодов при настройке', '**Хранилище** — для зашифрованного бэкапа и восстановления'] },
-        { type: 'h2', text: 'Передача данных' },
-        { type: 'p', text: 'Мы не передаем ваши данные третьим лицам. Ваши OTP-секреты остаются на устройстве.' },
-        { type: 'h2', text: 'Контакты' },
-        { type: 'p', text: 'Есть вопросы? Напишите на mailto:mnrhwow@gmail.com.' },
+        { type: 'p', text: 'Политика относится к приложениям **Authmeister** для iPhone, Apple Watch, Android и Wear OS. В Authmeister нет аккаунтов и рекламы. Коды и пароли хранятся на вашем устройстве, разработчик их не получает.' },
+        { type: 'h2', text: 'На устройстве' },
+        { type: 'ul', items: [
+          'Аккаунты одноразовых кодов и сохраненные пароли хранятся в зашифрованном виде. На Android их шифрует AES-256-GCM ключом из Android Keystore. На iPhone они лежат в связке ключей и не синхронизируются через iCloud.',
+          'Приложение можно закрыть PIN-кодом, Face ID или отпечатком. Биометрию проверяет система, приложению она не передается.',
+          'Камера нужна только для сканирования QR-кодов. К фотографиям приложение обращается, только когда вы сами выбираете картинку с QR-кодом.',
+          'На сопряженные Apple Watch или часы с Wear OS коды уходят напрямую через системное соединение. По умолчанию отправляются все коды, а пароли нет. Что попадет на часы, выбирается в настройках.',
+          'Если добавить виджет, он показывает коды на главном экране.',
+        ] },
+        { type: 'h2', text: 'Сервер разработчика' },
+        { type: 'ul', items: [
+          'При запуске приложение загружает с api.monoroh.com список сервисов и инструкции к ним. В каждом запросе есть версия приложения, версия системы, производитель и модель устройства. Как любой веб-сервер, он видит и IP-адрес. Коды, пароли и названия аккаунтов туда не отправляются.',
+          'Чтобы проверить, не утек ли сохраненный пароль, приложение отправляет первые 5 символов его хэша SHA-1. Сервер возвращает все утекшие хэши с таким началом, а совпадение ищется на устройстве. Сам пароль и полный хэш устройство не покидают.',
+        ] },
+        { type: 'h2', text: 'Firebase' },
+        { type: 'p', text: 'В приложении работают Firebase Analytics и Firebase Crashlytics от Google. Analytics записывает запуски, сессии и экраны вместе с моделью устройства, версией системы, страной и идентификатором установки приложения. Crashlytics присылает отчеты о сбоях с ошибкой, состоянием устройства и идентификатором установки. С вашим именем или почтой это не связано, коды, пароли и названия аккаунтов не отправляются. На Android Firebase может читать рекламный идентификатор. Рекламы в Authmeister нет, и для рекламы он не используется. Свою часть Google описывает на https://firebase.google.com/support/privacy.' },
+        { type: 'h2', text: 'Облачные бэкапы' },
+        { type: 'ul', items: [
+          'Бэкап в Google Drive, Dropbox, Microsoft OneDrive или iCloud Drive выключен, пока вы сами его не включите.',
+          'Перед отправкой бэкап шифруется на устройстве вашим паролем (PBKDF2 и AES-GCM). В облаке лежит только зашифрованный файл. Подсказка к паролю хранится в файле открыто, поэтому не пишите в нее сам пароль.',
+          'При подключении Google Drive, Dropbox или OneDrive приложение получает от сервиса имя, почту и аватар, чтобы показать, какой аккаунт подключен. Если выйти из аккаунта в приложении, доступ отзывается.',
+          'Экспорт в QR-код не шифруется, пока шифрование не включено в настройках бэкапа. Обращайтесь с таким экспортом так же, как с самими секретами.',
+        ] },
+        { type: 'h2', text: 'Как удалить свои данные' },
+        { type: 'p', text: 'Аккаунты и пароли удаляются в приложении по одному или выборкой. Сброс забытого PIN-кода стирает все. На iPhone связка ключей хранит данные и после удаления приложения, поэтому сначала удалите аккаунты. Облачный бэкап удаляется в настройках бэкапа или прямо в облачном хранилище. Чтобы удалить данные о вашем устройстве в Firebase или на сервере, напишите на почту ниже.' },
+        { type: 'h2', text: 'Дети' },
+        { type: 'p', text: 'Authmeister не рассчитан на детей младше 13 лет и сознательно не собирает их данные.' },
+        { type: 'h2', text: 'Изменения и связь' },
+        { type: 'p', text: 'Authmeister делает Иван Копылов. Если политика изменится, новая версия появится на этой странице с новой датой. Вопросы присылайте на mailto:mnrhwow@gmail.com.' },
       ],
     },
 
     authmeisterTerms: {
       title: 'Условия использования',
+      description: 'Условия использования аутентификатора Authmeister для iPhone, Android и часов.',
       body: [
         { type: 'p', text: 'Эти Условия регулируют ваше использование мобильного приложения **Authmeister**.' },
         { type: 'h2', text: 'Принятие условий' },
         { type: 'p', text: 'Скачивая и используя Authmeister, вы соглашаетесь с этими условиями.' },
         { type: 'h2', text: 'Описание сервиса' },
-        { type: 'p', text: 'Authmeister — это OTP-аутентификатор, который генерирует одноразовые коды по времени (TOTP) и по счетчику (HOTP).' },
+        { type: 'p', text: 'Authmeister генерирует одноразовые коды по времени (TOTP) и по счетчику (HOTP) и хранит пароли. Он умеет показывать коды на часах и в виджетах и сохранять зашифрованный бэкап в выбранное вами облако.' },
         { type: 'h2', text: 'Обязанности пользователя' },
-        { type: 'ul', items: ['Содержите устройство в безопасности', 'Делайте бэкапы своих данных аутентификации', 'Не передавайте OTP-коды посторонним'] },
+        { type: 'ul', items: ['Содержите устройство в безопасности', 'Делайте бэкапы своих данных аутентификации', 'Запомните пароль от бэкапа. Восстановить его нельзя, а без него бэкап не открыть.', 'Не передавайте OTP-коды посторонним'] },
         { type: 'h2', text: 'Отказ от ответственности' },
         { type: 'p', text: 'Приложение предоставляется "как есть" без гарантий. Мы не несем ответственности за потерю доступа к аккаунтам из-за сбоев приложения или проблем устройства.' },
         { type: 'h2', text: 'Ограничение ответственности' },
@@ -896,6 +924,7 @@ export const ru: Translations = {
 
     tosslingPrivacy: {
       title: 'Политика конфиденциальности',
+      description: 'Tossling шифрует буфер на устройстве. Что видят сервер и Firebase, что остается на телефоне и как это удалить.',
       body: [
         { type: 'p', text: 'Политика относится к приложениям **Tossling** для iPhone и Android. В Tossling нет аккаунтов и аналитики, и разработчик не получает то, что вы копируете.' },
         { type: 'h2', text: 'Куда уходят данные' },

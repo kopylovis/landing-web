@@ -11,9 +11,9 @@ export default function NotFound() {
       <SEO
         title={t.notFound.metaTitle}
         description={t.notFound.metaDescription}
-        url="/404"
         type="website"
         locale={locale}
+        noindex
       />
       <div className="not-found">
         <div className="container container-narrow not-found__inner">

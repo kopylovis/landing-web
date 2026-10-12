@@ -1,4 +1,5 @@
 import SEO from '../components/SEO'
+import { seoProps } from '../seo/pages'
 import HeroSection from '../components/HeroSection'
 import AppsSection from '../components/AppsSection'
 import AboutSection from '../components/AboutSection'
@@ -7,18 +8,11 @@ import { useScrollToSection } from '../hooks/useScrollToSection'
 
 export default function Home() {
   useScrollToSection('scroll', { behavior: 'smooth', block: 'start' })
-  const { t, locale } = useI18n()
+  const { locale } = useI18n()
 
   return (
     <>
-      <SEO
-        title={`${t.meta.siteName} — Mobile App Developer`}
-        description={t.meta.description}
-        keywords={t.meta.keywords}
-        url="/"
-        type="website"
-        locale={locale}
-      />
+      <SEO {...seoProps('home', locale)} />
       <HeroSection />
       <AppsSection />
       <AboutSection />

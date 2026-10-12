@@ -120,12 +120,3 @@ export type LoadingState = 'idle' | 'loading' | 'success' | 'error'
 
 // Theme Types
 export type Theme = 'light' | 'dark' | 'system'
-
-// Analytics Types
-export interface AnalyticsEvent {
-  name: string
-  category: string
-  action: string
-  label?: string
-  value?: number
-}

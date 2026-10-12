@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import { useI18n } from '../hooks/useI18n'
 import { useReveal } from '../hooks/useReveal'
 import { AppCardProps } from '../types'
@@ -132,7 +132,14 @@ export default function AppCard({ app, className, onClick, variant = 'default', 
 
         <div className="app-card__head-text">
           <span className="app-card__category">{copy?.category}</span>
-          <h3 className="app-card__name">{app.name}</h3>
+          <h3 className="app-card__name">
+            {app.name.split('_').map((part, i) => (
+              <Fragment key={i}>
+                {i > 0 && <>_<wbr /></>}
+                {part}
+              </Fragment>
+            ))}
+          </h3>
         </div>
 
         <span className="app-card__index" aria-hidden="true">

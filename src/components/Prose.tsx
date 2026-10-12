@@ -8,12 +8,12 @@ export type ProseBlock = ProseBlockP | ProseBlockH2 | ProseBlockH3 | ProseBlockU
 
 /**
  * Tiny markdown-ish renderer for translated legal text.
- * Supports inline **bold** and bare email URLs (mailto:...).
+ * Supports inline **bold**, bare email URLs (mailto:...) and https:// links.
  */
 function renderInline(text: string): React.ReactNode {
   const parts: React.ReactNode[] = []
-  // Pattern matches **bold** OR mailto:... addresses.
-  const regex = /\*\*([^*]+)\*\*|mailto:([\w.+-]+@[\w.-]+\.[A-Za-z]{2,})/g
+  // Pattern matches **bold**, mailto:... addresses OR https:// links.
+  const regex = /\*\*([^*]+)\*\*|mailto:([\w.+-]+@[\w.-]+\.[A-Za-z]{2,})|(https:\/\/[^\s]+?)(?=[.,;:)]?(?:\s|$))/g
   let lastIndex = 0
   let match: RegExpExecArray | null
   let key = 0
@@ -27,6 +27,12 @@ function renderInline(text: string): React.ReactNode {
       parts.push(
         <a key={`m${key++}`} href={`mailto:${match[2]}`}>
           {match[2]}
+        </a>
+      )
+    } else if (match[3]) {
+      parts.push(
+        <a key={`u${key++}`} href={match[3]} target="_blank" rel="noopener noreferrer">
+          {match[3]}
         </a>
       )
     }

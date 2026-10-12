@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
+import { seoProps } from '../seo/pages'
 import Prose, { ProseBlock } from '../components/Prose'
 import { useI18n } from '../hooks/useI18n'
 import '../styles/ContentPage.css'
@@ -9,13 +10,7 @@ export default function Privacy() {
 
   return (
     <>
-      <SEO
-        title={t.legal.privacy.title}
-        description={t.legal.privacy.title}
-        url="/privacy"
-        type="article"
-        locale={locale}
-      />
+      <SEO {...seoProps('privacy', locale)} />
       <div className="legal">
         <div className="container container-narrow">
           <Link to="/" className="legal__back">
@@ -29,7 +24,7 @@ export default function Privacy() {
             <span className="legal__meta">
               <span>{t.legal.section}</span>
               <span className="legal__meta-dot" aria-hidden="true" />
-              <span>{t.legal.updated}</span>
+              <span>{t.legal.privacyUpdated}</span>
             </span>
             <h1 className="legal__title">{t.legal.privacy.title}</h1>
           </header>

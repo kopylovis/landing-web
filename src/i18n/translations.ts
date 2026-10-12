@@ -388,7 +388,7 @@ export const en: Translations = {
     backTossling: 'Back to Tossling',
     section: 'Legal',
     updated: 'Updated 05 Mar 2025',
-    tosslingUpdated: 'Updated 9 Oct 2026',
+    tosslingUpdated: 'Updated 12 Oct 2026',
 
     privacy: {
       title: 'Privacy Policy',
@@ -493,6 +493,7 @@ export const en: Translations = {
           'Clipboard text, images and files are encrypted on your device with AES-256-GCM before they leave it. The key stays on the devices of your room, so the server cannot read the content.',
           'The server keeps encrypted messages for up to 12 hours and attachments for up to 3 hours, then deletes them.',
           'Like any web server, it sees the IP address of your device and when it connects.',
+          'Each device has a token of its own on the server, labeled with the device name, so the server owner can see the devices and cut one off.',
           'Project notifications are not encrypted. Your own services send them to your server, and the phone shows them.',
         ] },
         { type: 'h2', text: 'Push notifications' },
@@ -503,6 +504,8 @@ export const en: Translations = {
           'The app reads the clipboard only when you send it, with the To Computer button, the share sheet, a shortcut or the quick settings tile.',
           'The camera is used only to scan the QR code that a computer shows. Nothing is recorded or stored.',
         ] },
+        { type: 'h2', text: 'Deleting your data' },
+        { type: 'p', text: 'Leaving the room in the app deletes the room key from the phone and the phone\'s token from the server. Deleting the app removes the history. On iPhone the Keychain keeps the room key after the app is deleted, so leave the room first if you want it gone. Messages left on the server expire on their own within 12 hours.' },
         { type: 'h2', text: 'Demo' },
         { type: 'p', text: 'The developer runs a demo server at tossling-demo.monoroh.com, so the app can be tried without a computer. Each demo gets a room of its own with a bot that decrypts what you send in order to reply. The room closes after an hour, and the server deletes messages and files an hour after they arrive. Notifications of the demo project go to everyone trying the demo, and they never carry what you sent.' },
         { type: 'h2', text: 'Children' },
@@ -797,7 +800,7 @@ export const ru: Translations = {
     backTossling: 'К Tossling',
     section: 'Юридическое',
     updated: 'Обновлено 05.03.2025',
-    tosslingUpdated: 'Обновлено 09.10.2026',
+    tosslingUpdated: 'Обновлено 12.10.2026',
 
     privacy: {
       title: 'Политика конфиденциальности',
@@ -902,6 +905,7 @@ export const ru: Translations = {
           'Текст, картинки и файлы из буфера шифруются на устройстве по AES-256-GCM еще до отправки. Ключ есть только у устройств вашей комнаты, поэтому сервер содержимое прочитать не может.',
           'Зашифрованные сообщения сервер хранит до 12 часов, вложения до 3 часов, потом удаляет.',
           'Как любой веб-сервер, он видит IP-адрес устройства и время подключения.',
+          'У каждого устройства на сервере свой токен с именем устройства, чтобы владелец сервера видел устройства и мог отключить любое.',
           'Уведомления проектов не шифруются. Их присылают на ваш сервер ваши же сервисы, а телефон показывает.',
         ] },
         { type: 'h2', text: 'Пуш-уведомления' },
@@ -912,6 +916,8 @@ export const ru: Translations = {
           'Приложение читает буфер, только когда вы его отправляете, кнопкой "На компьютер", через меню "Поделиться", быструю команду или плитку в быстрых настройках.',
           'Камера нужна только чтобы отсканировать QR-код с компьютера. Ничего не записывается и не сохраняется.',
         ] },
+        { type: 'h2', text: 'Как удалить свои данные' },
+        { type: 'p', text: 'Если выйти из комнаты в приложении, ключ комнаты удалится с телефона, а токен телефона с сервера. Удаление приложения стирает историю. На iPhone ключ комнаты остается в связке ключей и после удаления приложения, поэтому сначала выйдите из комнаты. Сообщения на сервере сами удаляются в течение 12 часов.' },
         { type: 'h2', text: 'Демо' },
         { type: 'p', text: 'Разработчик держит демо-сервер на tossling-demo.monoroh.com, чтобы приложение можно было попробовать без компьютера. Для каждого демо создается отдельная комната с ботом, который расшифровывает присланное, чтобы ответить. Через час комната закрывается, а сообщения и файлы сервер удаляет через час после получения. Уведомления демо-проекта видят все, кто пробует демо, и того, что вы отправили, в них никогда нет.' },
         { type: 'h2', text: 'Дети' },

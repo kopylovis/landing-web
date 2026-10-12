@@ -4,13 +4,13 @@
     <title>Tossling</title>
     <link>https://monoroh.com/tossling</link>
     <item>
-      <title>Tossling 0.5.2</title>
-      <pubDate>Sun, 11 Oct 2026 21:06:22 GMT</pubDate>
-      <sparkle:version>65</sparkle:version>
-      <sparkle:shortVersionString>0.5.2</sparkle:shortVersionString>
+      <title>Tossling 0.6.0</title>
+      <pubDate>Mon, 12 Oct 2026 06:33:28 GMT</pubDate>
+      <sparkle:version>68</sparkle:version>
+      <sparkle:shortVersionString>0.6.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-      <sparkle:fullReleaseNotesLink>https://github.com/tossling/tossling-desktop/releases/tag/v0.5.2</sparkle:fullReleaseNotesLink>
-      <enclosure url="https://github.com/tossling/tossling-desktop/releases/download/v0.5.2/Tossling-0.5.2.dmg" sparkle:edSignature="AXrpcqnRoNd7yCFYdzXikYiAhAuIH6a7sjVyAsZCoLWEOONlX4zi76skr/sUpmAGnkIE/BHmyOe0IjhKqZQ3DQ==" length="4765574" type="application/octet-stream"/>
+      <sparkle:fullReleaseNotesLink>https://github.com/tossling/tossling-desktop/releases/tag/v0.6.0</sparkle:fullReleaseNotesLink>
+      <enclosure url="https://github.com/tossling/tossling-desktop/releases/download/v0.6.0/Tossling-0.6.0.dmg" sparkle:edSignature="kxB1Kx9TIK5oPUE0oEBxLI1SoGBzLZNVPSfDnPOPvZRLaDiMAAWLI/IZyCwJAfVHH3SsNZOrViXdHoasOhFcAw==" length="3751670" type="application/octet-stream"/>
     </item>
   </channel>
 </rss>

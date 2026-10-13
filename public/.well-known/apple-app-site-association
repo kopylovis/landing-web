@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["AG3425642R.com.kopylovis.sightra"],
+        "components": [
+          { "/": "/sightra/link/*" },
+          { "/": "/sightra/link" }
+        ]
+      }
+    ]
+  }
+}

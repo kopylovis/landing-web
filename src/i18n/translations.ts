@@ -109,11 +109,13 @@ export interface Translations {
     tosslingUpdated: string
     privacyUpdated: string
     authmeisterUpdated: string
+    sightraUpdated: string
     privacy: LegalDoc
     terms: LegalDoc
     authmeisterPrivacy: LegalDoc
     authmeisterTerms: LegalDoc
     tosslingPrivacy: LegalDoc
+    sightraPrivacy: LegalDoc
   }
   notFound: {
     title: string
@@ -393,12 +395,13 @@ export const en: Translations = {
     tosslingUpdated: 'Updated 12 Oct 2026',
     privacyUpdated: 'Updated 12 Oct 2026',
     authmeisterUpdated: 'Updated 12 Oct 2026',
+    sightraUpdated: 'Updated 13 Oct 2026',
 
     privacy: {
       title: 'Privacy Policy',
       description: 'The monoroh.com website collects nothing: no analytics and no cookies. What the GitHub Pages hosting sees and what happens to your emails.',
       body: [
-        { type: 'p', text: 'This policy covers the **monoroh.com** website. Each app has a policy of its own: https://monoroh.com/authmeister/privacy/ for Authmeister and https://monoroh.com/tossling/privacy/ for Tossling.' },
+        { type: 'p', text: 'This policy covers the **monoroh.com** website. Each app has a policy of its own: https://monoroh.com/authmeister/privacy/ for Authmeister, https://monoroh.com/tossling/privacy/ for Tossling and https://monoroh.com/sightra/privacy/ for Sightra.' },
         { type: 'h2', text: 'What the site collects' },
         { type: 'p', text: 'Nothing. The site has no analytics, no counters, no ads and no cookies. Fonts, images and scripts load from monoroh.com itself.' },
         { type: 'h2', text: 'Hosting' },
@@ -530,6 +533,44 @@ export const en: Translations = {
         { type: 'p', text: 'The apps and the server are open source at https://github.com/Tossling, so anyone can check what they do.' },
         { type: 'h2', text: 'Changes and contact' },
         { type: 'p', text: 'When this policy changes, the new version appears on this page with a new date. Write to mailto:mnrhwow@gmail.com with any questions.' },
+      ],
+    },
+
+    sightraPrivacy: {
+      title: 'Privacy Policy',
+      description: 'Sightra sends your voice and camera to the AI provider you pick, under your own key. What it sends, what stays on the phone and how to delete it.',
+      body: [
+        { type: 'p', text: 'This policy covers the **Sightra** apps for iPhone and Android. Sightra has no accounts, no analytics and no ads. The developer runs no server for it and never receives your conversations, video or keys.' },
+        { type: 'h2', text: 'Your own API keys' },
+        { type: 'p', text: 'Sightra works with the AI provider you choose, Google Gemini or OpenAI, under your own API key. The key is stored on your device. On Android it is encrypted under a key kept in the Android Keystore and excluded from backups and device transfer. On iPhone it is kept in the Keychain. Requests go from your phone straight to the provider, or through a proxy if you set one up.' },
+        { type: 'h2', text: 'What goes to the AI provider' },
+        { type: 'ul', items: [
+          'During a live conversation, the sound from the phone or glasses microphone and, while the camera is on, a few frames per second from the glasses or the phone camera.',
+          'Photos you take and send to the assistant.',
+          'Your speech in the interpreter, to be translated.',
+          'In transcription, the live recording or the audio file you pick. A file is uploaded to the Gemini Files API.',
+          'The text of the conversation, so the model keeps the context, and the instructions the app adds to it.',
+        ] },
+        { type: 'p', text: 'The provider handles this data under its own terms, tied to your account and key. On the unpaid tier of the Gemini API, Google may use what you send to improve its products. Google describes this at https://ai.google.dev/gemini-api/terms and OpenAI at https://openai.com/policies/privacy-policy.' },
+        { type: 'h2', text: 'Proxy' },
+        { type: 'p', text: 'If you enter proxy addresses in the settings, requests to Gemini or OpenAI go through that proxy together with your key. Whoever runs the proxy can see this traffic, so use only a proxy you run yourself or trust.' },
+        { type: 'h2', text: 'OpenClaw' },
+        { type: 'p', text: 'If you connect an OpenClaw gateway, the assistant sends it the tasks you ask it to carry out. The text of a conversation goes there when you tap Save to agent, and a transcript when you send it to the agent. The gateway address and token are stored encrypted on your device, like the API key. The gateway is yours, and the developer does not see what it receives.' },
+        { type: 'h2', text: 'Glasses' },
+        { type: 'p', text: 'Sightra connects to Meta AI glasses through the Meta AI app and the Meta Wearables Device Access Toolkit. Video and sound travel from the glasses to the phone over Bluetooth or Wi-Fi. The toolkit can send usage telemetry to Meta, and Sightra turns it off. Pairing and registration happen in the Meta AI app under Meta’s own policy at https://www.meta.com/legal/privacy-policy/.' },
+        { type: 'h2', text: 'On your phone' },
+        { type: 'ul', items: [
+          'The last conversation, the transcript and the notes you ask the assistant to keep are stored on the phone only.',
+          'A recording from the glasses is saved to your gallery or Photos only when you record one. On iPhone the app asks only to add to Photos and cannot read your library.',
+          'Timers, reminders and calendar events the assistant creates go into the apps on your phone. On iPhone calendar access is write-only, so the app cannot read your calendar.',
+          'Hands-free wake and stop phrases are recognized on the phone. On an Android phone without on-device recognition, the system speech service does it, usually Google’s.',
+        ] },
+        { type: 'h2', text: 'Deleting your data' },
+        { type: 'p', text: 'Remove keys and the gateway in the settings. Deleting the app removes conversations, transcripts and notes. On iPhone the Keychain keeps the keys after the app is deleted, so remove them in the settings first. Recordings stay in your gallery until you delete them. What the AI provider keeps is managed in your account with that provider.' },
+        { type: 'h2', text: 'Children' },
+        { type: 'p', text: 'Sightra is not directed at children under 13 and does not knowingly collect their data.' },
+        { type: 'h2', text: 'Changes and contact' },
+        { type: 'p', text: 'Sightra is made by Ivan Kopylov. When this policy changes, the new version appears on this page with a new date. Write to mailto:mnrhwow@gmail.com with any questions.' },
       ],
     },
   },
@@ -818,12 +859,13 @@ export const ru: Translations = {
     tosslingUpdated: 'Обновлено 12.10.2026',
     privacyUpdated: 'Обновлено 12.10.2026',
     authmeisterUpdated: 'Обновлено 12.10.2026',
+    sightraUpdated: 'Обновлено 13.10.2026',
 
     privacy: {
       title: 'Политика конфиденциальности',
       description: 'Сайт monoroh.com ничего не собирает, на нем нет аналитики и cookies. Что видит хостинг GitHub Pages и что происходит с письмами.',
       body: [
-        { type: 'p', text: 'Политика относится к сайту **monoroh.com**. У каждого приложения своя политика, для Authmeister это https://monoroh.com/authmeister/privacy/, для Tossling https://monoroh.com/tossling/privacy/.' },
+        { type: 'p', text: 'Политика относится к сайту **monoroh.com**. У каждого приложения своя политика, для Authmeister это https://monoroh.com/authmeister/privacy/, для Tossling https://monoroh.com/tossling/privacy/, для Sightra https://monoroh.com/sightra/privacy/.' },
         { type: 'h2', text: 'Что собирает сайт' },
         { type: 'p', text: 'Ничего. На сайте нет аналитики, счетчиков, рекламы и cookies. Шрифты, картинки и скрипты грузятся с самого monoroh.com.' },
         { type: 'h2', text: 'Хостинг' },
@@ -955,6 +997,44 @@ export const ru: Translations = {
         { type: 'p', text: 'Приложения и сервер открыты на https://github.com/Tossling, так что любой может проверить, что они делают.' },
         { type: 'h2', text: 'Изменения и связь' },
         { type: 'p', text: 'Если политика изменится, новая версия появится на этой странице с новой датой. Вопросы присылайте на mailto:mnrhwow@gmail.com.' },
+      ],
+    },
+
+    sightraPrivacy: {
+      title: 'Политика конфиденциальности',
+      description: 'Sightra отправляет ваш голос и камеру выбранному вами AI-провайдеру под вашим ключом. Что уходит, что остается на телефоне и как это удалить.',
+      body: [
+        { type: 'p', text: 'Политика относится к приложениям **Sightra** для iPhone и Android. В Sightra нет аккаунтов, аналитики и рекламы. Своего сервера для приложения у разработчика нет, и ваши разговоры, видео и ключи он не получает.' },
+        { type: 'h2', text: 'Ваши ключи API' },
+        { type: 'p', text: 'Sightra работает с тем AI-провайдером, которого вы выбрали, Google Gemini или OpenAI, под вашим собственным ключом API. Ключ хранится на устройстве. На Android он зашифрован ключом из Android Keystore и не попадает в резервные копии и перенос на новый телефон. На iPhone он лежит в связке ключей. Запросы идут с телефона прямо к провайдеру или через прокси, если вы его настроили.' },
+        { type: 'h2', text: 'Что получает AI-провайдер' },
+        { type: 'ul', items: [
+          'Во время живого разговора звук с микрофона телефона или очков, а пока включена камера, несколько кадров в секунду с очков или с камеры телефона.',
+          'Фото, которые вы снимаете и отправляете ассистенту.',
+          'Вашу речь в режиме переводчика.',
+          'При транскрипции запись с микрофона или выбранный вами аудиофайл. Файл загружается в Gemini Files API.',
+          'Текст разговора, чтобы модель помнила контекст, и инструкции, которые добавляет приложение.',
+        ] },
+        { type: 'p', text: 'Провайдер обрабатывает эти данные по своим условиям, привязанным к вашему аккаунту и ключу. На бесплатном тарифе Gemini API Google может использовать присланное для улучшения своих продуктов. Подробности у Google на https://ai.google.dev/gemini-api/terms и у OpenAI на https://openai.com/policies/privacy-policy.' },
+        { type: 'h2', text: 'Прокси' },
+        { type: 'p', text: 'Если вы указали в настройках адреса прокси, запросы к Gemini или OpenAI идут через него вместе с ключом. Тот, кто держит прокси, видит этот трафик, поэтому используйте только свой прокси или тот, которому доверяете.' },
+        { type: 'h2', text: 'OpenClaw' },
+        { type: 'p', text: 'Если вы подключили шлюз OpenClaw, ассистент отправляет ему задачи, которые вы просите выполнить. Текст разговора уходит туда по кнопке "Сохранить агенту", а расшифровка, когда вы отправляете ее агенту. Адрес и токен шлюза хранятся на устройстве в зашифрованном виде, как ключ API. Шлюз ваш, и разработчик не видит, что в него приходит.' },
+        { type: 'h2', text: 'Очки' },
+        { type: 'p', text: 'Sightra подключается к очкам Meta AI через приложение Meta AI и Meta Wearables Device Access Toolkit. Видео и звук идут с очков на телефон по Bluetooth или Wi-Fi. Toolkit умеет отправлять в Meta телеметрию использования, и в Sightra она выключена. Сопряжение и регистрация проходят в приложении Meta AI по правилам Meta, они описаны на https://www.meta.com/legal/privacy-policy/.' },
+        { type: 'h2', text: 'На телефоне' },
+        { type: 'ul', items: [
+          'Последний разговор, расшифровка и заметки, которые вы просите ассистента сохранить, хранятся только на телефоне.',
+          'Запись с очков сохраняется в галерею или в Фото, только когда вы ее делаете. На iPhone приложение просит доступ только на добавление в Фото и вашу медиатеку прочитать не может.',
+          'Таймеры, напоминания и события, которые создает ассистент, попадают в приложения на телефоне. На iPhone доступ к календарю только на запись, читать календарь приложение не может.',
+          'Фразы для запуска и остановки без рук распознаются на телефоне. Если на Android-телефоне нет распознавания на устройстве, этим занимается системный сервис речи, обычно от Google.',
+        ] },
+        { type: 'h2', text: 'Как удалить свои данные' },
+        { type: 'p', text: 'Ключи и шлюз удаляются в настройках. Удаление приложения стирает разговоры, расшифровки и заметки. На iPhone ключи остаются в связке ключей и после удаления приложения, поэтому сначала удалите их в настройках. Записи остаются в галерее, пока вы их не удалите. То, что хранит AI-провайдер, управляется в вашем аккаунте у этого провайдера.' },
+        { type: 'h2', text: 'Дети' },
+        { type: 'p', text: 'Sightra не рассчитан на детей младше 13 лет и сознательно не собирает их данные.' },
+        { type: 'h2', text: 'Изменения и связь' },
+        { type: 'p', text: 'Sightra делает Иван Копылов. Если политика изменится, новая версия появится на этой странице с новой датой. Вопросы присылайте на mailto:mnrhwow@gmail.com.' },
       ],
     },
   },

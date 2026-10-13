@@ -14,6 +14,7 @@ export type PageKey =
   | 'authmeisterTerms'
   | 'tossling'
   | 'tosslingPrivacy'
+  | 'sightraPrivacy'
 
 export interface PageMeta {
   path: string
@@ -32,6 +33,7 @@ export const pagePaths: Record<PageKey, string> = {
   authmeisterTerms: '/authmeister/terms/',
   tossling: '/tossling/',
   tosslingPrivacy: '/tossling/privacy/',
+  sightraPrivacy: '/sightra/privacy/',
 }
 
 export function fullTitle(title: string): string {
@@ -48,6 +50,7 @@ export function pageMeta(page: PageKey, locale: Locale): PageMeta {
   const path = pagePaths[page]
   const authmeisterImage = `${SITE_URL}/media/authmeister_512x512.png`
   const tosslingImage = `${SITE_URL}/media/tossling_512x512.png`
+  const sightraImage = `${SITE_URL}/media/sightra_512x512.png`
 
   switch (page) {
     case 'home':
@@ -66,6 +69,8 @@ export function pageMeta(page: PageKey, locale: Locale): PageMeta {
       return { path, title: 'Tossling, One Clipboard for Your Computers and Android Phone', description: t.projects.tossling.description, image: tosslingImage, type: 'website' }
     case 'tosslingPrivacy':
       return { path, title: `Tossling, ${t.legal.tosslingPrivacy.title}`, description: t.legal.tosslingPrivacy.description, image: tosslingImage, type: 'article' }
+    case 'sightraPrivacy':
+      return { path, title: `Sightra, ${t.legal.sightraPrivacy.title}`, description: t.legal.sightraPrivacy.description, image: sightraImage, type: 'article' }
   }
 }
 

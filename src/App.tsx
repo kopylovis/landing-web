@@ -9,6 +9,7 @@ import Terms from './pages/Terms'
 import Authmeister from './pages/Authmeister'
 import AuthmeisterPrivacy from './pages/AuthmeisterPrivacy'
 import TosslingPrivacy from './pages/TosslingPrivacy'
+import SightraPrivacy from './pages/SightraPrivacy'
 import AuthmeisterTerms from './pages/AuthmeisterTerms'
 import Tossling from './pages/Tossling'
 import NotFound from './pages/NotFound'
@@ -30,6 +31,7 @@ function App() {
                 <Route path="/authmeister/terms" element={<AuthmeisterTerms />} />
                 <Route path="/tossling" element={<Tossling />} />
                 <Route path="/tossling/privacy" element={<TosslingPrivacy />} />
+                <Route path="/sightra/privacy" element={<SightraPrivacy />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Layout>

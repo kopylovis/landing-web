@@ -15,6 +15,7 @@ export type PageKey =
   | 'tossling'
   | 'tosslingPrivacy'
   | 'sightraPrivacy'
+  | 'sightraTerms'
 
 export interface PageMeta {
   path: string
@@ -34,6 +35,7 @@ export const pagePaths: Record<PageKey, string> = {
   tossling: '/tossling/',
   tosslingPrivacy: '/tossling/privacy/',
   sightraPrivacy: '/sightra/privacy/',
+  sightraTerms: '/sightra/terms/',
 }
 
 export function fullTitle(title: string): string {
@@ -71,6 +73,8 @@ export function pageMeta(page: PageKey, locale: Locale): PageMeta {
       return { path, title: `Tossling, ${t.legal.tosslingPrivacy.title}`, description: t.legal.tosslingPrivacy.description, image: tosslingImage, type: 'article' }
     case 'sightraPrivacy':
       return { path, title: `Sightra, ${t.legal.sightraPrivacy.title}`, description: t.legal.sightraPrivacy.description, image: sightraImage, type: 'article' }
+    case 'sightraTerms':
+      return { path, title: `Sightra, ${t.legal.sightraTerms.title}`, description: t.legal.sightraTerms.description, image: sightraImage, type: 'article' }
   }
 }
 

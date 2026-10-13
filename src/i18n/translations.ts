@@ -116,6 +116,7 @@ export interface Translations {
     authmeisterTerms: LegalDoc
     tosslingPrivacy: LegalDoc
     sightraPrivacy: LegalDoc
+    sightraTerms: LegalDoc
   }
   notFound: {
     title: string
@@ -571,6 +572,36 @@ export const en: Translations = {
         { type: 'p', text: 'Sightra is not directed at children under 13 and does not knowingly collect their data.' },
         { type: 'h2', text: 'Changes and contact' },
         { type: 'p', text: 'Sightra is made by Ivan Kopylov. When this policy changes, the new version appears on this page with a new date. Write to mailto:mnrhwow@gmail.com with any questions.' },
+      ],
+    },
+
+    sightraTerms: {
+      title: 'Terms of Use',
+      description: 'Terms of use for Sightra: your own AI keys, how far to trust the answers and how to use the glasses camera around other people.',
+      body: [
+        { type: 'p', text: 'These terms cover your use of the **Sightra** apps for iPhone and Android. By installing and using Sightra, you agree to them.' },
+        { type: 'h2', text: 'What Sightra does' },
+        { type: 'p', text: 'Sightra is an assistant for Meta AI glasses and for your phone. It holds a live voice conversation with an AI model that can see through the glasses or the phone camera, interprets speech into another language and transcribes recordings. It can also hand tasks to an OpenClaw gateway you connect.' },
+        { type: 'h2', text: 'Your API keys and providers' },
+        { type: 'ul', items: [
+          'Sightra works under your own Google Gemini or OpenAI API key. You get the key from the provider, and the provider’s terms and prices apply to everything the app sends under it. The provider bills your account, the developer does not charge you anything.',
+          'Keep your keys private. Anyone who has your key can use it at your expense.',
+          'If you use a proxy or an OpenClaw gateway, choosing one you can trust is up to you.',
+        ] },
+        { type: 'h2', text: 'AI answers' },
+        { type: 'p', text: 'Answers, translations and transcripts come from an AI model and can be wrong or out of date. The model can also misread what the camera sees. Do not rely on Sightra for medical or legal decisions or where safety is at stake, and do not use it to find your way in traffic.' },
+        { type: 'h2', text: 'The camera and microphone around other people' },
+        { type: 'p', text: 'The glasses and the phone can capture the people around you. Follow the local laws on recording others and respect their privacy. Keep the capture LED on the glasses uncovered. Do not use Sightra to identify people, follow them or record them without their knowledge.' },
+        { type: 'h2', text: 'Acceptable use' },
+        { type: 'p', text: 'Do not use Sightra to break the law, to harass anyone or to get around the terms of Google, OpenAI or Meta. The connection to the glasses also falls under Meta’s terms for the Meta AI app and its glasses.' },
+        { type: 'h2', text: 'Testing' },
+        { type: 'p', text: 'While Sightra is in testing, features can change or stop working, and test builds can expire.' },
+        { type: 'h2', text: 'No warranty' },
+        { type: 'p', text: 'Sightra is provided "as is", without warranties. The developer does not promise that it works without interruptions or errors, or with every model of glasses, phone and AI provider.' },
+        { type: 'h2', text: 'Limitation of liability' },
+        { type: 'p', text: 'As far as the law allows, the developer is not liable for damages from using Sightra or from being unable to use it. That includes charges from your AI provider, what you send to it and what an OpenClaw gateway does on your behalf.' },
+        { type: 'h2', text: 'Changes and contact' },
+        { type: 'p', text: 'Sightra is made by Ivan Kopylov. When these terms change, the new version appears on this page with a new date. How Sightra handles your data is described at https://monoroh.com/sightra/privacy/. Write to mailto:mnrhwow@gmail.com with any questions.' },
       ],
     },
   },
@@ -1035,6 +1066,36 @@ export const ru: Translations = {
         { type: 'p', text: 'Sightra не рассчитан на детей младше 13 лет и сознательно не собирает их данные.' },
         { type: 'h2', text: 'Изменения и связь' },
         { type: 'p', text: 'Sightra делает Иван Копылов. Если политика изменится, новая версия появится на этой странице с новой датой. Вопросы присылайте на mailto:mnrhwow@gmail.com.' },
+      ],
+    },
+
+    sightraTerms: {
+      title: 'Условия использования',
+      description: 'Условия использования Sightra. Ваши ключи AI, насколько доверять ответам и как пользоваться камерой очков рядом с другими людьми.',
+      body: [
+        { type: 'p', text: 'Эти условия относятся к приложениям **Sightra** для iPhone и Android. Устанавливая и используя Sightra, вы с ними соглашаетесь.' },
+        { type: 'h2', text: 'Что делает Sightra' },
+        { type: 'p', text: 'Sightra работает ассистентом для очков Meta AI и для телефона. Он ведет живой голосовой разговор с AI-моделью, которая видит через очки или камеру телефона, переводит речь на другой язык и расшифровывает записи. Еще он может передавать задачи шлюзу OpenClaw, если вы его подключили.' },
+        { type: 'h2', text: 'Ваши ключи API и провайдеры' },
+        { type: 'ul', items: [
+          'Sightra работает под вашим собственным ключом API Google Gemini или OpenAI. Ключ вы получаете у провайдера, и все, что приложение отправляет под ним, идет по условиям и ценам провайдера. Счет выставляет провайдер, разработчик денег с вас не берет.',
+          'Не показывайте ключи посторонним. Любой, у кого есть ваш ключ, может пользоваться им за ваш счет.',
+          'Если вы пользуетесь прокси или шлюзом OpenClaw, выбрать надежный остается за вами.',
+        ] },
+        { type: 'h2', text: 'Ответы AI' },
+        { type: 'p', text: 'Ответы, переводы и расшифровки делает AI-модель, и они могут быть неверными или устаревшими. Модель может и неправильно понять то, что видит камера. Не полагайтесь на Sightra в медицинских и юридических решениях и там, где речь идет о безопасности, и не используйте его, чтобы ориентироваться в дорожном движении.' },
+        { type: 'h2', text: 'Камера и микрофон рядом с другими людьми' },
+        { type: 'p', text: 'Очки и телефон могут снимать и записывать людей вокруг вас. Соблюдайте местные законы о съемке и записи других людей и уважайте их частную жизнь. Не закрывайте индикатор съемки на очках. Не используйте Sightra, чтобы опознавать людей, следить за ними или записывать их без их ведома.' },
+        { type: 'h2', text: 'Допустимое использование' },
+        { type: 'p', text: 'Не используйте Sightra, чтобы нарушать закон, преследовать кого-либо или обходить условия Google, OpenAI или Meta. На подключение к очкам распространяются и условия Meta для приложения Meta AI и очков.' },
+        { type: 'h2', text: 'Тестирование' },
+        { type: 'p', text: 'Пока Sightra в тестировании, функции могут меняться или переставать работать, а у тестовых сборок может закончиться срок.' },
+        { type: 'h2', text: 'Без гарантий' },
+        { type: 'p', text: 'Sightra предоставляется "как есть", без гарантий. Разработчик не обещает, что приложение работает без перерывов и ошибок или с любыми моделями очков, телефонов и AI-провайдеров.' },
+        { type: 'h2', text: 'Ограничение ответственности' },
+        { type: 'p', text: 'В пределах, допустимых законом, разработчик не отвечает за ущерб от использования Sightra или от невозможности им пользоваться. Сюда входят счета вашего AI-провайдера, то, что вы ему отправляете, и то, что шлюз OpenClaw делает от вашего имени.' },
+        { type: 'h2', text: 'Изменения и связь' },
+        { type: 'p', text: 'Sightra делает Иван Копылов. Если условия изменятся, новая версия появится на этой странице с новой датой. Как Sightra обращается с вашими данными, описано на https://monoroh.com/sightra/privacy/. Вопросы присылайте на mailto:mnrhwow@gmail.com.' },
       ],
     },
   },

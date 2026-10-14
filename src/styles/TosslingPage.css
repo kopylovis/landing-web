@@ -2,6 +2,16 @@
   height: 48px;
 }
 
+.tossling__platforms {
+  display: flex;
+  gap: 12px;
+}
+
+.tossling .product__cta-row .btn-icon {
+  width: 48px;
+  padding-inline: 0;
+}
+
 .tossling .product__hero-text {
   min-width: 0;
 }

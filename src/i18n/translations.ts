@@ -79,7 +79,8 @@ export interface Translations {
     back: string
     tagline: string
     downloadMac: string
-    downloadDesktop: string
+    downloadWindows: string
+    downloadLinux: string
     downloadAndroid: string
     brewLabel: string
     copy: string
@@ -317,8 +318,9 @@ export const en: Translations = {
     tagline:
       'One clipboard for your computers and Android phone, through your own server. Copy on one device, paste on another a second later. Everything is encrypted on the devices; the server only relays ciphertext.',
     downloadMac: 'Download for Mac',
-    downloadDesktop: 'Windows and Linux',
-    downloadAndroid: 'Android APK',
+    downloadWindows: 'Download for Windows',
+    downloadLinux: 'Download for Linux',
+    downloadAndroid: 'Download the Android APK',
     brewLabel: 'Or with Homebrew',
     copy: 'Copy',
     copied: 'Copied',
@@ -811,8 +813,9 @@ export const ru: Translations = {
     tagline:
       'Общий буфер обмена для своих компьютеров и Android-телефона через свой сервер. Скопировал на одном устройстве, через секунду вставляешь на другом. Все шифруется на устройствах, сервер передает только шифротекст.',
     downloadMac: 'Скачать для Mac',
-    downloadDesktop: 'Windows и Linux',
-    downloadAndroid: 'APK для Android',
+    downloadWindows: 'Скачать для Windows',
+    downloadLinux: 'Скачать для Linux',
+    downloadAndroid: 'Скачать APK для Android',
     brewLabel: 'Или через Homebrew',
     copy: 'Скопировать',
     copied: 'Скопировано',

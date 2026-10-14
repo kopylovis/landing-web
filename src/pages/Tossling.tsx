@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Fragment, useState } from 'react'
 import { Link } from 'react-router-dom'
 import SEO from '../components/SEO'
 import { seoProps } from '../seo/pages'
@@ -8,7 +8,10 @@ import '../styles/AuthmeisterPage.css'
 import '../styles/TosslingPage.css'
 
 const tossling = projects.find((p) => p.id === 'tossling')!
-const BREW = 'brew install --cask tossling/tap/tossling'
+// Spans keep --cask whole and let the tap path break only after a slash on narrow screens.
+const BREW_WORDS = ['brew', 'install', '--cask']
+const BREW_PATH = 'tossling/tap/tossling'
+const BREW = `${BREW_WORDS.join(' ')} ${BREW_PATH}`
 
 type Platform = 'mac' | 'windows' | 'linux' | 'android'
 
@@ -84,7 +87,20 @@ function BrewCommand() {
     <div className="tossling__brew">
       <span className="tossling__brew-label">{t.tosslingPage.brewLabel}</span>
       <div className="tossling__brew-row">
-        <code>{BREW}</code>
+        <code>
+          {BREW_WORDS.map((word, i) => (
+            <Fragment key={word}>
+              {i > 0 && ' '}
+              <span className="tossling__brew-part">{word}</span>
+            </Fragment>
+          ))}
+          {' '}
+          {BREW_PATH.split(/(?<=\/)/).map((part) => (
+            <span key={part} className="tossling__brew-part">
+              {part}
+            </span>
+          ))}
+        </code>
         <button type="button" className="tossling__brew-copy" onClick={copy}>
           {copied ? t.tosslingPage.copied : t.tosslingPage.copy}
         </button>
@@ -97,6 +113,7 @@ export default function Tossling() {
   const { t, locale } = useI18n()
   const page = t.tosslingPage
   const [platform] = useState(detectPlatform)
+  const showBrew = platform === 'mac' && !/iPhone|iPod/.test(navigator.userAgent)
 
   return (
     <>
@@ -117,7 +134,7 @@ export default function Tossling() {
               <h1 className="product__title">Tossling</h1>
               <p className="product__tagline">{page.tagline}</p>
               <DownloadButtons platform={platform} />
-              {platform === 'mac' && <BrewCommand />}
+              {showBrew && <BrewCommand />}
             </div>
 
             <figure className="product__hero-art" aria-hidden="true">

@@ -119,6 +119,18 @@
   min-height: 260px;
 }
 
+@media (max-width: 560px) {
+  .product__hero {
+    grid-template-columns: minmax(0, 1fr);
+    padding: var(--space-5);
+  }
+
+  .product__hero-art {
+    aspect-ratio: auto;
+    min-height: 220px;
+  }
+}
+
 .product__hero-glow {
   position: absolute;
   inset: 15%;
@@ -182,6 +194,12 @@
 }
 
 .product__specs-item:nth-last-child(-n+2) { border-bottom: none; }
+
+@media (max-width: 560px) {
+  .product__specs { grid-template-columns: 1fr; }
+  .product__specs-item { border-right: none; }
+  .product__specs-item:nth-last-child(2) { border-bottom: 1px solid var(--line); }
+}
 
 .product__specs dt {
   font-family: var(--font-mono);

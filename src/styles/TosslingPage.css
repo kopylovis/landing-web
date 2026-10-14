@@ -48,9 +48,12 @@
   font-family: var(--font-mono);
   font-size: var(--fs-sm);
   color: var(--ink);
-  overflow-x: auto;
-  white-space: nowrap;
   min-width: 0;
+  text-wrap: balance;
+}
+
+.tossling__brew-part {
+  display: inline-block;
 }
 
 .tossling__brew-copy {
@@ -195,4 +198,24 @@
   margin-top: var(--space-2);
   color: var(--ink-faint);
   font-size: var(--fs-sm);
+}
+
+@media (max-width: 560px) {
+  .tossling .product__cta-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .tossling .product__cta-row .btn-icon {
+    flex: 1;
+    width: auto;
+  }
+
+  .tossling__brew-row {
+    width: 100%;
+  }
+
+  .tossling__brew-row code {
+    font-size: var(--fs-xs);
+  }
 }

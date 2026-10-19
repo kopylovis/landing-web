@@ -81,7 +81,7 @@ export function pageMeta(page: PageKey, locale: Locale): PageMeta {
     case 'tosslingPrivacy':
       return { path, title: `Tossling, ${t.legal.tosslingPrivacy.title}`, description: t.legal.tosslingPrivacy.description, image: tosslingImage, type: 'article' }
     case 'sightra':
-      return { path, title: 'Sightra, an AI Assistant for Meta AI Glasses', description: t.projects.sightra.description, image: sightraImage, type: 'website' }
+      return { path, title: 'Sightra, an AI Assistant for Ray-Ban Meta Gen 2', description: t.projects.sightra.description, image: sightraImage, type: 'website' }
     case 'sightraPrivacy':
       return { path, title: `Sightra, ${t.legal.sightraPrivacy.title}`, description: t.legal.sightraPrivacy.description, image: sightraImage, type: 'article' }
     case 'sightraTerms':

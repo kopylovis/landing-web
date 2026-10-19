@@ -87,6 +87,19 @@ export interface Translations {
     finalBody: string
     legalPrivacy: string
   }
+  sightraPage: {
+    back: string
+    tagline: string
+    status: string
+    specs: LabeledValue[]
+    featuresEyebrow: string
+    featuresTitle: string
+    highlights: TitleBody[]
+    finalTitle: string
+    finalBody: string
+    legalPrivacy: string
+    legalTerms: string
+  }
   tosslingPage: {
     back: string
     tagline: string
@@ -388,6 +401,31 @@ export const en: Translations = {
     finalTitle: 'Coming to the app stores',
     finalBody: 'kcalm is in closed testing. To try it earlier, write to mnrhwow@gmail.com.',
     legalPrivacy: 'Privacy policy',
+  },
+  sightraPage: {
+    back: 'Back to portfolio',
+    tagline: 'Talk to an AI that sees what you see, through Meta AI glasses or the phone camera.',
+    status: 'In closed testing',
+    specs: [
+      { label: 'Platforms', value: 'iOS · Android' },
+      { label: 'Tech', value: 'Kotlin Multiplatform · Compose · SwiftUI' },
+      { label: 'AI', value: 'Gemini or OpenAI, your own key' },
+      { label: 'Accounts', value: 'None' },
+    ],
+    featuresEyebrow: 'Features',
+    featuresTitle: 'Ask about what is in front of you.',
+    highlights: [
+      { title: 'It sees through the glasses', body: 'A live voice conversation with Gemini or OpenAI. While the camera is on, the model gets a few frames per second from Meta AI glasses or the phone camera, so you can ask about what you are looking at.' },
+      { title: 'Interpreter', body: 'Speak and hear the translation into another language. It needs only the phone, the glasses are optional.' },
+      { title: 'Transcription', body: 'A live recording or an audio file turns into text. The transcript stays on the phone, and you can send it on to your agent.' },
+      { title: 'Your own key', body: 'Sightra works under your Gemini or OpenAI API key, kept encrypted on the device. Requests go straight to the provider or through your proxy. The developer runs no server for it.' },
+      { title: 'Tasks for OpenClaw', body: 'Connect your OpenClaw gateway and the assistant hands it the tasks you ask for. A conversation can be saved to the agent with one tap.' },
+      { title: 'Hands-free on the phone', body: 'Timers, reminders and calendar events go into the apps on your phone. Wake and stop phrases are recognized on the device.' },
+    ],
+    finalTitle: 'Coming to the app stores',
+    finalBody: 'Sightra is in closed testing. To try it earlier, write to mnrhwow@gmail.com.',
+    legalPrivacy: 'Privacy policy',
+    legalTerms: 'Terms of use',
   },
   tosslingPage: {
     back: 'Back to portfolio',
@@ -985,6 +1023,31 @@ export const ru: Translations = {
     finalTitle: 'Скоро в магазинах приложений',
     finalBody: 'kcalm сейчас в закрытом тестировании. Если хотите попробовать раньше, напишите на mnrhwow@gmail.com.',
     legalPrivacy: 'Политика конфиденциальности',
+  },
+  sightraPage: {
+    back: 'Назад к портфолио',
+    tagline: 'Разговор с ИИ, который видит то же, что и вы, через очки Meta AI или камеру телефона.',
+    status: 'Сейчас в закрытом тестировании',
+    specs: [
+      { label: 'Платформы', value: 'iOS · Android' },
+      { label: 'Технологии', value: 'Kotlin Multiplatform · Compose · SwiftUI' },
+      { label: 'ИИ', value: 'Gemini или OpenAI, свой ключ' },
+      { label: 'Аккаунты', value: 'Не нужны' },
+    ],
+    featuresEyebrow: 'Возможности',
+    featuresTitle: 'Спросите о том, что перед глазами.',
+    highlights: [
+      { title: 'Видит через очки', body: 'Живой голосовой разговор с Gemini или OpenAI. Пока камера включена, модель получает несколько кадров в секунду с очков Meta AI или камеры телефона, и можно спросить о том, на что вы смотрите.' },
+      { title: 'Переводчик', body: 'Говорите и слышите перевод на другой язык. Хватает одного телефона, очки не обязательны.' },
+      { title: 'Расшифровка', body: 'Запись с микрофона или аудиофайл превращаются в текст. Расшифровка остается на телефоне, ее можно отправить своему агенту.' },
+      { title: 'Свой ключ', body: 'Sightra работает на вашем API-ключе Gemini или OpenAI, ключ хранится на устройстве в зашифрованном виде. Запросы идут сразу к провайдеру или через ваш прокси. Своего сервера у приложения нет.' },
+      { title: 'Задачи для OpenClaw', body: 'Подключите свой шлюз OpenClaw, и ассистент будет передавать ему задачи, о которых вы попросите. Разговор сохраняется агенту одним нажатием.' },
+      { title: 'Без рук', body: 'Таймеры, напоминания и события календаря попадают в приложения телефона. Фразы для запуска и остановки распознаются на самом устройстве.' },
+    ],
+    finalTitle: 'Скоро в магазинах приложений',
+    finalBody: 'Sightra сейчас в закрытом тестировании. Если хотите попробовать раньше, напишите на mnrhwow@gmail.com.',
+    legalPrivacy: 'Политика конфиденциальности',
+    legalTerms: 'Условия использования',
   },
   tosslingPage: {
     back: 'К проектам',

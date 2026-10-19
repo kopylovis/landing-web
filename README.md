@@ -10,6 +10,7 @@ Personal developer site at [www.monoroh.com](https://www.monoroh.com): projects,
 | `/tossling`, `/tossling/privacy` | Tossling and its privacy policy |
 | `/authmeister`, `/authmeister/privacy`, `/authmeister/terms` | Authmeister, privacy policy, terms of use |
 | `/sightra/privacy`, `/sightra/terms` | Sightra privacy policy and terms of use |
+| `/kcalm`, `/kcalm/privacy` | kcalm and its privacy policy |
 | `/privacy`, `/terms` | Site-wide privacy policy and terms |
 
 UI strings live in `src/i18n/translations.ts`. `public/.well-known/apple-app-site-association` serves the universal links for the iOS apps. GitHub Pages has no SPA fallback, so `public/404.html` redirects unknown paths to the root with the path in the query string and the router picks it up.

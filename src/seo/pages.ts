@@ -16,6 +16,8 @@ export type PageKey =
   | 'tosslingPrivacy'
   | 'sightraPrivacy'
   | 'sightraTerms'
+  | 'kcalm'
+  | 'kcalmPrivacy'
 
 export interface PageMeta {
   path: string
@@ -36,6 +38,8 @@ export const pagePaths: Record<PageKey, string> = {
   tosslingPrivacy: '/tossling/privacy/',
   sightraPrivacy: '/sightra/privacy/',
   sightraTerms: '/sightra/terms/',
+  kcalm: '/kcalm/',
+  kcalmPrivacy: '/kcalm/privacy/',
 }
 
 export function fullTitle(title: string): string {
@@ -53,6 +57,7 @@ export function pageMeta(page: PageKey, locale: Locale): PageMeta {
   const authmeisterImage = `${SITE_URL}/media/authmeister_512x512.png`
   const tosslingImage = `${SITE_URL}/media/tossling_512x512.png`
   const sightraImage = `${SITE_URL}/media/sightra_512x512.png`
+  const kcalmImage = `${SITE_URL}/media/kcalm_512x512.png`
 
   switch (page) {
     case 'home':
@@ -75,6 +80,10 @@ export function pageMeta(page: PageKey, locale: Locale): PageMeta {
       return { path, title: `Sightra, ${t.legal.sightraPrivacy.title}`, description: t.legal.sightraPrivacy.description, image: sightraImage, type: 'article' }
     case 'sightraTerms':
       return { path, title: `Sightra, ${t.legal.sightraTerms.title}`, description: t.legal.sightraTerms.description, image: sightraImage, type: 'article' }
+    case 'kcalm':
+      return { path, title: 'kcalm, a Calm Food Diary', description: t.projects.kcalm.description, image: kcalmImage, type: 'website' }
+    case 'kcalmPrivacy':
+      return { path, title: `kcalm, ${t.legal.kcalmPrivacy.title}`, description: t.legal.kcalmPrivacy.description, image: kcalmImage, type: 'article' }
   }
 }
 

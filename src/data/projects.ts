@@ -59,7 +59,9 @@ export const projects: AppData[] = [
       { name: 'iOS', icon: '', available: true },
       { name: 'Android', icon: '', available: true },
     ],
-    links: {},
+    links: {
+      page: '/sightra',
+    },
   },
   {
     id: 'axrock',

@@ -14,6 +14,7 @@ export type PageKey =
   | 'authmeisterTerms'
   | 'tossling'
   | 'tosslingPrivacy'
+  | 'sightra'
   | 'sightraPrivacy'
   | 'sightraTerms'
   | 'kcalm'
@@ -36,6 +37,7 @@ export const pagePaths: Record<PageKey, string> = {
   authmeisterTerms: '/authmeister/terms/',
   tossling: '/tossling/',
   tosslingPrivacy: '/tossling/privacy/',
+  sightra: '/sightra/',
   sightraPrivacy: '/sightra/privacy/',
   sightraTerms: '/sightra/terms/',
   kcalm: '/kcalm/',
@@ -76,6 +78,8 @@ export function pageMeta(page: PageKey, locale: Locale): PageMeta {
       return { path, title: 'Tossling, One Clipboard for Your Computers and Android Phone', description: t.projects.tossling.description, image: tosslingImage, type: 'website' }
     case 'tosslingPrivacy':
       return { path, title: `Tossling, ${t.legal.tosslingPrivacy.title}`, description: t.legal.tosslingPrivacy.description, image: tosslingImage, type: 'article' }
+    case 'sightra':
+      return { path, title: 'Sightra, an AI Assistant for Meta AI Glasses', description: t.projects.sightra.description, image: sightraImage, type: 'website' }
     case 'sightraPrivacy':
       return { path, title: `Sightra, ${t.legal.sightraPrivacy.title}`, description: t.legal.sightraPrivacy.description, image: sightraImage, type: 'article' }
     case 'sightraTerms':

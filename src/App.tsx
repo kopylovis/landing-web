@@ -12,6 +12,7 @@ import TosslingPrivacy from './pages/TosslingPrivacy'
 import SightraPrivacy from './pages/SightraPrivacy'
 import SightraTerms from './pages/SightraTerms'
 import Kcalm from './pages/Kcalm'
+import Sightra from './pages/Sightra'
 import KcalmPrivacy from './pages/KcalmPrivacy'
 import AuthmeisterTerms from './pages/AuthmeisterTerms'
 import Tossling from './pages/Tossling'
@@ -34,6 +35,7 @@ function App() {
                 <Route path="/authmeister/terms" element={<AuthmeisterTerms />} />
                 <Route path="/tossling" element={<Tossling />} />
                 <Route path="/tossling/privacy" element={<TosslingPrivacy />} />
+                <Route path="/sightra" element={<Sightra />} />
                 <Route path="/sightra/privacy" element={<SightraPrivacy />} />
                 <Route path="/sightra/terms" element={<SightraTerms />} />
                 <Route path="/kcalm" element={<Kcalm />} />

@@ -19,6 +19,7 @@ export type PageKey =
   | 'sightraTerms'
   | 'kcalm'
   | 'kcalmPrivacy'
+  | 'kcalmDeleteAccount'
 
 export interface PageMeta {
   path: string
@@ -42,6 +43,7 @@ export const pagePaths: Record<PageKey, string> = {
   sightraTerms: '/sightra/terms/',
   kcalm: '/kcalm/',
   kcalmPrivacy: '/kcalm/privacy/',
+  kcalmDeleteAccount: '/kcalm/delete-account/',
 }
 
 export function fullTitle(title: string): string {
@@ -88,6 +90,8 @@ export function pageMeta(page: PageKey, locale: Locale): PageMeta {
       return { path, title: 'kcalm, a Calm Food Diary', description: t.projects.kcalm.description, image: kcalmImage, type: 'website' }
     case 'kcalmPrivacy':
       return { path, title: `kcalm, ${t.legal.kcalmPrivacy.title}`, description: t.legal.kcalmPrivacy.description, image: kcalmImage, type: 'article' }
+    case 'kcalmDeleteAccount':
+      return { path, title: t.legal.kcalmDeleteAccount.title, description: t.legal.kcalmDeleteAccount.description, image: kcalmImage, type: 'article' }
   }
 }
 

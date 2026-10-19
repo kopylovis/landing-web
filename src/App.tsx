@@ -14,6 +14,7 @@ import SightraTerms from './pages/SightraTerms'
 import Kcalm from './pages/Kcalm'
 import Sightra from './pages/Sightra'
 import KcalmPrivacy from './pages/KcalmPrivacy'
+import KcalmDeleteAccount from './pages/KcalmDeleteAccount'
 import AuthmeisterTerms from './pages/AuthmeisterTerms'
 import Tossling from './pages/Tossling'
 import NotFound from './pages/NotFound'
@@ -40,6 +41,7 @@ function App() {
                 <Route path="/sightra/terms" element={<SightraTerms />} />
                 <Route path="/kcalm" element={<Kcalm />} />
                 <Route path="/kcalm/privacy" element={<KcalmPrivacy />} />
+                <Route path="/kcalm/delete-account" element={<KcalmDeleteAccount />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Layout>

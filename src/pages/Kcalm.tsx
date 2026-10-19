@@ -70,6 +70,8 @@ export default function Kcalm() {
 
             <nav className="product__legal" aria-label="kcalm legal">
               <Link to="/kcalm/privacy">{t.kcalmPage.legalPrivacy}</Link>
+              <span aria-hidden="true">·</span>
+              <Link to="/kcalm/delete-account">{t.legal.kcalmDeleteAccount.title}</Link>
             </nav>
           </section>
         </div>

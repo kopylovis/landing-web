@@ -145,6 +145,7 @@ export interface Translations {
     sightraPrivacy: LegalDoc
     sightraTerms: LegalDoc
     kcalmPrivacy: LegalDoc
+    kcalmDeleteAccount: LegalDoc
   }
   notFound: {
     title: string
@@ -654,6 +655,28 @@ export const en: Translations = {
       ],
     },
 
+    kcalmDeleteAccount: {
+      title: 'Delete your kcalm account',
+      description: 'How to delete a kcalm account and all of its data, in the app or by email.',
+      body: [
+        { type: 'p', text: 'This page explains how to delete an account in **kcalm** by Ivan Kopylov.' },
+        { type: 'h2', text: 'In the app' },
+        { type: 'p', text: 'Open Profile, then Settings, then Delete account. Confirm on that screen. The account is removed from the server at once and the app signs you out.' },
+        { type: 'h2', text: 'Without the app' },
+        { type: 'p', text: 'Write to mailto:mnrhwow@gmail.com from the email of your kcalm account with the subject "Delete kcalm account". The account is deleted within 30 days, and you get a reply when it is done.' },
+        { type: 'h2', text: 'What is deleted' },
+        { type: 'ul', items: [
+          'Profile, targets and avatar.',
+          'Food diary, your own products and dishes, favourites.',
+          'Weight, water and activity, including data that came from Apple Health or Health Connect.',
+          'Medications and intake marks.',
+          'Posts with their photos, comments, likes, friends, club memberships and achievements.',
+          'Sign-in data and every session.',
+        ] },
+        { type: 'p', text: 'Clubs themselves stay, since other people use them. Server backups are rotated, and deleted data disappears from them as they are replaced. Nothing is kept on purpose after deletion.' },
+      ],
+    },
+
     kcalmPrivacy: {
       title: 'Privacy Policy',
       description: 'What kcalm stores on its server, what it reads from Apple Health and Health Connect, where a photo of a meal goes and how to delete your account.',
@@ -685,7 +708,7 @@ export const en: Translations = {
         { type: 'h2', text: 'Google user data' },
         { type: 'p', text: 'When you sign in with Google, kcalm uses your Google account identifier, email address and name only to sign you in and show your name in the app. kcalm does not request access to any other Google data. The use of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements: https://developers.google.com/terms/api-services-user-data-policy.' },
         { type: 'h2', text: 'Export and deletion' },
-        { type: 'p', text: 'In the app you can export the diary to CSV, a 30-day report to PDF and the whole account to a JSON archive. To delete your account, write to mailto:mnrhwow@gmail.com from the email of the account. The account and everything listed above are deleted within 30 days. Server backups are rotated, and deleted data disappears from them as they are replaced.' },
+        { type: 'p', text: 'In the app you can export the diary to CSV, a 30-day report to PDF and the whole account to a JSON archive. To delete the account, open Profile, Settings, Delete account. The account and everything listed above are removed from the server at once. Without the app, follow https://monoroh.com/kcalm/delete-account/. Server backups are rotated, and deleted data disappears from them as they are replaced.' },
         { type: 'h2', text: 'Children' },
         { type: 'p', text: 'kcalm is not meant for children under 13 and does not knowingly collect their data.' },
         { type: 'h2', text: 'Changes and contact' },
@@ -1276,6 +1299,28 @@ export const ru: Translations = {
       ],
     },
 
+    kcalmDeleteAccount: {
+      title: 'Удаление аккаунта kcalm',
+      description: 'Как удалить аккаунт kcalm и все его данные в приложении или по письму.',
+      body: [
+        { type: 'p', text: 'Здесь описано, как удалить аккаунт в **kcalm** от Ивана Копылова.' },
+        { type: 'h2', text: 'В приложении' },
+        { type: 'p', text: 'Откройте Профиль, затем Настройки и Удалить аккаунт. Подтвердите удаление на этом экране. Аккаунт сразу удалится с сервера, и приложение выйдет из него.' },
+        { type: 'h2', text: 'Без приложения' },
+        { type: 'p', text: 'Напишите на mailto:mnrhwow@gmail.com с почты вашего аккаунта kcalm, тема письма "Удалить аккаунт kcalm". Аккаунт удаляется в течение 30 дней, о готовности придет ответ.' },
+        { type: 'h2', text: 'Что удаляется' },
+        { type: 'ul', items: [
+          'Профиль, нормы и аватар.',
+          'Дневник питания, свои продукты и блюда, избранное.',
+          'Вес, вода и активность, в том числе данные из Apple Health и Health Connect.',
+          'Лекарства и отметки о приеме.',
+          'Посты с фото, комментарии, лайки, друзья, членство в клубах и ачивки.',
+          'Данные для входа и все сессии.',
+        ] },
+        { type: 'p', text: 'Сами клубы остаются, ими пользуются другие люди. Резервные копии сервера обновляются по кругу, и удаленные данные пропадают из них по мере замены копий. Специально после удаления ничего не хранится.' },
+      ],
+    },
+
     kcalmPrivacy: {
       title: 'Политика конфиденциальности',
       description: 'Что kcalm хранит на сервере, что читает из Apple Health и Health Connect, куда уходит фото блюда и как удалить аккаунт.',
@@ -1307,7 +1352,7 @@ export const ru: Translations = {
         { type: 'h2', text: 'Данные Google' },
         { type: 'p', text: 'Когда вы входите через Google, kcalm использует ваш идентификатор аккаунта Google, адрес почты и имя только для входа и чтобы показать имя в приложении. Доступа к другим данным Google kcalm не запрашивает. Информация, полученная через Google API, используется в соответствии с Google API Services User Data Policy, включая требования Limited Use, подробнее на https://developers.google.com/terms/api-services-user-data-policy.' },
         { type: 'h2', text: 'Выгрузка и удаление' },
-        { type: 'p', text: 'В приложении можно выгрузить дневник в CSV, отчет за 30 дней в PDF и весь аккаунт в архив JSON. Чтобы удалить аккаунт, напишите на mailto:mnrhwow@gmail.com с почты этого аккаунта. Аккаунт и все перечисленное выше удаляются в течение 30 дней. Резервные копии сервера обновляются по кругу, и удаленные данные пропадают из них по мере замены копий.' },
+        { type: 'p', text: 'В приложении можно выгрузить дневник в CSV, отчет за 30 дней в PDF и весь аккаунт в архив JSON. Чтобы удалить аккаунт, откройте Профиль, затем Настройки и Удалить аккаунт. Аккаунт и все перечисленное выше сразу удаляются с сервера. Без приложения это можно сделать по инструкции на https://monoroh.com/kcalm/delete-account/. Резервные копии сервера обновляются по кругу, и удаленные данные пропадают из них по мере замены копий.' },
         { type: 'h2', text: 'Дети' },
         { type: 'p', text: 'kcalm не рассчитан на детей младше 13 лет и сознательно не собирает их данные.' },
         { type: 'h2', text: 'Изменения и связь' },

@@ -19,7 +19,7 @@ interface ProseH3 { type: 'h3'; text: string }
 interface ProseUl { type: 'ul'; items: string[] }
 type ProseBlockT = ProseP | ProseH2 | ProseH3 | ProseUl
 interface LegalDoc { title: string; description: string; body: ProseBlockT[] }
-interface ProjectCopyT { category: string; description: string; features: string[] }
+interface ProjectCopyT { category: string; description: string; features: string[]; status?: string }
 interface HintLink { label: string; to: string; external: boolean }
 interface Shot { src: string; alt: string; kind: 'desktop' | 'phone' | 'wide' }
 interface RepoLink { name: string; detail: string; href: string }
@@ -62,7 +62,7 @@ export interface Translations {
     privacy: string
     terms: string
   }
-  projects: Record<'tossling' | 'authmeister' | 'kcalm' | 'fastlaneRustore', ProjectCopyT>
+  projects: Record<'tossling' | 'authmeister' | 'kcalm' | 'sightra' | 'axrock' | 'fastlaneRustore', ProjectCopyT>
   authmeisterPage: {
     back: string
     tagline: string
@@ -283,6 +283,32 @@ export const en: Translations = {
         'Steps and energy from Apple Health or Health Connect',
         'Medication schedule and intakes',
         'Export to CSV, PDF and a full archive',
+      ],
+      status: 'In closed testing',
+    },
+    sightra: {
+      category: 'AI · Smart glasses',
+      description:
+        'An assistant for Meta AI glasses and the phone. You talk to Gemini or OpenAI by voice, and the model sees what the glasses or the phone camera see. Sightra also interprets speech into another language and transcribes recordings, under your own API key and without an account.',
+      features: [
+        'Live voice chat with Gemini or OpenAI',
+        'Sees through Meta AI glasses or the phone camera',
+        'Speech interpreted into another language',
+        'Transcripts of recordings',
+        'Tasks for your own OpenClaw gateway',
+      ],
+      status: 'In closed testing',
+    },
+    axrock: {
+      category: 'Website · Music',
+      description:
+        'The website of the rock band Angel-Khranitel: concerts and tours, news, discography, photos and video. The band edits everything in its own admin panel, and the pages are prerendered and served from GitHub Pages.',
+      features: [
+        'Concerts and tours',
+        'News, discography, photos and video',
+        'Russian and English versions',
+        'Admin panel for concerts, releases, news and expenses',
+        'Prerendered pages, data from its own API',
       ],
     },
     fastlaneRustore: {
@@ -854,6 +880,32 @@ export const ru: Translations = {
         'Шаги и расход из Apple Health или Health Connect',
         'Расписание и отметки приема лекарств',
         'Выгрузка в CSV, PDF и полный архив',
+      ],
+      status: 'В закрытом тестировании',
+    },
+    sightra: {
+      category: 'ИИ · Умные очки',
+      description:
+        'Ассистент для очков Meta AI и телефона. С Gemini или OpenAI говоришь голосом, а модель видит то же, что очки или камера телефона. Еще Sightra переводит речь на другой язык и расшифровывает записи. Работает на вашем API-ключе, без аккаунта.',
+      features: [
+        'Голосовой разговор с Gemini или OpenAI',
+        'Видит через очки Meta AI или камеру телефона',
+        'Перевод речи на другой язык',
+        'Расшифровка записей',
+        'Задачи для своего шлюза OpenClaw',
+      ],
+      status: 'В закрытом тестировании',
+    },
+    axrock: {
+      category: 'Сайт · Музыка',
+      description:
+        'Сайт рок-группы Ангел-Хранитель: концерты и туры, новости, дискография, фото и видео. Группа сама ведет все через свою админку, а страницы заранее собираются и лежат на GitHub Pages.',
+      features: [
+        'Концерты и туры',
+        'Новости, дискография, фото и видео',
+        'Русская и английская версии',
+        'Админка для концертов, релизов, новостей и расходов',
+        'Готовые страницы, данные из своего API',
       ],
     },
     fastlaneRustore: {

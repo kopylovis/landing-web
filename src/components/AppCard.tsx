@@ -77,7 +77,13 @@ export default function AppCard({ app, className, onClick, variant = 'default', 
     }
   }
 
+  // A project in closed testing may have no page, store or source yet: the card is then not a link.
+  const hasTarget = Boolean(
+    app.links.page || app.links.website || app.links.github || app.links.rubygems || visibleStores.length > 0,
+  )
+
   const handleCardClick = () => {
+    if (!hasTarget) return
     if (app.links.page && onClick) {
       onClick()
     } else if (app.links.website) {
@@ -107,11 +113,11 @@ export default function AppCard({ app, className, onClick, variant = 'default', 
   return (
     <article
       ref={ref}
-      className={`app-card app-card--${variant} reveal ${className || ''}`}
+      className={`app-card app-card--${variant}${hasTarget ? '' : ' app-card--static'} reveal ${className || ''}`}
       data-visible={visible}
       style={{ ['--reveal-delay' as string]: `${index * 80}ms` }}
-      role="link"
-      tabIndex={0}
+      role={hasTarget ? 'link' : undefined}
+      tabIndex={hasTarget ? 0 : undefined}
       onClick={handleCardClick}
       onKeyDown={handleKey}
     >
@@ -179,6 +185,7 @@ export default function AppCard({ app, className, onClick, variant = 'default', 
           </div>
         ) : (
           <div className="app-card__source">
+            {copy?.status && <span className="app-card__status">{copy.status}</span>}
             {sourceCtas.map((cta) => (
               <a
                 key={cta.key}
@@ -195,12 +202,14 @@ export default function AppCard({ app, className, onClick, variant = 'default', 
           </div>
         )}
 
-        <span className="app-card__cta" aria-hidden="true">
-          {ctaLabel}
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M7 17 17 7M9 7h8v8" />
-          </svg>
-        </span>
+        {hasTarget && (
+          <span className="app-card__cta" aria-hidden="true">
+            {ctaLabel}
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M7 17 17 7M9 7h8v8" />
+            </svg>
+          </span>
+        )}
       </div>
     </article>
   )

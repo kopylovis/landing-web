@@ -52,6 +52,26 @@ export const projects: AppData[] = [
     },
   },
   {
+    id: 'sightra',
+    name: 'Sightra',
+    image: '/media/sightra_512x512.png',
+    platforms: [
+      { name: 'iOS', icon: '', available: true },
+      { name: 'Android', icon: '', available: true },
+    ],
+    links: {},
+  },
+  {
+    id: 'axrock',
+    name: 'axrock.band',
+    image: '/media/axrock_512x512.png',
+    platforms: [{ name: 'Web', icon: '', available: true }],
+    links: {
+      website: 'https://axrock.band',
+      github: 'https://github.com/kopylovis/axrock-web',
+    },
+  },
+  {
     id: 'fastlaneRustore',
     name: 'upload_to_ru_store',
     image: '/media/upload_to_ru_store_512x512.png',

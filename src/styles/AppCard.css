@@ -20,6 +20,15 @@
   transform: translateY(-2px);
 }
 
+.app-card--static {
+  cursor: default;
+}
+
+.app-card--static:hover {
+  border-color: var(--line);
+  transform: none;
+}
+
 .app-card:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 4px;
@@ -246,6 +255,17 @@
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
+}
+
+.app-card__status {
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+  padding-inline: 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-full);
+  color: var(--ink-mute);
+  font-size: var(--fs-sm);
 }
 
 .app-card__source-link {

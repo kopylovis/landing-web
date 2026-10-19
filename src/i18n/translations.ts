@@ -62,7 +62,7 @@ export interface Translations {
     privacy: string
     terms: string
   }
-  projects: Record<'tossling' | 'authmeister' | 'fastlaneRustore', ProjectCopyT>
+  projects: Record<'tossling' | 'authmeister' | 'kcalm' | 'fastlaneRustore', ProjectCopyT>
   authmeisterPage: {
     back: string
     tagline: string
@@ -74,6 +74,18 @@ export interface Translations {
     finalBody: string
     legalPrivacy: string
     legalTerms: string
+  }
+  kcalmPage: {
+    back: string
+    tagline: string
+    status: string
+    specs: LabeledValue[]
+    featuresEyebrow: string
+    featuresTitle: string
+    highlights: TitleBody[]
+    finalTitle: string
+    finalBody: string
+    legalPrivacy: string
   }
   tosslingPage: {
     back: string
@@ -111,6 +123,7 @@ export interface Translations {
     privacyUpdated: string
     authmeisterUpdated: string
     sightraUpdated: string
+    kcalmUpdated: string
     privacy: LegalDoc
     terms: LegalDoc
     authmeisterPrivacy: LegalDoc
@@ -118,6 +131,7 @@ export interface Translations {
     tosslingPrivacy: LegalDoc
     sightraPrivacy: LegalDoc
     sightraTerms: LegalDoc
+    kcalmPrivacy: LegalDoc
   }
   notFound: {
     title: string
@@ -259,6 +273,18 @@ export const en: Translations = {
         'Backup and restore',
       ],
     },
+    kcalm: {
+      category: 'Health · Nutrition',
+      description:
+        'A food diary for iPhone and Android. Log a meal by search, barcode or a photo of the plate, see calories and macros against your target, keep activity from Health and medication intakes in the same place.',
+      features: [
+        'Search, barcode and photo logging',
+        'Calories and macros against your target',
+        'Steps and energy from Apple Health or Health Connect',
+        'Medication schedule and intakes',
+        'Export to CSV, PDF and a full archive',
+      ],
+    },
     fastlaneRustore: {
       category: 'Open Source · Fastlane plugin',
       description:
@@ -313,6 +339,30 @@ export const en: Translations = {
     legalTerms: 'Terms & Conditions',
   },
 
+  kcalmPage: {
+    back: 'Back to portfolio',
+    tagline: 'A food diary without strict rules. Logging a meal takes less than a minute.',
+    status: 'In closed testing',
+    specs: [
+      { label: 'Platforms', value: 'iOS · Android' },
+      { label: 'Tech', value: 'Kotlin Multiplatform' },
+      { label: 'Pricing', value: 'Free' },
+      { label: 'Ads', value: 'None' },
+    ],
+    featuresEyebrow: 'Features',
+    featuresTitle: 'Write down what you ate and move on.',
+    highlights: [
+      { title: 'Quick logging', body: 'Find a product in the database, scan its barcode or pick one you ate yesterday. Your own products and dishes are saved for next time.' },
+      { title: 'A photo of the plate', body: 'Take a picture and AI suggests the name, portion, calories and macros. You check the numbers before they go into the diary.' },
+      { title: 'Activity from Health', body: 'Steps, workouts and burned energy come from Apple Health or Health Connect, read only, and only when you allow it.' },
+      { title: 'Medications', body: 'A schedule for tablets and injections, intake marks with dose, injection site, mood and side effects.' },
+      { title: 'Friends and clubs', body: 'Share a day, a meal or an achievement with friends. You choose who sees each part of your profile.' },
+      { title: 'Your data goes with you', body: 'Export the diary to CSV, a 30-day report to PDF for a doctor or coach, or the whole account to a JSON archive.' },
+    ],
+    finalTitle: 'Coming to the app stores',
+    finalBody: 'kcalm is in closed testing. To try it earlier, write to mnrhwow@gmail.com.',
+    legalPrivacy: 'Privacy policy',
+  },
   tosslingPage: {
     back: 'Back to portfolio',
     tagline:
@@ -399,12 +449,13 @@ export const en: Translations = {
     privacyUpdated: 'Updated 12 Oct 2026',
     authmeisterUpdated: 'Updated 12 Oct 2026',
     sightraUpdated: 'Updated 13 Oct 2026',
+    kcalmUpdated: 'Updated 19 Oct 2026',
 
     privacy: {
       title: 'Privacy Policy',
       description: 'The monoroh.com website collects nothing: no analytics and no cookies. What the GitHub Pages hosting sees and what happens to your emails.',
       body: [
-        { type: 'p', text: 'This policy covers the **monoroh.com** website. Each app has a policy of its own: https://monoroh.com/authmeister/privacy/ for Authmeister, https://monoroh.com/tossling/privacy/ for Tossling and https://monoroh.com/sightra/privacy/ for Sightra.' },
+        { type: 'p', text: 'This policy covers the **monoroh.com** website. Each app has a policy of its own: https://monoroh.com/authmeister/privacy/ for Authmeister, https://monoroh.com/tossling/privacy/ for Tossling, https://monoroh.com/sightra/privacy/ for Sightra and https://monoroh.com/kcalm/privacy/ for kcalm.' },
         { type: 'h2', text: 'What the site collects' },
         { type: 'p', text: 'Nothing. The site has no analytics, no counters, no ads and no cookies. Fonts, images and scripts load from monoroh.com itself.' },
         { type: 'h2', text: 'Hosting' },
@@ -536,6 +587,45 @@ export const en: Translations = {
         { type: 'p', text: 'The apps and the server are open source at https://github.com/Tossling, so anyone can check what they do.' },
         { type: 'h2', text: 'Changes and contact' },
         { type: 'p', text: 'When this policy changes, the new version appears on this page with a new date. Write to mailto:mnrhwow@gmail.com with any questions.' },
+      ],
+    },
+
+    kcalmPrivacy: {
+      title: 'Privacy Policy',
+      description: 'What kcalm stores on its server, what it reads from Apple Health and Health Connect, where a photo of a meal goes and how to delete your account.',
+      body: [
+        { type: 'p', text: 'This policy covers the **kcalm** apps for iPhone and Android. kcalm is a food diary. Your diary lives on the developer\'s server at api.monoroh.com, so it is the same on every device you sign in on. kcalm has no ads and no analytics, and your data is not sold.' },
+        { type: 'h2', text: 'Your account' },
+        { type: 'p', text: 'You sign up with an email and a password. The server keeps only a salted hash of the password. You can also sign in with Apple or Google. Then kcalm receives your account identifier at that provider, your email address and, if you share it, your name. The app keeps a session token on the device and sends it with every request.' },
+        { type: 'h2', text: 'What you record' },
+        { type: 'ul', items: [
+          'Profile: name, sex, age, height, weight, goal weight, activity level, daily targets, username, bio and avatar.',
+          'Diary: meals, products and amounts, your own products and dishes, favourites, water and weight entries.',
+          'Medications: names, doses and schedule, intake marks with injection site, mood, appetite, side effects and notes.',
+          'Social: posts, photos in posts, comments, likes, friends and clubs.',
+        ] },
+        { type: 'p', text: 'All of this is stored on the server so that the diary syncs between devices and friends see what you share.' },
+        { type: 'h2', text: 'Apple Health and Health Connect' },
+        { type: 'p', text: 'If you allow it, kcalm reads steps, workouts, burned energy and weight. On iPhone this is active and resting energy from Apple Health, on Android total calories burned from Health Connect. kcalm writes nothing to Health. The app stores daily totals on the server to show your activity and adjust the calorie budget. Health data is not used for advertising, is not sold and is not shared with anyone. You can disconnect Health in the app and revoke access in the system settings at any time.' },
+        { type: 'h2', text: 'Camera and photos' },
+        { type: 'p', text: 'Barcodes are read on the phone, and only the number goes to the server. When you use meal recognition, the photo and your note go to the server and from there to OpenRouter, which passes them to a Google Gemini model. kcalm does not keep the photo after the analysis. OpenRouter and Google handle the request under their own terms, see https://openrouter.ai/privacy and https://policies.google.com/privacy. Your avatar and photos you attach to posts are stored on the server.' },
+        { type: 'h2', text: 'Who sees what' },
+        { type: 'p', text: 'Posts are visible to your friends or to the members of the club you post to. In the privacy settings you choose who sees each part of your profile. The developer can access the server for maintenance and to answer your requests.' },
+        { type: 'h2', text: 'Services kcalm uses' },
+        { type: 'ul', items: [
+          'OpenRouter and Google, for the photo and note when you recognise a meal.',
+          'Apple and Google, when you sign in with them.',
+          'An email delivery service, to send you the password reset code.',
+        ] },
+        { type: 'p', text: 'The product database includes data from Open Food Facts. It is copied to the kcalm server, and your searches do not go to Open Food Facts.' },
+        { type: 'h2', text: 'Google user data' },
+        { type: 'p', text: 'When you sign in with Google, kcalm uses your Google account identifier, email address and name only to sign you in and show your name in the app. kcalm does not request access to any other Google data. The use of information received from Google APIs adheres to the Google API Services User Data Policy, including the Limited Use requirements: https://developers.google.com/terms/api-services-user-data-policy.' },
+        { type: 'h2', text: 'Export and deletion' },
+        { type: 'p', text: 'In the app you can export the diary to CSV, a 30-day report to PDF and the whole account to a JSON archive. To delete your account, write to mailto:mnrhwow@gmail.com from the email of the account. The account and everything listed above are deleted within 30 days. Server backups are rotated, and deleted data disappears from them as they are replaced.' },
+        { type: 'h2', text: 'Children' },
+        { type: 'p', text: 'kcalm is not meant for children under 13 and does not knowingly collect their data.' },
+        { type: 'h2', text: 'Changes and contact' },
+        { type: 'p', text: 'kcalm is made by Ivan Kopylov. When this policy changes, the new version appears on this page with a new date. Write to mailto:mnrhwow@gmail.com with any questions.' },
       ],
     },
 
@@ -754,6 +844,18 @@ export const ru: Translations = {
         'Бэкап и восстановление',
       ],
     },
+    kcalm: {
+      category: 'Здоровье · Питание',
+      description:
+        'Дневник питания для iPhone и Android. Еду можно записать поиском, по штрихкоду или по фото тарелки, калории и БЖУ сразу видны рядом с нормой, а активность из Health и прием лекарств лежат там же.',
+      features: [
+        'Запись поиском, по штрихкоду и по фото',
+        'Калории и БЖУ рядом с дневной нормой',
+        'Шаги и расход из Apple Health или Health Connect',
+        'Расписание и отметки приема лекарств',
+        'Выгрузка в CSV, PDF и полный архив',
+      ],
+    },
     fastlaneRustore: {
       category: 'Open Source · Fastlane-плагин',
       description:
@@ -808,6 +910,30 @@ export const ru: Translations = {
     legalTerms: 'Условия использования',
   },
 
+  kcalmPage: {
+    back: 'Назад к портфолио',
+    tagline: 'Дневник питания без строгих правил. Записать еду занимает меньше минуты.',
+    status: 'Сейчас в закрытом тестировании',
+    specs: [
+      { label: 'Платформы', value: 'iOS · Android' },
+      { label: 'Технологии', value: 'Kotlin Multiplatform' },
+      { label: 'Цена', value: 'Бесплатно' },
+      { label: 'Реклама', value: 'Нет' },
+    ],
+    featuresEyebrow: 'Возможности',
+    featuresTitle: 'Записали, что съели, и живете дальше.',
+    highlights: [
+      { title: 'Быстрая запись', body: 'Найдите продукт в базе, отсканируйте штрихкод или возьмите то, что ели вчера. Свои продукты и блюда сохраняются на следующий раз.' },
+      { title: 'Фото тарелки', body: 'Сфотографируйте блюдо, и ИИ предложит название, порцию, калории и БЖУ. Цифры вы проверяете сами, прежде чем они попадут в дневник.' },
+      { title: 'Активность из Health', body: 'Шаги, тренировки и потраченные калории приходят из Apple Health или Health Connect. Приложение их только читает и только с вашего разрешения.' },
+      { title: 'Лекарства', body: 'Расписание для таблеток и уколов и отметки о приеме с дозой, местом инъекции, самочувствием и побочными эффектами.' },
+      { title: 'Друзья и клубы', body: 'Делитесь днем, приемом пищи или ачивкой с друзьями. Кто видит какой раздел профиля, решаете вы.' },
+      { title: 'Данные остаются вашими', body: 'Дневник выгружается в CSV, отчет за 30 дней в PDF для врача или тренера, а весь аккаунт в архив JSON.' },
+    ],
+    finalTitle: 'Скоро в магазинах приложений',
+    finalBody: 'kcalm сейчас в закрытом тестировании. Если хотите попробовать раньше, напишите на mnrhwow@gmail.com.',
+    legalPrivacy: 'Политика конфиденциальности',
+  },
   tosslingPage: {
     back: 'К проектам',
     tagline:
@@ -894,12 +1020,13 @@ export const ru: Translations = {
     privacyUpdated: 'Обновлено 12.10.2026',
     authmeisterUpdated: 'Обновлено 12.10.2026',
     sightraUpdated: 'Обновлено 13.10.2026',
+    kcalmUpdated: 'Обновлено 19.10.2026',
 
     privacy: {
       title: 'Политика конфиденциальности',
       description: 'Сайт monoroh.com ничего не собирает, на нем нет аналитики и cookies. Что видит хостинг GitHub Pages и что происходит с письмами.',
       body: [
-        { type: 'p', text: 'Политика относится к сайту **monoroh.com**. У каждого приложения своя политика, для Authmeister это https://monoroh.com/authmeister/privacy/, для Tossling https://monoroh.com/tossling/privacy/, для Sightra https://monoroh.com/sightra/privacy/.' },
+        { type: 'p', text: 'Политика относится к сайту **monoroh.com**. У каждого приложения своя политика, для Authmeister это https://monoroh.com/authmeister/privacy/, для Tossling https://monoroh.com/tossling/privacy/, для Sightra https://monoroh.com/sightra/privacy/, для kcalm https://monoroh.com/kcalm/privacy/.' },
         { type: 'h2', text: 'Что собирает сайт' },
         { type: 'p', text: 'Ничего. На сайте нет аналитики, счетчиков, рекламы и cookies. Шрифты, картинки и скрипты грузятся с самого monoroh.com.' },
         { type: 'h2', text: 'Хостинг' },
@@ -1031,6 +1158,45 @@ export const ru: Translations = {
         { type: 'p', text: 'Приложения и сервер открыты на https://github.com/Tossling, так что любой может проверить, что они делают.' },
         { type: 'h2', text: 'Изменения и связь' },
         { type: 'p', text: 'Если политика изменится, новая версия появится на этой странице с новой датой. Вопросы присылайте на mailto:mnrhwow@gmail.com.' },
+      ],
+    },
+
+    kcalmPrivacy: {
+      title: 'Политика конфиденциальности',
+      description: 'Что kcalm хранит на сервере, что читает из Apple Health и Health Connect, куда уходит фото блюда и как удалить аккаунт.',
+      body: [
+        { type: 'p', text: 'Политика относится к приложениям **kcalm** для iPhone и Android. kcalm это дневник питания. Дневник хранится на сервере разработчика api.monoroh.com, поэтому он одинаковый на всех устройствах, где вы вошли. В kcalm нет рекламы и аналитики, и ваши данные никому не продаются.' },
+        { type: 'h2', text: 'Аккаунт' },
+        { type: 'p', text: 'Вы регистрируетесь по почте и паролю. Сервер хранит только хеш пароля с солью. Еще можно войти через Apple или Google. Тогда kcalm получает ваш идентификатор у этого провайдера, адрес почты и имя, если вы его передали. Приложение держит на устройстве токен сессии и отправляет его с каждым запросом.' },
+        { type: 'h2', text: 'Что вы записываете' },
+        { type: 'ul', items: [
+          'Профиль. Имя, пол, возраст, рост, вес, целевой вес, уровень активности, дневные нормы, имя пользователя, описание и аватар.',
+          'Дневник. Приемы пищи, продукты и порции, свои продукты и блюда, избранное, записи воды и веса.',
+          'Лекарства. Названия, дозы и расписание, отметки о приеме с местом инъекции, настроением, аппетитом, побочными эффектами и заметками.',
+          'Общение. Посты, фото в постах, комментарии, лайки, друзья и клубы.',
+        ] },
+        { type: 'p', text: 'Все это хранится на сервере, чтобы дневник синхронизировался между устройствами, а друзья видели то, чем вы делитесь.' },
+        { type: 'h2', text: 'Apple Health и Health Connect' },
+        { type: 'p', text: 'Если вы разрешите, kcalm читает шаги, тренировки, потраченные калории и вес. На iPhone это активная энергия и энергия покоя из Apple Health, на Android общий расход калорий из Health Connect. В Health kcalm ничего не записывает. Дневные итоги приложение сохраняет на сервере, чтобы показать вашу активность и поправить норму калорий. Данные о здоровье не используются для рекламы, не продаются и никому не передаются. Отключить Health можно в приложении, а отозвать доступ в настройках системы в любой момент.' },
+        { type: 'h2', text: 'Камера и фото' },
+        { type: 'p', text: 'Штрихкод распознается на телефоне, на сервер уходит только его номер. Когда вы распознаете блюдо по фото, снимок и ваше уточнение уходят на сервер, а с него в OpenRouter, который передает их модели Google Gemini. После разбора kcalm фото не хранит. OpenRouter и Google обрабатывают запрос по своим условиям, они описаны на https://openrouter.ai/privacy и https://policies.google.com/privacy. Аватар и фото, которые вы прикрепляете к постам, хранятся на сервере.' },
+        { type: 'h2', text: 'Кто что видит' },
+        { type: 'p', text: 'Посты видят ваши друзья или участники клуба, в который вы пишете. В настройках приватности вы выбираете, кто видит каждый раздел профиля. У разработчика есть доступ к серверу для обслуживания и ответов на ваши запросы.' },
+        { type: 'h2', text: 'Какими сервисами пользуется kcalm' },
+        { type: 'ul', items: [
+          'OpenRouter и Google получают фото и уточнение, когда вы распознаете блюдо.',
+          'Apple и Google участвуют во входе, если вы входите через них.',
+          'Почтовый сервис отправляет вам код для сброса пароля.',
+        ] },
+        { type: 'p', text: 'В базе продуктов есть данные Open Food Facts. Они скопированы на сервер kcalm, и ваши поисковые запросы в Open Food Facts не уходят.' },
+        { type: 'h2', text: 'Данные Google' },
+        { type: 'p', text: 'Когда вы входите через Google, kcalm использует ваш идентификатор аккаунта Google, адрес почты и имя только для входа и чтобы показать имя в приложении. Доступа к другим данным Google kcalm не запрашивает. Информация, полученная через Google API, используется в соответствии с Google API Services User Data Policy, включая требования Limited Use, подробнее на https://developers.google.com/terms/api-services-user-data-policy.' },
+        { type: 'h2', text: 'Выгрузка и удаление' },
+        { type: 'p', text: 'В приложении можно выгрузить дневник в CSV, отчет за 30 дней в PDF и весь аккаунт в архив JSON. Чтобы удалить аккаунт, напишите на mailto:mnrhwow@gmail.com с почты этого аккаунта. Аккаунт и все перечисленное выше удаляются в течение 30 дней. Резервные копии сервера обновляются по кругу, и удаленные данные пропадают из них по мере замены копий.' },
+        { type: 'h2', text: 'Дети' },
+        { type: 'p', text: 'kcalm не рассчитан на детей младше 13 лет и сознательно не собирает их данные.' },
+        { type: 'h2', text: 'Изменения и связь' },
+        { type: 'p', text: 'kcalm делает Иван Копылов. Если политика изменится, новая версия появится на этой странице с новой датой. Вопросы присылайте на mailto:mnrhwow@gmail.com.' },
       ],
     },
 

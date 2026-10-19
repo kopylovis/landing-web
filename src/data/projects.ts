@@ -40,6 +40,18 @@ export const projects: AppData[] = [
     },
   },
   {
+    id: 'kcalm',
+    name: 'kcalm',
+    image: '/media/kcalm_512x512.png',
+    platforms: [
+      { name: 'iOS', icon: '', available: true },
+      { name: 'Android', icon: '', available: true },
+    ],
+    links: {
+      page: '/kcalm',
+    },
+  },
+  {
     id: 'fastlaneRustore',
     name: 'upload_to_ru_store',
     image: '/media/upload_to_ru_store_512x512.png',

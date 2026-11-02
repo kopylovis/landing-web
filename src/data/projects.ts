@@ -13,6 +13,7 @@ export const projects: AppData[] = [
     platforms: [
       { name: 'macOS', icon: '', available: true },
       { name: 'Android', icon: '', available: true },
+      { name: 'iOS', icon: '', available: true },
       { name: 'Docker', icon: '', available: true },
     ],
     links: {
@@ -23,6 +24,7 @@ export const projects: AppData[] = [
       githubServer: 'https://github.com/Tossling/tossling-server',
       macDownload: 'https://github.com/Tossling/tossling-desktop/releases/latest',
       androidDownload: 'https://github.com/Tossling/tossling-mobile/releases/latest',
+      appStore: 'https://apps.apple.com/app/id6820647520',
     },
   },
   {

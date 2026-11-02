@@ -77,7 +77,7 @@ export function pageMeta(page: PageKey, locale: Locale): PageMeta {
     case 'authmeisterTerms':
       return { path, title: `Authmeister — ${t.legal.authmeisterTerms.title}`, description: t.legal.authmeisterTerms.description, image: authmeisterImage, type: 'article' }
     case 'tossling':
-      return { path, title: 'Tossling, One Clipboard for Your Computers and Android Phone', description: t.projects.tossling.description, image: tosslingImage, type: 'website' }
+      return { path, title: 'Tossling, One Clipboard for Your Computers and Phone', description: t.projects.tossling.description, image: tosslingImage, type: 'website' }
     case 'tosslingPrivacy':
       return { path, title: `Tossling, ${t.legal.tosslingPrivacy.title}`, description: t.legal.tosslingPrivacy.description, image: tosslingImage, type: 'article' }
     case 'sightra':

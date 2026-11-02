@@ -107,6 +107,7 @@ export interface Translations {
     downloadWindows: string
     downloadLinux: string
     downloadAndroid: string
+    downloadIos: string
     brewLabel: string
     copy: string
     copied: string
@@ -264,9 +265,9 @@ export const en: Translations = {
 
   projects: {
     tossling: {
-      category: 'Open Source · macOS, Windows, Linux & Android',
+      category: 'Open Source · macOS, Windows, Linux, Android & iOS',
       description:
-        'One end-to-end encrypted clipboard for your computers and Android phone, through your own server. Copy on one device and paste on another a second later. Text, images and files up to 500 MB.',
+        'One end-to-end encrypted clipboard for your computers and your Android phone or iPhone, through your own server. Copy on one device and paste on another a second later. Text, images and files up to 500 MB.',
       features: [
         'Encrypted on the devices (AES-256-GCM)',
         'Self-hosted server in one Docker container',
@@ -431,16 +432,17 @@ export const en: Translations = {
   tosslingPage: {
     back: 'Back to portfolio',
     tagline:
-      'One clipboard for your computers and Android phone, through your own server. Copy on one device, paste on another a second later. Everything is encrypted on the devices; the server only relays ciphertext.',
+      'One clipboard for your computers and your Android phone or iPhone, through your own server. Copy on one device, paste on another a second later. Everything is encrypted on the devices; the server only relays ciphertext.',
     downloadMac: 'Download for Mac',
     downloadWindows: 'Download for Windows',
     downloadLinux: 'Download for Linux',
     downloadAndroid: 'Download the Android APK',
+    downloadIos: 'Download on the App Store',
     brewLabel: 'Or with Homebrew',
     copy: 'Copy',
     copied: 'Copied',
     specs: [
-      { label: 'Platforms', value: 'macOS 13+ · Windows 10+ · Linux · Android 13+ · iOS in progress' },
+      { label: 'Platforms', value: 'macOS 13+ · Windows 10+ · Linux · Android 13+ · iOS 17+' },
       { label: 'Server', value: 'Self-hosted, Docker' },
       { label: 'Encryption', value: 'AES-256-GCM · X25519' },
       { label: 'License', value: 'GPL-3.0' },
@@ -490,10 +492,10 @@ export const en: Translations = {
     ],
     sourceEyebrow: 'Open source',
     sourceTitle: 'Three repositories, one project.',
-    sourceBody: 'Everything is open source under GPL-3.0. The iOS app is in progress.',
+    sourceBody: 'Everything is open source under GPL-3.0.',
     repos: [
       { name: 'Tossling Desktop', detail: 'Apps for macOS, Windows and Linux with a menu bar or tray icon, the tossling command and file manager menus', href: 'https://github.com/Tossling/tossling-desktop' },
-      { name: 'Tossling for Android', detail: 'The phone app with history, a widget and project notifications', href: 'https://github.com/Tossling/tossling-mobile' },
+      { name: 'Tossling for Android and iOS', detail: 'The phone apps with history and project notifications', href: 'https://github.com/Tossling/tossling-mobile' },
       { name: 'Tossling Server', detail: 'One Docker container, ghcr.io/tossling/tossling-server (amd64, arm64)', href: 'https://github.com/Tossling/tossling-server' },
       { name: 'github.com/Tossling', detail: 'Releases, issues and the Homebrew tap', href: 'https://github.com/Tossling' },
     ],
@@ -908,9 +910,9 @@ export const ru: Translations = {
 
   projects: {
     tossling: {
-      category: 'Open Source · macOS, Windows, Linux и Android',
+      category: 'Open Source · macOS, Windows, Linux, Android и iOS',
       description:
-        'Общий буфер обмена для своих компьютеров и Android-телефона через свой сервер, со сквозным шифрованием. Скопировал на одном устройстве, через секунду вставляешь на другом. Текст, картинки и файлы до 500 МБ.',
+        'Общий буфер обмена для своих компьютеров и телефона на Android или iPhone через свой сервер, со сквозным шифрованием. Скопировал на одном устройстве, через секунду вставляешь на другом. Текст, картинки и файлы до 500 МБ.',
       features: [
         'Шифрование на устройствах (AES-256-GCM)',
         'Свой сервер в одном Docker-контейнере',
@@ -1075,16 +1077,17 @@ export const ru: Translations = {
   tosslingPage: {
     back: 'К проектам',
     tagline:
-      'Общий буфер обмена для своих компьютеров и Android-телефона через свой сервер. Скопировал на одном устройстве, через секунду вставляешь на другом. Все шифруется на устройствах, сервер передает только шифротекст.',
+      'Общий буфер обмена для своих компьютеров и телефона на Android или iPhone через свой сервер. Скопировал на одном устройстве, через секунду вставляешь на другом. Все шифруется на устройствах, сервер передает только шифротекст.',
     downloadMac: 'Скачать для Mac',
     downloadWindows: 'Скачать для Windows',
     downloadLinux: 'Скачать для Linux',
     downloadAndroid: 'Скачать APK для Android',
+    downloadIos: 'Скачать в App Store',
     brewLabel: 'Или через Homebrew',
     copy: 'Скопировать',
     copied: 'Скопировано',
     specs: [
-      { label: 'Платформы', value: 'macOS 13+ · Windows 10+ · Linux · Android 13+ · iOS в работе' },
+      { label: 'Платформы', value: 'macOS 13+ · Windows 10+ · Linux · Android 13+ · iOS 17+' },
       { label: 'Сервер', value: 'Свой, Docker' },
       { label: 'Шифрование', value: 'AES-256-GCM · X25519' },
       { label: 'Лицензия', value: 'GPL-3.0' },
@@ -1134,10 +1137,10 @@ export const ru: Translations = {
     ],
     sourceEyebrow: 'Открытый код',
     sourceTitle: 'Три репозитория, один проект.',
-    sourceBody: 'Весь код открыт под GPL-3.0. Приложение для iOS в работе.',
+    sourceBody: 'Весь код открыт под GPL-3.0.',
     repos: [
       { name: 'Tossling Desktop', detail: 'Приложения для macOS, Windows и Linux со строкой меню или треем, командой tossling и меню файловых менеджеров', href: 'https://github.com/Tossling/tossling-desktop' },
-      { name: 'Tossling для Android', detail: 'Приложение для телефона с историей, виджетом и уведомлениями проектов', href: 'https://github.com/Tossling/tossling-mobile' },
+      { name: 'Tossling для Android и iOS', detail: 'Приложения для телефона с историей и уведомлениями проектов', href: 'https://github.com/Tossling/tossling-mobile' },
       { name: 'Tossling Server', detail: 'Один Docker-контейнер ghcr.io/tossling/tossling-server (amd64, arm64)', href: 'https://github.com/Tossling/tossling-server' },
       { name: 'github.com/Tossling', detail: 'Релизы, задачи и Homebrew tap', href: 'https://github.com/Tossling' },
     ],

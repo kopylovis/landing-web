@@ -23,7 +23,7 @@ export const projects: AppData[] = [
       githubMobile: 'https://github.com/Tossling/tossling-mobile',
       githubServer: 'https://github.com/Tossling/tossling-server',
       macDownload: 'https://github.com/Tossling/tossling-desktop/releases/latest',
-      androidDownload: 'https://github.com/Tossling/tossling-mobile/releases/latest',
+      googlePlay: 'https://play.google.com/store/apps/details?id=com.kopylovis.tossling',
       appStore: 'https://apps.apple.com/app/id6820647520',
     },
   },

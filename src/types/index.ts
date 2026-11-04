@@ -40,7 +40,6 @@ export interface AppLinks {
   githubMobile?: string
   githubServer?: string
   macDownload?: string
-  androidDownload?: string
 }
 
 // Component Props Types

@@ -36,6 +36,7 @@ export interface AppLinks {
   rubygems?: string
   website?: string
   page?: string
+  docs?: string
   githubOrg?: string
   githubMobile?: string
   githubServer?: string

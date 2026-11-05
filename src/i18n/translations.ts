@@ -126,6 +126,7 @@ export interface Translations {
     finalBody: string
     status: string
     legalPrivacy: string
+    docs: string
   }
   legal: {
     backHome: string
@@ -504,6 +505,7 @@ export const en: Translations = {
       'Run Tossling Server, open its setup page, then install the app on a computer. It asks for the address and the token and shows a QR code for the phone.',
     status: 'Early, in daily use by the author. Expect changes before 1.0.',
     legalPrivacy: 'Privacy Policy',
+    docs: 'Documentation',
   },
 
   legal: {
@@ -1149,6 +1151,7 @@ export const ru: Translations = {
       'Запустите Tossling Server, откройте его страницу настройки и поставьте приложение на компьютер. Оно спросит адрес и токен и покажет QR-код для телефона.',
     status: 'Ранняя версия, автор пользуется каждый день. До 1.0 возможны изменения.',
     legalPrivacy: 'Политика конфиденциальности',
+    docs: 'Документация',
   },
 
   legal: {

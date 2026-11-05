@@ -138,6 +138,12 @@ export default function Tossling() {
               <p className="product__tagline">{page.tagline}</p>
               <DownloadButtons platform={platform} />
               {showBrew && <BrewCommand />}
+              <a href={tossling.links.docs} target="_blank" rel="noopener noreferrer" className="tossling__docs">
+                {page.docs}
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M7 17 17 7M9 7h8v8" />
+                </svg>
+              </a>
             </div>
 
             <figure className="product__hero-art" aria-hidden="true">
@@ -217,6 +223,9 @@ export default function Tossling() {
             <p className="tossling__status">{page.status}</p>
 
             <nav className="product__legal" aria-label="Tossling legal">
+              <a href={tossling.links.docs} target="_blank" rel="noopener noreferrer">
+                {page.docs}
+              </a>
               <Link to="/tossling/privacy">{page.legalPrivacy}</Link>
             </nav>
           </section>

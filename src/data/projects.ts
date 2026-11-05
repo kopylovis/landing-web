@@ -1,4 +1,7 @@
 import { AppData } from '../types'
+// The update feeds name the newest installer of each platform and change with every release, so the buttons follow them.
+import windowsFeed from '../../public/tossling/windows.json'
+import linuxFeed from '../../public/tossling/linux-amd64.json'
 
 /**
  * Structural project list (URLs, icons, ids). Translated copy
@@ -23,6 +26,8 @@ export const projects: AppData[] = [
       githubMobile: 'https://github.com/Tossling/tossling-mobile',
       githubServer: 'https://github.com/Tossling/tossling-server',
       macDownload: 'https://github.com/Tossling/tossling-desktop/releases/latest',
+      windowsDownload: windowsFeed.url,
+      linuxDownload: linuxFeed.url,
       docs: 'https://tossling.github.io/docs/',
       googlePlay: 'https://play.google.com/store/apps/details?id=com.kopylovis.tossling',
       appStore: 'https://apps.apple.com/app/id6820647520',

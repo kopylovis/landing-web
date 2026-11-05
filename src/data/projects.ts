@@ -2,6 +2,12 @@ import { AppData } from '../types'
 // The update feeds name the newest installer of each platform and change with every release, so the buttons follow them.
 import windowsFeed from '../../public/tossling/windows.json'
 import linuxFeed from '../../public/tossling/linux-amd64.json'
+import appcast from '../../public/tossling/appcast.xml?raw'
+
+// Sparkle's appcast lists the newest release first, and its enclosure is the .dmg.
+const macDmg =
+  appcast.match(/<enclosure url="([^"]+\.dmg)"/)?.[1] ??
+  'https://github.com/Tossling/tossling-desktop/releases/latest'
 
 /**
  * Structural project list (URLs, icons, ids). Translated copy
@@ -25,7 +31,7 @@ export const projects: AppData[] = [
       githubOrg: 'https://github.com/Tossling',
       githubMobile: 'https://github.com/Tossling/tossling-mobile',
       githubServer: 'https://github.com/Tossling/tossling-server',
-      macDownload: 'https://github.com/Tossling/tossling-desktop/releases/latest',
+      macDownload: macDmg,
       windowsDownload: windowsFeed.url,
       linuxDownload: linuxFeed.url,
       docs: 'https://tossling.github.io/docs/',

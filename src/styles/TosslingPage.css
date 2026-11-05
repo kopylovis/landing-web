@@ -194,6 +194,20 @@
   transform: translate(2px, -2px);
 }
 
+.tossling__docs {
+  margin-top: var(--space-3);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--ink-mute);
+  font-size: var(--fs-sm);
+  transition: color var(--t-fast);
+}
+
+.tossling__docs:hover {
+  color: var(--accent);
+}
+
 .product__final .tossling__status {
   margin-top: var(--space-2);
   color: var(--ink-faint);
